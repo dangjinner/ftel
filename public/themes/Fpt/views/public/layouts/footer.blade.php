@@ -319,6 +319,7 @@
                                 <input type="hidden" name="utm_campaign" value="{{ request()->get('utm_campaign') }}" />
                                 <input type="hidden" name="utm_term" value="{{ request()->get('utm_term') }}" />
                                 <input type="hidden" name="utm_content" value="{{ request()->get('utm_content') }}" />
+                                <input type="hidden" name="current_url" value="{{ request()->url() }}" />
                             </div>
                             <div class="col-lg-12 col-md-12 col-12">
                                 <p>(*) Vui lòng điền đầy đủ các thông tin này</p>
