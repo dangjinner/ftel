@@ -28,7 +28,7 @@ class GoogleSheetAdsen
     public function readGoogleSheet()
     {
         $dimensions = $this->getDimensions($this->spreadSheetId);
-        $range = 'DangKy!A1:' . $dimensions['colCount'];
+        $range = 'FTEL!A1:' . $dimensions['colCount'];
         $data = $this->googleSheetService
             ->spreadsheets_values
             ->batchGet($this->spreadSheetId, ['ranges' => $range]);
