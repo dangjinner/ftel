@@ -39,7 +39,7 @@
            <p class="lead"><strong>Bạn đã đăng ký thành công. Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất có thể.<br> Thank you who have used the services of <a href="https://fpttelecom.net.vn/" style="color: #034ea2;"> FPT Telecom!</a></strong> </p>
            <hr>
            <p>
-            Hotline: <a href="tel:0986666348">098.6666.348</a> -  <a href="https://fpttelecom.net.vn/">Back to Home</a>
+            Hotline: <a href="tel:0978888659">0978888659</a> -  <a href="https://fpttelecom.net.vn/">Back to Home</a>
            </p>
            
            <p class="lead" style="margin-top: 10px;">

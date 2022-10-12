@@ -6,7 +6,7 @@
     <div class="widget-container">
         <div class="textwidget">
             <h2 style="text-align: left;"><span style="color: #008000;"><strong><span style="color: #008000;"> Hotline:
-                            <a style="color: #008000;" href="tel:0986666348">098.6666.348</a></span> </strong></span>
+                            <a style="color: #008000;" href="tel:0978888659">0978888659</a></span> </strong></span>
             </h2>
         </div>
     </div>
@@ -20,7 +20,7 @@
     <div class="widget-container">
         <div class="textwidget">
             <h2 style="text-align: left;"><span style="color: #0000ff;"><strong>Hotline: <a
-                            href="tel:0986666348">098.6666.348</a></strong></span></h2>
+                            href="tel:0978888659">0978888659</a></strong></span></h2>
             <h2 style="text-align: left;"><span style="color: #ff0000;"><strong>&nbsp;</strong></span></h2>
         </div>
     </div>

@@ -102,7 +102,7 @@
                                                 <!-- <li><a href="https://hi.fpt.vn/" target="_black">Hi FPT</a></li> -->
                                                 <li><a href="{{ route('pages.support.contact') }}">Điểm giao dịch</a>
                                                 </li>
-                                                <li><a href="tel:0986666348">Tổng đài 0986666348</a></li>
+                                                <li><a href="tel:0978888659">Tổng đài 0978888659</a></li>
                                                 <li><a href="https://www.facebook.com/fpttelecom.net.vn"
                                                         target="_black">Fanpage</a></li>
                                             </ul>
@@ -369,7 +369,7 @@
                                                                         FPT</a></li> -->
                                                                 <li><a href="{{ route('pages.support.contact') }}">Điểm
                                                                         giao dịch</a></li>
-                                                                <li><a href="tel:0986666348">Tổng đài 0986666348</a>
+                                                                <li><a href="tel:0978888659">Tổng đài 0978888659</a>
                                                                 </li>
                                                                 <li><a href="https://www.facebook.com/fpttelecom.net.vn"
                                                                         target="_black">Fanpage</a></li>

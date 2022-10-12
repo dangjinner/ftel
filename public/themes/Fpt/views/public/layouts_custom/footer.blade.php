@@ -144,7 +144,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="linkedin" href="https://zalo.me/0986666348">
+                                        <a class="linkedin" href="https://zalo.me/0978888659">
                                             <img src="{{ v(theme::url('assets/images/sc5.png')) }}" alt="Linkedin FPT">
                                         </a>
                                     </li>

@@ -34,12 +34,12 @@
                 </p>
             </div>
             <div class="col-xs-12 col-sm-4 text-center support--center">
-                <a href="tel:098.6666.348" title="Hotline bán hàng: 098.6666.348">
+                <a href="tel:0978888659" title="Hotline bán hàng: 0978888659">
                     <img src="{{ v(theme::url('assets/images/icon/hotline-fpt.png')) }}" alt="">
                 </a>
                 <p>
-                    <a href="tel:098.6666.348" title="Hotline bán hàng: 098.6666.348" class="text-uppercase">Hotline :
-                        098.6666.348</a>
+                    <a href="tel:0978888659" title="Hotline bán hàng: 0978888659" class="text-uppercase">Hotline :
+                        0978888659</a>
                 </p>
             </div>
             <div class="col-xs-12 col-sm-4 text-center support--right">

@@ -4,11 +4,11 @@
     <div class="always-on">
         <div class="group-call col-xs-12 fix-pad ">
             <div id="group-call" class="bg-gray text-center pull-right">
-                <a  href="tel:098.6666.348" title="098.6666.348"><img src="{{ v(theme::url('assets/images/call.png')) }}" alt="Call FPT"></a>
+                <a  href="tel:0978888659" title="0978888659"><img src="{{ v(theme::url('assets/images/call.png')) }}" alt="Call FPT"></a>
             </div>
             <div id="group-call-text" class="text-number hide text-center pull-right">
                 <p>Hotline Đăng ký</p>
-                <a>098.6666.348</a>
+                <a>0978888659</a>
             </div>
         </div>
         <div class="group-chat col-xs-12 fix-pad ">
@@ -120,7 +120,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="linkedin" href="https://zalo.me/0986666348">
+                                        <a class="linkedin" href="https://zalo.me/0978888659">
                                             <img src="{{ v(theme::url('assets/images/sc5.png')) }}" alt="Linkedin FPT">
                                         </a>
                                     </li>

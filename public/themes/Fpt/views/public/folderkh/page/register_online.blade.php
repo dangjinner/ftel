@@ -663,12 +663,12 @@
                     </p>
                 </div>
                 <div class="col-xs-12 col-sm-4 text-center support--center" style="display: none">
-                    <a href="tel:0986666348" title="Hotline bán hàng: 0986666348">
+                    <a href="tel:0978888659" title="Hotline bán hàng: 0978888659">
                         <img src="{{ v(theme::url('assets/images/icon/hotline-fpt.png')) }}" alt="Hotline bán hàng FPT">
                     </a>
                     <p>
-                        <a href="tel:0986666348" title="Hotline bán hàng: 0986666348" class="text-uppercase">Hotline
-                            : 0986666348</a>
+                        <a href="tel:0978888659" title="Hotline bán hàng: 0978888659" class="text-uppercase">Hotline
+                            : 0978888659</a>
                     </p>
                 </div>
                 <div class="col-xs-12 col-sm-4 text-center support--right">

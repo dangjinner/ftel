@@ -234,7 +234,7 @@
         <div class="row" style="margin-top: 5rem; background-color: #e9ecef; padding: 1rem">
             <div class="col-lg-12 col-md-12 col-sm-12 text-center mgt30">
                 <span class="text-default" style="font-size: 18px">Bạn gặp khó khăn khi đặt hàng ? Gọi ngay 
-                <span style="color: red">098.6666.348</span> để được hỗ trợ.</span>
+                <span style="color: red">0978888659</span> để được hỗ trợ.</span>
             </div>
         </div>
     </section>

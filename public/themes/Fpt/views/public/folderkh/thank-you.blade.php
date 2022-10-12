@@ -42,7 +42,7 @@
                         style="color: #034ea2;"> FPT Telecom!</a></strong> </p>
             <hr>
             <p>
-                Hotline: <a href="tel:0986666348">0986666348</a> - <a href="https://fpttelecom.net.vn/">Back to
+                Hotline: <a href="tel:0978888659">0978888659</a> - <a href="https://fpttelecom.net.vn/">Back to
                     Home</a>
             </p>
 

@@ -929,7 +929,7 @@ Ngoài ra theo khảo sát thì <a href="https://fpttelecom.net.vn/san-pham-dich
 <h3> Lựa chọn lp mạng FPT Hà Nội khách hàng sẽ được tư vấn chi tiết </h3> <br>
 <p>
 Như đã ni ở trên nhà mạng FPT  hiện đang cung cấp rất nhiu gói cước. Tuy nhiên khng phải khách hàng nào cũng nắm vững thông tin và chọn lựa những gói cước thích hợp. Rồi còn giá cả từng gói cước, thời hạn sử dụng, hợp đồng, thủ tục đăng ký... Tuy nhiên khi lựa chọn lắp mng FPT Hà Nội bạn sẽ không cần lo lắng về điều này.
-Trong thời kỳ dịch bệnh này bạn cũng không cần phải đến trực tiếp những địa chỉ của FPT mà có thể gọi điện qua số Hotline: <a href="tel:0986666348"> 098.6666.348 </a>. Đây là tổng đài hỗ trợ 24/7 tất cả các ngày trong tuần. Chính vì thế khách hàng có thể liên hệ để được tư vấn chi tiết hn về các gói mạng. thủ tục, hợp đồng sử dụng… Chắc chắn khách hàng sẽ có thể lựa chọn chính xác và làm đúng quy trình thủ tục để đăng ký sử dụng mạng nhanh chóng nhất.
+Trong thời kỳ dịch bệnh này bạn cũng không cần phải đến trực tiếp những địa chỉ của FPT mà có thể gọi điện qua số Hotline: <a href="tel:0978888659"> 0978888659 </a>. Đây là tổng đài hỗ trợ 24/7 tất cả các ngày trong tuần. Chính vì thế khách hàng có thể liên hệ để được tư vấn chi tiết hn về các gói mạng. thủ tục, hợp đồng sử dụng… Chắc chắn khách hàng sẽ có thể lựa chọn chính xác và làm đúng quy trình thủ tục để đăng ký sử dụng mạng nhanh chóng nhất.
 Ngoài ra trong quá trình sử dụng nếu có bất kỳ lỗi kỹ thuật hay thắc mắc gì khách hàng cũng có thể liên hệ ngay đến tổng đài. Nhân viên kỹ thuật sẽ có mặt trong thi gian ngắn nhất để hỗ trợ và sửa chữa kịp thời. Nhân viên tư vấn tại FPT chắc chắn sẽ mang li cho bạn cảm giác hài lòng về sự chuyên nghiệp của mình.</p>
 <br>
 
@@ -941,7 +941,7 @@ Thông thường nhà mạng sẽ có những chương trình khuyến mãi như
 <br>
 <h3> FPT thực hiện nhiều chương trình khuyến mãi hấp dẫn </h3> <br>
 <p>
-Với những lý do như trên chắc chắn bạn đã trả lời được câu hỏi nên hay không <a href="https://fpttelecom.net.vn/san-pham-dich-vu/internet-fpt/cap-quang-ca-nhan">lắp mạng FPT Hà Ni </a> trong thời kỳ hiện tại đúng không? Câu tr lời chắc chắn là CÓ. Bởi đây chính là lựa chn tốt nhất giúp bạn có tốc độ đường truyền n định, gói cước đa dng cùng nhiều chương trình khuyến mãi khủng. Còn chần chừ gì nữa mà bạn không liên hệ đăng ký mng ngay bây giờ để đưc hưởng khuyến mãi hấp dẫn. Chúng tôi luôn sẵn sàng tư vấn chi tiết nhất cho mọi khách hàng, hãy liên hệ hotline <b>098.6666.348</b> hoặc website: <a href="https://fpttelecom.net.vn/"> https://fpttelecom.net.vn/</a> để biết thêm thông tin chi tit!</p> 
+Với những lý do như trên chắc chắn bạn đã trả lời được câu hỏi nên hay không <a href="https://fpttelecom.net.vn/san-pham-dich-vu/internet-fpt/cap-quang-ca-nhan">lắp mạng FPT Hà Ni </a> trong thời kỳ hiện tại đúng không? Câu tr lời chắc chắn là CÓ. Bởi đây chính là lựa chn tốt nhất giúp bạn có tốc độ đường truyền n định, gói cước đa dng cùng nhiều chương trình khuyến mãi khủng. Còn chần chừ gì nữa mà bạn không liên hệ đăng ký mng ngay bây giờ để đưc hưởng khuyến mãi hấp dẫn. Chúng tôi luôn sẵn sàng tư vấn chi tiết nhất cho mọi khách hàng, hãy liên hệ hotline <b>0978888659</b> hoặc website: <a href="https://fpttelecom.net.vn/"> https://fpttelecom.net.vn/</a> để biết thêm thông tin chi tit!</p> 
 
  <br><a href="https://fpttelecom.net.vn/dang-ky-thong-tin"> <img src="https://fpttelecom.net.vn/themes/fpt/assets/images/dang%20ky%20online%20fpt.png?v=2.0.7" alt="Đăng ký online"> </a>
 
@@ -981,11 +981,11 @@ Với những lý do như trên chắc chắn bạn đã trả lời được c�
             </p>
          </div>
          <div class="col-xs-12 col-sm-4 text-center support--center">
-            <a href="tel:098.6666.348" title="Hotline bán hàng: 098.6666.348">
+            <a href="tel:0978888659" title="Hotline bán hàng: 0978888659">
             <img src="https://fpttelecom.net.vn/themes/fpt/assets/images/icon/hotline-fpt.png?v=2.0.7" alt="">
             </a>
             <p>
-               <a href="tel:098.6666.348" title="Hotline bán hàng: 098.6666.348" class="text-uppercase">Hotline : 098.6666.348</a>
+               <a href="tel:0978888659" title="Hotline bán hàng: 0978888659" class="text-uppercase">Hotline : 0978888659</a>
             </p>
          </div>
          <div class="col-xs-12 col-sm-4 text-center support--right">
