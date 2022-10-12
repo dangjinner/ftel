@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /search?q=*
+
+Sitemap: http://fpttelecom.net.vn/sitemap.xml

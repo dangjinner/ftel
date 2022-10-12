@@ -1,0 +1,13 @@
+{
+    "name": "StoreBranch",
+    "alias": "storebranch",
+    "description": "The FleetCart StoreBranch Module.",
+    
+    "priority": 0,
+    "providers": [
+        "Modules\\StoreBranch\\Providers\\StoreBranchServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

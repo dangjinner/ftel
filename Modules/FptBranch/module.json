@@ -1,0 +1,13 @@
+{
+    "name": "FptBranch",
+    "alias": "fptbranch",
+    "description": "The FleetCart FptBranch Module.",
+    
+    "priority": 0,
+    "providers": [
+        "Modules\\FptBranch\\Providers\\FptBranchServiceProvider"
+    ],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}

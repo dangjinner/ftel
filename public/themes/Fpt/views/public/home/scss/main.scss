@@ -1,0 +1,27 @@
+
+//css base
+@import 'base/_reset.scss';
+@import 'base/_color.scss';
+
+//css components
+
+
+//css layout
+
+@import 'layout/_header.scss';
+@import 'layout/_footer.scss';
+
+//css page
+@import 'page/_homepage.scss';
+@import 'page/_new.scss';
+@import 'page/_library.scss';
+@import 'page/_phuong-phap.scss';
+@import 'page/_giao-vien.scss';
+@import 'page/_chi-tiet-giao-vien.scss';
+@import 'page/_khoa-hoc.scss';
+@import 'page/_tin-tuc.scss';
+@import 'page/_chi-tiet-tin-tuc.scss';
+@import 'page/_chi-tiet-khoa-hoc.scss';
+@import 'page/_tieng-anh-giao-tiep.scss';
+@import 'page/_tieng-anh-bo-giao-duc.scss';
+@import 'page/_tieng-anh-cambridge.scss';
