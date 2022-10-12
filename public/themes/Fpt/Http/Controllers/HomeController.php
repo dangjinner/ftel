@@ -54,7 +54,7 @@ class HomeController
         SEOMeta::addKeyword(setting('meta_keyword_of_home') ?? 'lắp mạng fpt, truyền hình fpt, wifi fpt, cáp quang fpt, fpt play box, fpt camera, fpt ihome, combo internet và truyền hình, mạng fpt');
         SEO::opengraph()->setUrl(url()->current());
         SEO::twitter()->setSite(route('home'));
-        SEO::jsonLd()->addImage('https://fpttelecom.net.vn/themes/fpt/assets/images/logo.png?v=60cc09b3d36e8');
+        SEO::jsonLd()->addImage('https://ftel.vn/themes/fpt/assets/images/logo.png?v=60cc09b3d36e8');
 
         $data['postsFPT'] = Group::findOrFail(258)->posts()->limit(3)->get();
         $data['postsPress'] = Group::findOrFail(259)->posts()->limit(3)->get();
@@ -147,7 +147,7 @@ class HomeController
         SEOMeta::addKeyword('Đăng ký trực tuyến FPT - FPT Telecom');
         SEO::opengraph()->setUrl(url()->current());
         SEO::twitter()->setSite(route('home'));
-        SEO::jsonLd()->addImage('https://fpttelecom.net.vn/themes/fpt/assets/images/logo.png?v=60cc09b3d36e8');
+        SEO::jsonLd()->addImage('https://ftel.vn/themes/fpt/assets/images/logo.png?v=60cc09b3d36e8');
         
         $data['category_services_1'] = CategoryService::findOrFail(5)->services()->get();
         $data['category_services_2'] = CategoryService::findOrFail(6)->services()->get();

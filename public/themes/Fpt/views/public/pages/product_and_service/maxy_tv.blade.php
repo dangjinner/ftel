@@ -34,7 +34,7 @@
                       <h1><a href="{{ route('home') }}">Trang chủ</a></h1>
                    </li>
                    <li>Sản phẩm dịch vụ</li>
-                   <li> <a href="https://fpttelecom.net.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">Truyền hình FPT</a> </li>
+                   <li> <a href="https://ftel.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">Truyền hình FPT</a> </li>
                 </ul>
              </div>
           </div>
@@ -90,11 +90,11 @@
          <div id="detail-content" style="display: none;margin-top:20px;line-height: 1.7;text-align: justify; ">
                  <p style="text-align:justify;font-size: 18px;font-weight: 600">4 lý do bạn nên chọn sử dụng truyền hình FPT cho năm 2021</p><br>
                 <p style="font-size: 18px">
-                  <a href="https://fpttelecom.net.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">Truyền hình FPT</a>  dần thay thế kênh truyền thống nhờ vào các tính năng ưu việt. Vì sao bạn nên chọn FPT chứ không phải kênh truyền hình khác, cùng xem 4 lý do sau.
+                  <a href="https://ftel.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">Truyền hình FPT</a>  dần thay thế kênh truyền thống nhờ vào các tính năng ưu việt. Vì sao bạn nên chọn FPT chứ không phải kênh truyền hình khác, cùng xem 4 lý do sau.
                </p>
                 <br>
                <p style="font-size: 18px;margin-bottom: 20px">
-                  Truyền hình FPT được gọi là kênh tương tác, người dùng có thể điều khiển hai chiều bằng remote hoặc qua điều khiển giọng nói. FPT ứng dụng công nghệ IPTV cùng bộ đầu thu HD Box đã kết nối <a href="https://fpttelecom.net.vn/san-pham-dich-vu/internet-fpt/cap-quang-ca-nhan" style="color:#0342a2"> internet cáp quang </a> là có thể xem phim, nghe nhạc, bóng đá thoải mái. Từ những ưu điểm vốn có, Công ty cổ phần Viễn thông FPT dần chiếm lĩnh thị trường truyền hình hiện đại. Nếu bạn còn mơ hồ, chúng tôi sẽ chỉ ra 4 lý do bạn nên chọn FPT để trở thành kênh truyền hình cho gia đình mình trong năm 2021.
+                  Truyền hình FPT được gọi là kênh tương tác, người dùng có thể điều khiển hai chiều bằng remote hoặc qua điều khiển giọng nói. FPT ứng dụng công nghệ IPTV cùng bộ đầu thu HD Box đã kết nối <a href="https://ftel.vn/san-pham-dich-vu/internet-fpt/cap-quang-ca-nhan" style="color:#0342a2"> internet cáp quang </a> là có thể xem phim, nghe nhạc, bóng đá thoải mái. Từ những ưu điểm vốn có, Công ty cổ phần Viễn thông FPT dần chiếm lĩnh thị trường truyền hình hiện đại. Nếu bạn còn mơ hồ, chúng tôi sẽ chỉ ra 4 lý do bạn nên chọn FPT để trở thành kênh truyền hình cho gia đình mình trong năm 2021.
 
                </p>
 
@@ -105,25 +105,25 @@
 
                   <p style="margin: 10px 0px 0px 0px;font-weight: 600;">Công nghệ truyền hình tương tác FPT năm 2021</p><br>
                   <p style="font-size: 18px;margin-bottom: 20px">
-                  Từ tháng 8/2014, <a href="https://fpttelecom.net.vn/" style="color:#034ea2"> FPT Telecom </a> chính thức đưa dịch vụ truyền hình trả tiền vào hoạt động. Kênh truyền hình tiền thân của FPT là OneTV. Bằng công nghệ truyền hình tương tác, người dùng được cấp phép các quyền điều khiển qua Remote. Thậm chí, người dùng có thể dùng giọng nói để sử dụng qua ứng dụng Remote FPT APP được tích hợp trên IPhone.
+                  Từ tháng 8/2014, <a href="https://ftel.vn/" style="color:#034ea2"> FPT Telecom </a> chính thức đưa dịch vụ truyền hình trả tiền vào hoạt động. Kênh truyền hình tiền thân của FPT là OneTV. Bằng công nghệ truyền hình tương tác, người dùng được cấp phép các quyền điều khiển qua Remote. Thậm chí, người dùng có thể dùng giọng nói để sử dụng qua ứng dụng Remote FPT APP được tích hợp trên IPhone.
                   </p>
                   <img alt="Truyền hình FPT" style="width: 100%;margin-bottom: 20px" src="{{ v(theme::url('assets/images/truyen-hinh-fpt-02.jpg'))}}">
                   <br>
                   <p style="margin-bottom: 20px ;font-size: 18px">
-                 Bạn có thể xem phim theo ý thích cùng chương trình xem lại xem đã qua trong 48 giờ. Bạn có thể điều khiển tivi khi đang ở công ty, bên ngoài đường và biết tivi đang chiếu chương trình gì. Kênh  <a href="https://fpttelecom.net.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">truyền hình FPT</a>  phát triển dựa vào nền tảng IPTV (Internet Protocol Television), FPT Play TV được dùng để giải mã tín hiệu truyền hình. <br>
+                 Bạn có thể xem phim theo ý thích cùng chương trình xem lại xem đã qua trong 48 giờ. Bạn có thể điều khiển tivi khi đang ở công ty, bên ngoài đường và biết tivi đang chiếu chương trình gì. Kênh  <a href="https://ftel.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">truyền hình FPT</a>  phát triển dựa vào nền tảng IPTV (Internet Protocol Television), FPT Play TV được dùng để giải mã tín hiệu truyền hình. <br>
                 Bên cạnh các tính năng thông dụng của box HD, công nghệ này còn được công ty nâng cấp nhiều chức năng năng độc đáo khác.… đảm bảo trải nghiệm tuyệt vời cho người dùng. Không dừng lại ở đó, phần cứng FPT HD box rất mạnh mẽ, nên kênh truyền hình FPT xứng đáng là sự lựa chọn của bạn trong năm dịch Covid này.
                 <br> </p>
                   <p  style="font-size: 18px;">
                     <strong style="margin-bottom: 10px"> Truyền hình FPT sở hữu kho phim HD miễn phí, đặc sắc và có bản quyền</strong><br><br>
-                     Nếu cách đây 7 năm, các kênh truyền hình truyền thống tự hào vì cung cấp dịch dịch vụ kênh lên đến cả trăm. Thì trong năm 2021 này,  <a href="https://fpttelecom.net.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">truyền hình FPT</a>  mang đến cho đa dạng kênh nhưng ưu việt hơn hẳn với con số 200 kênh. Và trong tương lai thì chắc chắn số lượng kênh truyền hình FPT sẽ tăng lên và chất lượng được nâng cao hơn trước.
+                     Nếu cách đây 7 năm, các kênh truyền hình truyền thống tự hào vì cung cấp dịch dịch vụ kênh lên đến cả trăm. Thì trong năm 2021 này,  <a href="https://ftel.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">truyền hình FPT</a>  mang đến cho đa dạng kênh nhưng ưu việt hơn hẳn với con số 200 kênh. Và trong tương lai thì chắc chắn số lượng kênh truyền hình FPT sẽ tăng lên và chất lượng được nâng cao hơn trước.
                   </p>
                   <p style="font-size: 18px;">Xuất phát là công ty công nghệ, nghiễm nhiên các sản phẩm do FPT tạo ra luôn có chất lượng cao, phong phú về thể loại. Với danh sách hơn 200 kênh truyền hình trong nước nước và quốc tế, trong đó có 50 kênh tiêu chuẩn HD. Tất cả các nội dung của kênh vô cùng đa dạng, bao gồm giải trí, phim ảnh, thể thao, tin tức….. <br>
-                  Một số kênh  <a href="https://fpttelecom.net.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">truyền hình FPT</a>  tiêu biểu có lượng người xem phổ biến như: VTVcab, VTC, K+, An Viên đều là kênh trong nước thì HBO, Star Movies, Disney Channel, Fox Sports cũng thuộc kênh nước ngoài nổi bật do FPT cung cấp. Tất cả các kênh truyền hình đều được thiết lập dựa trên tiêu chuẩn full HD, hình ảnh sắc nét. Nên dù bạn có dùng tivi màn hình phẳng cho dù khách hàng sử dụng tivi màn hình lớn 50 in trở lên vẫn đảm bảo độ rõ nét của hình ảnh.
+                  Một số kênh  <a href="https://ftel.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">truyền hình FPT</a>  tiêu biểu có lượng người xem phổ biến như: VTVcab, VTC, K+, An Viên đều là kênh trong nước thì HBO, Star Movies, Disney Channel, Fox Sports cũng thuộc kênh nước ngoài nổi bật do FPT cung cấp. Tất cả các kênh truyền hình đều được thiết lập dựa trên tiêu chuẩn full HD, hình ảnh sắc nét. Nên dù bạn có dùng tivi màn hình phẳng cho dù khách hàng sử dụng tivi màn hình lớn 50 in trở lên vẫn đảm bảo độ rõ nét của hình ảnh.
                   Một ưu điểm đặc biệt khi bạn dùng đến kênh của FPT chính là độ trễ phát sóng của các kênh cực ít. Do đó, tín hiệu của kênh truyền hình FPT luôn nhanh hơn các kênh truyền thống và đối thủ khác từ 1 - 3 giây. <br>
                   <img alt="Truyền hình FPT" style="width: 100%;margin-bottom: 20px;margin-top:10px " src="{{ v(theme::url('assets/images/truyen-hinh-fpt-04.jpg'))}}">
                   </p>
                   <br>
-                   <p style="margin: 10px 0px 0px 0px;font-size: 18px">Hiện tại,  <a href="https://fpttelecom.net.vn/" style="color:#034ea2"> FPT Telecom </a> có cung cấp một số gói cho kênh truyền hình để người dùng lựa chọn. Trong đó, 2 gói được nhiều người lựa chọn nhất là cơ bản và mở rộng, cụ thể từng gói như sau:
+                   <p style="margin: 10px 0px 0px 0px;font-size: 18px">Hiện tại,  <a href="https://ftel.vn/" style="color:#034ea2"> FPT Telecom </a> có cung cấp một số gói cho kênh truyền hình để người dùng lựa chọn. Trong đó, 2 gói được nhiều người lựa chọn nhất là cơ bản và mở rộng, cụ thể từng gói như sau:
                   </p> <br>
                   <div class="row" style="font-size: 18px;margin-bottom: 10px">
                       <div class="col-lg-4 col-12">
@@ -151,7 +151,7 @@
                     </div>
 
                   <p style="font-size: 18px;font-weight: 600;margin-bottom: 10px">
-                    Số lượng <a href="https://fpttelecom.net.vn/san-pham-dich-vu/truyen-hinh-fpt/goi-kenh-maxy" style="color:#034ea2">gói Maxy</a>  phục vụ nhu cầu cá nhân hóa của người dùng
+                    Số lượng <a href="https://ftel.vn/san-pham-dich-vu/truyen-hinh-fpt/goi-kenh-maxy" style="color:#034ea2">gói Maxy</a>  phục vụ nhu cầu cá nhân hóa của người dùng
                   </p>
                   <p style="font-size: 18px;margin-bottom: 10px">
                     Có kho nội dung phong phú, kênh có đa dạng thể loại bao gồm các hình thức giải trí, ca múa nhạc, phim truyện, thể thao…. Người dùng có thể thoải mái lựa chọn nội dung theo như gợi ý của kênh truyền hình hoặc yêu cầu. Kênh truyền hình FPT có các ứng dụng sẽ làm bạn hài lòng như sau:
@@ -160,7 +160,7 @@
                   <br>
 
                   <p style="font-size: 18px">
-                      Ứng dụng Phim truyện tại dịch vụ  <a href="https://fpttelecom.net.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">truyền hình FPT</a>  có thể nói là thế giới nghệ thuật thu nhỏ. Với hàng ngàn bộ phim điện ảnh được phát sóng mỗi ngày, cùng kho phim truyền hình đặc sắc của trong nước và quốc tế. Mỗi thể loại phim của kênh luôn được cập nhật liên tục, đặc biệt kênh có nhiều ngôn ngữ, thực hiện phụ đề và thuyết minh trong phim.
+                      Ứng dụng Phim truyện tại dịch vụ  <a href="https://ftel.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">truyền hình FPT</a>  có thể nói là thế giới nghệ thuật thu nhỏ. Với hàng ngàn bộ phim điện ảnh được phát sóng mỗi ngày, cùng kho phim truyền hình đặc sắc của trong nước và quốc tế. Mỗi thể loại phim của kênh luôn được cập nhật liên tục, đặc biệt kênh có nhiều ngôn ngữ, thực hiện phụ đề và thuyết minh trong phim.
                   </p>
                  <br>
                   <img alt="Truyền hình FPT" style="width: 100%;margin-bottom: 20px" src="{{ v(theme::url('assets/images/truyen-hinh-fpt-05.jpg'))}}">
@@ -185,7 +185,7 @@
                     </div>
                   <br>
                   <p style="font-size: 18px">
-                       Ngoài ra, các bộ phim điện ảnh chiếu rạp bom tấn mới nhất cũng có mặt tại  <a href="https://fpttelecom.net.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">truyền hình FPT</a>  người: Phim Hollywood, Việt Nam thông qua các yêu cầu của Fim+, Danet.<br>
+                       Ngoài ra, các bộ phim điện ảnh chiếu rạp bom tấn mới nhất cũng có mặt tại  <a href="https://ftel.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">truyền hình FPT</a>  người: Phim Hollywood, Việt Nam thông qua các yêu cầu của Fim+, Danet.<br>
                   </p>
                   <p  style="margin-bottom: 10px;margin-top: 10px; font-weight: 600;font-size: 18px">Ứng dụng thiếu nhi</p>
                   <p style="margin-bottom: 10px;margin-top: 10px;font-size: 18px">Ứng dụng thiếu nhi của kênh trước khi công chiếu sẽ chọn lọc kỹ lưỡng với mục đích mang đến giải và giáo dục cao cho trẻ nhỏ. Các bộ phim hoạt hình mang tính nhân văn, chương trình ca nhạc, kể chuyện, chương trình học Tiếng Anh…..rất dễ hiểu, phù hợp với thiếu nhi. Tất cả chương trình đều có bản thuyết minh bằng tiếng Việt, đảm bảo các bé vừa học, vừa chơi hiệu quả nhất.
@@ -220,7 +220,7 @@
                     <img alt="Truyền Hình FPT" style="width: 100%;margin-bottom: 20px" src="{{ v(theme::url('assets/images/truyen-hinh-fpt-06.jpg'))}}">
                   <p style="margin-top: 10px; font-weight: 600;font-size: 18px;margin-bottom: 10px;">Các ứng dụng trực tuyến</p>
 
-                  <p style="font-size: 18px"> <a href="https://fpttelecom.net.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">Truyền hình FPT</a>  sẽ phù phép chiếc tivi của gia đình bạn trở thành một ứng dụng trực tuyến đa chức năng. Bạn có thể xem video qua kênh Youtube, hát karaoke, đọc các kênh báo điện tử trực tuyến….cùng nhiều ứng dụng hiện đại khác.
+                  <p style="font-size: 18px"> <a href="https://ftel.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">Truyền hình FPT</a>  sẽ phù phép chiếc tivi của gia đình bạn trở thành một ứng dụng trực tuyến đa chức năng. Bạn có thể xem video qua kênh Youtube, hát karaoke, đọc các kênh báo điện tử trực tuyến….cùng nhiều ứng dụng hiện đại khác.
                   </p>
                   <p style="margin-bottom: 10px;margin-top: 10px; font-weight: 600;font-size: 18px">Tính năng tương tác cực kỳ nhạy bén
                    </p>
@@ -234,17 +234,17 @@
                   </p>
                   <p style="margin-bottom: 10px;margin-top: 10px; font-weight: 600;font-size: 18px">Mở két tương tác trực tiếp với người dẫn chương trình
                    </p>
-                  <p style="font-size: 18px">Ở một cấp độ tương tác thực này, người dùng hoàn toàn có thể bước vào thế giới giải trí qua chiếc tivi. Không chỉ đi sâu vào nội dung của chương trình, người dùng còn được giao tiếp với người dẫn chương trình dù đang ngồi đối diện tivi. Chỉ bằng 1 chiếc remote, người chơi có thể trả lời câu hỏi và nhấp nút lệnh là xong câu trả lời của mình. Và tại Việt Nam, chỉ có duy nhất kênh  <a href="https://fpttelecom.net.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">truyền hình FPT</a>  sử dụng công nghệ này cho hệ thống dịch vụ truyền hình tương tác.
+                  <p style="font-size: 18px">Ở một cấp độ tương tác thực này, người dùng hoàn toàn có thể bước vào thế giới giải trí qua chiếc tivi. Không chỉ đi sâu vào nội dung của chương trình, người dùng còn được giao tiếp với người dẫn chương trình dù đang ngồi đối diện tivi. Chỉ bằng 1 chiếc remote, người chơi có thể trả lời câu hỏi và nhấp nút lệnh là xong câu trả lời của mình. Và tại Việt Nam, chỉ có duy nhất kênh  <a href="https://ftel.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">truyền hình FPT</a>  sử dụng công nghệ này cho hệ thống dịch vụ truyền hình tương tác.
 
                   </p>
                   <p style="margin-bottom: 10px;margin-top: 10px; font-weight: 600;font-size: 18px">Tính năng giám sát trẻ em
                   </p>
                   <p style="font-size: 18px">Kênh truyền hình chắc chắn sẽ giúp trẻ phát triển nhận thức về thế giới quan. Tuy nhiên, nếu bạn không kiểm soát thời gian và những gì mà các bé đang xem sẽ làm mất đi giá trị kiến thức. Bởi khả năng cao kênh mà bé đang xem không phù hợp với lứa tuổi và nội dung không được lành mạnh. <br>
-                    Vậy thì bạn hãy yên tâm về vấn đề này khi đăng ký kênh  <a href="https://fpttelecom.net.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">truyền hình FPT</a> . Với tính năng giám sát trẻ em, người dùng được phép thiết lập thời gian xem của bé. <br>
+                    Vậy thì bạn hãy yên tâm về vấn đề này khi đăng ký kênh  <a href="https://ftel.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">truyền hình FPT</a> . Với tính năng giám sát trẻ em, người dùng được phép thiết lập thời gian xem của bé. <br>
                     Đồng thời, bạn cũng có thể giới hạn nội dung xem các chương trình thiếu nhi để yên tâm làm những công việc khác.
                   </p>
                   <p style="margin-bottom: 10px;margin-top: 10px; font-weight: 600;font-size: 18px">Tính năng EPG </p>
-                  <p style="font-size: 18px">EPG là tính năng lịch phát sóng thông minh. Bạn có thể dùng EPG để tra cứu lịch phát sóng của các chương trình, sự kiện. Như vậy, người dùng sẽ không bỏ lỡ những nội dung mà mình đang yêu thích, đây cũng là lý do bạn nên chọn kênh  <a href="https://fpttelecom.net.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">truyền hình FPT</a>  cho năm 2021.
+                  <p style="font-size: 18px">EPG là tính năng lịch phát sóng thông minh. Bạn có thể dùng EPG để tra cứu lịch phát sóng của các chương trình, sự kiện. Như vậy, người dùng sẽ không bỏ lỡ những nội dung mà mình đang yêu thích, đây cũng là lý do bạn nên chọn kênh  <a href="https://ftel.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">truyền hình FPT</a>  cho năm 2021.
 
                   </p>
                     <p style="margin-bottom: 10px;margin-top: 10px; font-weight: 600;font-size: 18px">Tính năng xem lại
@@ -262,7 +262,7 @@
                    <p style="margin-bottom: 10px;margin-top: 10px; font-weight: 600;font-size: 18px">Danh sách kênh cá nhân
                   </p> <br>
                   <p style="font-size: 18px">
-                    Danh sách kênh cá nhân có đến 30 kênh bạn yêu thích được tổng hợp từ số lượng truy cập nhiều nhất. Nhờ đó mà bạn không cần phải vất vả tìm kênh muốn xem trong tổng 30/200 kênh  <a href="https://fpttelecom.net.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">truyền hình FPT</a> .
+                    Danh sách kênh cá nhân có đến 30 kênh bạn yêu thích được tổng hợp từ số lượng truy cập nhiều nhất. Nhờ đó mà bạn không cần phải vất vả tìm kênh muốn xem trong tổng 30/200 kênh  <a href="https://ftel.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">truyền hình FPT</a> .
                   </p>
                    <p style="margin-bottom: 10px;margin-top: 10px; font-weight: 600;font-size: 18px">Tính năng PIP & MOSAIC
                   </p> <br>
@@ -275,7 +275,7 @@
                     Smartphone với ứng dụng FPT Remote cung cấp cho người dùng tính năng điều khiển bằng giọng. Ứng dụng này cũng đã có mặt trên CH Play và App Store, nay cũng được kênh truyền hình FPT áp dụng để cho người dùng sự thuận tiện khi xem tivi.
                   </p>
                   <p style="font-size: 18px">
-                   <a href="https://fpttelecom.net.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">Truyền hình FPT</a>  ra đời như một cuộc cải cách và dần thay thế thói quen xem truyền hình truyền thống của người dùng. Bằng công nghệ IPTV (Internet Protocol Television) tạo kênh truyền hình tương tác 2 chiều giúp người dùng thao tác dễ dàng khi xem tivi. Hơn hết, FPT có hơn 200 kênh trong và ngoài nước, film tiêu chuẩn HD, tính năng tua lại, giám sát trẻ em...sẽ làm bạn cảm thấy an tâm và hài lòng khi lắp đặt kênh truyền hình cho năm 2021.
+                   <a href="https://ftel.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">Truyền hình FPT</a>  ra đời như một cuộc cải cách và dần thay thế thói quen xem truyền hình truyền thống của người dùng. Bằng công nghệ IPTV (Internet Protocol Television) tạo kênh truyền hình tương tác 2 chiều giúp người dùng thao tác dễ dàng khi xem tivi. Hơn hết, FPT có hơn 200 kênh trong và ngoài nước, film tiêu chuẩn HD, tính năng tua lại, giám sát trẻ em...sẽ làm bạn cảm thấy an tâm và hài lòng khi lắp đặt kênh truyền hình cho năm 2021.
                 </p>
                   <iframe width="100%" height="500" src="https://www.youtube.com/embed/AMI-W9hh0AU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                   <br>
@@ -323,7 +323,7 @@
                    <p>Với gần 200 kênh truyền hình trong nước và quốc tế với nhiều nội dung vượt trội, trong đó có 70 kênh chất lượng chuẩn HD, khách hàng có thể dễ dàng lựa chọn các nội dung khác nhau phù hợp với sở thích. Các kênh truyền hình được chia thành các nhóm như Nhóm kênh Thiếu nhi: Cbeebies, Cartoon Network HD, Disney Junior, Disney Channel...<br><br>
                       Nhóm kênh phim truyện Hollywood, Âu Mỹ, Châu Á: HBO, FOX Movies, Red by HBO, Cinemax, Fox Family Movies...<br><br>
                       Nhóm kênh Giải trí tổng hợp (thể thao, thời trang, âm nhạc...): AXN HD, Fox HD, Discovery, Blue Ant Extreme, Fox Sport HD...<br><br>
-                      Ngoài ra  <a href="https://fpttelecom.net.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">Truyền hình FPT</a>  còn cung cấp gói kênh K+ với nhiều nội dung thể thao, giải trí hấp dẫn.
+                      Ngoài ra  <a href="https://ftel.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">Truyền hình FPT</a>  còn cung cấp gói kênh K+ với nhiều nội dung thể thao, giải trí hấp dẫn.
                    </p>
                 </div>
              </div>
@@ -452,7 +452,7 @@
                    <img alt="tv-frend.png" src="{{ v(theme::url('assets/images/icon/tv frend fpt.png'))}}">
                 </div>
                 <div class="col-sm-10">
-                   <p> <a href="https://fpttelecom.net.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">Truyền hình FPT</a>  hữu trọn vẹn bản quyền các giải đấu thuộc khuôn khổ Liên đoàn bóng đá AFC 2021 – 2024, Serie A mùa giải 2018-2021. Ngoài ra  <a href="https://fpttelecom.net.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">Truyền hình FPT</a>  còn có nhiều giải thể thao hấp dẫn như giải bóng rổ châu Âu EuroLeague, giải bóng đá FA Cup... cùng nhiều chương trình thể thao hấp dẫn khác.</p>
+                   <p> <a href="https://ftel.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">Truyền hình FPT</a>  hữu trọn vẹn bản quyền các giải đấu thuộc khuôn khổ Liên đoàn bóng đá AFC 2021 – 2024, Serie A mùa giải 2018-2021. Ngoài ra  <a href="https://ftel.vn/san-pham-dich-vu/truyen-hinh-fpt" style="color:#034ea2">Truyền hình FPT</a>  còn có nhiều giải thể thao hấp dẫn như giải bóng rổ châu Âu EuroLeague, giải bóng đá FA Cup... cùng nhiều chương trình thể thao hấp dẫn khác.</p>
                 </div>
              </div>
           </div>

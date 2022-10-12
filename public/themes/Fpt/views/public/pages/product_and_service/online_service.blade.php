@@ -104,7 +104,7 @@
             </p>
          </div>
          <div class="col-lg-6 col-12">
-            <img alt="https://fpttelecom.net.vn/" width="100%" src="{{ v(theme::url('assets/images/banner/fpt play.png'))}}">
+            <img alt="https://ftel.vn/" width="100%" src="{{ v(theme::url('assets/images/banner/fpt play.png'))}}">
          </div>
          <div class="col-lg-12 col-12" id="button" style="text-align: center;">
             <button onclick="openFunction()" style="border: 0px; background-color: red;border-radius: 5px; margin-top: 10px; padding: 5px 20px;    box-shadow: 6px 10px 5px #ccc; " ><p id="none" style="display: block;color: #fff">Xem thêm</p></button>
@@ -120,13 +120,13 @@
          <div class="row">
             <div class="col-lg-12 col-12">
                <div id="detail-content" style="display: none;margin-top:20px;line-height: 1.7; text-align: justify; font-size: 18px ">
-                        <p style="font-size: 18px">Bạn đang rối như tơ vò vì khó lựa chọn một thiết bị đầu thu truyền hình chất lượng giữa vô vàn các loại thiết bị đang bày bán tràn lan trên thị trường như hiện nay. Bạn đã nghe đến <a href="https://fpttelecom.net.vn/san-pham-dich-vu/dich-vu-online/fpt-play-box" style="color: #034ea2">FPT Play Box</a>  là bộ thiết bị chất lượng với nhiều ưu điểm vượt trội so với các dòng sản phẩm khác. Bạn chưa biết thực hư cùng những đánh giá cụ thể về chúng. Cùng chúng tôi điểm qua nhưng điểm mạnh của thiết bị này để lựa chọn tham khảo cho gia đình mình.
+                        <p style="font-size: 18px">Bạn đang rối như tơ vò vì khó lựa chọn một thiết bị đầu thu truyền hình chất lượng giữa vô vàn các loại thiết bị đang bày bán tràn lan trên thị trường như hiện nay. Bạn đã nghe đến <a href="https://ftel.vn/san-pham-dich-vu/dich-vu-online/fpt-play-box" style="color: #034ea2">FPT Play Box</a>  là bộ thiết bị chất lượng với nhiều ưu điểm vượt trội so với các dòng sản phẩm khác. Bạn chưa biết thực hư cùng những đánh giá cụ thể về chúng. Cùng chúng tôi điểm qua nhưng điểm mạnh của thiết bị này để lựa chọn tham khảo cho gia đình mình.
                         </p>
                         <h3 style="font-size: 30px;margin: 20px 0px;line-height: 1.5">
                            Tổng quan về FPT Play Box
                         </h3>
                         <p style="font-size: 18px">
-                           Chắc hẳn bạn đã một lần nghe đến thiết bị <a href="https://fpttelecom.net.vn/san-pham-dich-vu/dich-vu-online/fpt-play-box" style="color: #034ea2">FPT Play Box</a> khi có nhu cầu xem các bộ phim chuẩn HD. Đây là một thiết bị ngoại vi có tính năng biến tivi thường thành tivi thông minh mà không cần thao tác phức tạp. Nhờ vậy, bạn có thể xem tới hơn 100 các loại kênh truyền hình, các bộ phim bom tấn, tình cảm,... đến từ các nước châu Á,  u, Mỹ hay Hàn Quốc. Thậm chí những kênh phim có từ lâu đời như TVB hay KBS cũng đều có thể dễ dàng theo dõi được khi có FPT Play Box.
+                           Chắc hẳn bạn đã một lần nghe đến thiết bị <a href="https://ftel.vn/san-pham-dich-vu/dich-vu-online/fpt-play-box" style="color: #034ea2">FPT Play Box</a> khi có nhu cầu xem các bộ phim chuẩn HD. Đây là một thiết bị ngoại vi có tính năng biến tivi thường thành tivi thông minh mà không cần thao tác phức tạp. Nhờ vậy, bạn có thể xem tới hơn 100 các loại kênh truyền hình, các bộ phim bom tấn, tình cảm,... đến từ các nước châu Á,  u, Mỹ hay Hàn Quốc. Thậm chí những kênh phim có từ lâu đời như TVB hay KBS cũng đều có thể dễ dàng theo dõi được khi có FPT Play Box.
                            Bên cạnh đó, khi sử dụng thiết bị này, khách hàng sẽ nhận được thêm một gói  vụ miễn phí hoàn toàn để xem các kênh liên quan đến thể thao, bóng đá ở những giải đấu lớn không phát trên các kênh tivi thông thường. <br>
                            Kể từ khi sản phẩm này ra đời cho tới nay, những lo lắng thường trực xung quanh việc xem các bộ phim chuẩn HD hay 4K với độ phân giải cực chất lượng đã không còn tồn tại. Sản phẩm này có mức giá dao động tùy theo chất lượng sản phẩm, đôi khi chỉ vài trăm ngàn nhưng có những thiết bị có mức giá lên tới vài triệu. Tùy theo mục đích sử dụng cũng như nhu cầu của các thành viên trong gia đình mà bạn có thể lựa chọn sao cho phù hợp nhất. <br>
                            Chẳng hạn, có một số sản phẩm đầu thu xuất xứ Trung Quốc, Đài Loan với mức giá rẻ nhưng chỉ xem được vài lần là phải đóng thêm phụ phí hàng tháng hay mới xem được một thời gian ngắn đã bị lỗi, hỏng,... Có loại cũng lên tới 5 - 6 triệu nhưng đa số chỉ dao động ở mức hơn 2 triệu đồng mà vẫn đủ các chức năng xem phim, hỗ trợ 4K,... cho người dùng. <br>
@@ -140,7 +140,7 @@
                         <p style="text-align: center;"> Những tính năng giải trí bất tận</p>
                         <br>
                         <p style="font-size: 18px">
-                        Thiết bị <a href="https://fpttelecom.net.vn/san-pham-dich-vu/dich-vu-online/fpt-play-box" style="color: #034ea2">FPT Play Box</a> được ưa chuộng và sử dụng cực kỳ phổ biến vì bản thân nó sở hữu nhiều ưu điểm rất nổi trội. Dù là các diễn đàn công nghệ, những người có kinh nghiệm sử dụng các thiết bị đầu thu lâu năm cũng không ngần ngại đánh giá cao dòng sản phẩm này. <br>
+                        Thiết bị <a href="https://ftel.vn/san-pham-dich-vu/dich-vu-online/fpt-play-box" style="color: #034ea2">FPT Play Box</a> được ưa chuộng và sử dụng cực kỳ phổ biến vì bản thân nó sở hữu nhiều ưu điểm rất nổi trội. Dù là các diễn đàn công nghệ, những người có kinh nghiệm sử dụng các thiết bị đầu thu lâu năm cũng không ngần ngại đánh giá cao dòng sản phẩm này. <br>
                         Đầu thu có thiết kế tương đối nhỏ gọn, trọng lượng nhẹ nên việc lắp đặt, vận chuyển và di động một quãng đường xa cũng không làm khó được người lắp đặt cũng như người dùng.
                         Sản phẩm còn cung cấp nhiều kênh truyền hình đặc sắc và miễn phí các gói cơ bản (hoàn toàn thay thế các dạng truyền hình cáp từ trước đó). Chẳng may bạn có bỏ lỡ một chương trình yêu thích thì có thể dễ dàng xem lại tại đây trong vòng từ 1 đến 2 ngày kể từ khi chương trình đó phát sóng.
                         Đường truyền ổn định, người dùng có thể xem phim HD Offline thông qua cổng USB 3.0 từ ổ cứng di động hoặc các thiết bị lưu trữ rời. Bên cạnh đó, trong Box còn có kho phim đồ sộ với nhiều thể loại đặc sắc đang được tìm kiếm rầm rộ trên mạng hiện nay như Kho Phim Lẻ, Kho Phim Bộ, Kho Phim HD 4K, …. mà không lo tình trạng giật, lag xảy ra. Nếu ngại sử dụng bàn phím điều khiển thì tính năng tích hợp giọng nói con người với FPT Voice Remote hiện cũng được trang bị kèm theo đầu thu này.
@@ -163,7 +163,7 @@
 
                                 <p style="font-size: 18px;">&nbsp;<i class="fas fa-check" style="font-size: 15px;color: #51b848"></i> &nbsp;Khi kết nối với Tivi: FPT Play Box cho phép kết nối với tivi thông qua 2 cổng là HDMI và AV. Dù tivi bạn dùng là đời cũ đã ngừng sản xuất thì vẫn có thể tương thích một cách dễ dàng. Bạn chỉ cần có đầy đủ các phụ kiện đi kèm với đầu thu là dây nguồn, cáp AV, cáp internet, cáp HDMI, pin, remote và sách hướng dẫn sử dụng sản phẩm là có thể sử dụng.</p> <br>
                                 <p style="font-size: 18px;">&nbsp;<i class="fas fa-check" style="font-size: 15px;color: #51b848"></i> &nbsp;
-                               Kết nối với <a href="https://fpttelecom.net.vn/san-pham-dich-vu/internet-fpt" style="color: #034ea2">mạng Internet:</a>  Thiết bị có thể kết nối mạng bằng 2 cách là qua dây mạng và qua Wifi. Bản thân chúng cũng hỗ trợ kết nối với tốc độ cao và được nhận xét là cải tiến thông minh để hỗ trợ cả kết nối thường và kết nối với tốc độ siêu nhanh.</p>
+                               Kết nối với <a href="https://ftel.vn/san-pham-dich-vu/internet-fpt" style="color: #034ea2">mạng Internet:</a>  Thiết bị có thể kết nối mạng bằng 2 cách là qua dây mạng và qua Wifi. Bản thân chúng cũng hỗ trợ kết nối với tốc độ cao và được nhận xét là cải tiến thông minh để hỗ trợ cả kết nối thường và kết nối với tốc độ siêu nhanh.</p>
                                <br>
                                <p style="font-size: 18px;">&nbsp;<i class="fas fa-check" style="font-size: 15px;color: #51b848"></i> &nbsp;
                                Kết nối qua cổng USB: FPT Play Box có thiết kế 3 cổng mà USB có thể liên kết. Nhờ đó, người dùng có thể kết nối USB, chuột có dây,... để dễ dàng sử dụng và điều khiển khi xem.<br><p>
@@ -174,7 +174,7 @@
                         <p style="text-align: center;">Cấu hình mạnh mẽ</p>
                         <br>
                         <p style="font-size: 18px;">
-                        Trong phiên bản mới nhất của <a href="https://fpttelecom.net.vn/san-pham-dich-vu/dich-vu-online/fpt-play-box" style="color: #034ea2">FPT Play Box</a>, nhà sản xuất đã đầu tư hơn vào phần cứng giúp cấu hình đầu thu cao hơn, tương thích với hầu hết các đường truyền viễn thông cùng hiệu suất ổn định nhất. Nhờ vậy, thiết bị này luôn chạy rất mượt tại các ứng dụng và cổng media. Cổng cũng tương thích với nhiều dòng tivi hiện nay nên được đông đảo khách hàng đưa vào “ tầm ngắm” để xem xét lựa chọn. <br>
+                        Trong phiên bản mới nhất của <a href="https://ftel.vn/san-pham-dich-vu/dich-vu-online/fpt-play-box" style="color: #034ea2">FPT Play Box</a>, nhà sản xuất đã đầu tư hơn vào phần cứng giúp cấu hình đầu thu cao hơn, tương thích với hầu hết các đường truyền viễn thông cùng hiệu suất ổn định nhất. Nhờ vậy, thiết bị này luôn chạy rất mượt tại các ứng dụng và cổng media. Cổng cũng tương thích với nhiều dòng tivi hiện nay nên được đông đảo khách hàng đưa vào “ tầm ngắm” để xem xét lựa chọn. <br>
                         </p>
                         <p  style="margin-bottom: 10px;margin-top: 10px; font-weight: 600;">Về dịch vụ đi kèm mà FPT Playbox đang cung cấp</p>
                         <br>
@@ -204,7 +204,7 @@
 
                         <p style="font-size: 18px;">&nbsp;<i class="fas fa-check" style="font-size: 15px;color: #51b848"></i> &nbsp; Tổng hợp hàng loạt các ứng dụng giải trí mới nhất </p> <br>
                         <p style="font-size: 18px;">
-                        Bên cạnh hàng loạt các ưu điểm trên, <a href="https://fpttelecom.net.vn/san-pham-dich-vu/dich-vu-online/fpt-play-box" style="color: #034ea2">FPT Play Box</a> có tích hợp với kho thông tin giải trí siêu hot, phong phú và đa dạng các chương trình như hài, gameshow sức khỏe, kiến thức khoa học, đời sống,... <br>
+                        Bên cạnh hàng loạt các ưu điểm trên, <a href="https://ftel.vn/san-pham-dich-vu/dich-vu-online/fpt-play-box" style="color: #034ea2">FPT Play Box</a> có tích hợp với kho thông tin giải trí siêu hot, phong phú và đa dạng các chương trình như hài, gameshow sức khỏe, kiến thức khoa học, đời sống,... <br>
                         Ngoài các dịch vụ hữu ích kèm theo đã nêu ở trên thì FPT Play Box còn đi kèm với kho thông tin giải trí khổng lồ, vô cùng đa dạng như chương trình phim hài, chương trình sức khỏe, kiến thức, Gameshow, giải trí,….
                         </p>
                         <br>
@@ -221,7 +221,7 @@
                         <p style="font-size: 18px;">
                         Cũng như các thiết bị công nghệ số khác, FPT Play Box mặc dù mang theo nhiều ưu điểm nhưng cũng vẫn còn tồn tại đâu đó một số khuyết điểm cần khắc phục.  Dù vậy, so với các sản phẩm Tivi Box trên thị trường thì có lẽ khó ai sánh kịp FPT Play Box.  Đây thực sự là một điểm sáng của công nghệ Việt và cần được tiếp tục phát huy.<br></p>
                         <p style="font-size: 18px;">
-                        Trên đây là một vài điểm mạnh của sản phẩm <a href="https://fpttelecom.net.vn/san-pham-dich-vu/dich-vu-online/fpt-play-box" style="color: #034ea2">FPT Play Box</a> theo đánh giá khách quan từ người dùng. Hy vọng qua những thông tin chung, độc giả đã có cái nhìn chi tiết hơn về sản phẩm này và xem xét lựa chọn cho tổ ấm của mình trong thời gian tới.
+                        Trên đây là một vài điểm mạnh của sản phẩm <a href="https://ftel.vn/san-pham-dich-vu/dich-vu-online/fpt-play-box" style="color: #034ea2">FPT Play Box</a> theo đánh giá khách quan từ người dùng. Hy vọng qua những thông tin chung, độc giả đã có cái nhìn chi tiết hơn về sản phẩm này và xem xét lựa chọn cho tổ ấm của mình trong thời gian tới.
                         </p>
                         <br>
                         <div class="col-lg-12 col-12" style="text-align: center;">

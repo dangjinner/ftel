@@ -14,7 +14,7 @@
     <label class="control-label required" for="current-slug">Permalink:</label>
     <span id="sample-page-permalink" class="d-inline-block">
     <a class="permalink" target="_blank" href="#">
-    <span class="default-slug">https://fpttelecom.net.vn/<span id="editable-page-name">{{ $page->slug ?? ''}}</span></span>
+    <span class="default-slug">https://ftel.vn/<span id="editable-page-name">{{ $page->slug ?? ''}}</span></span>
     </a>
     </span>
     <span id="edit-slug-buttons">
@@ -24,6 +24,6 @@
     </span>
     </div>
     <input type="hidden" id="current-page-slug" name="current-slug" value="{{ $page->slug ?? '' }}">
-    <div data-url="{{ route('admin.pages.ajax.slug') }}" data-view="https://fpttelecom.net.vn/" id="page_slug_id" data-id="{{ $page->id ?? 0 }}"></div>
+    <div data-url="{{ route('admin.pages.ajax.slug') }}" data-view="https://ftel.vn/" id="page_slug_id" data-id="{{ $page->id ?? 0 }}"></div>
 </div>
 {{ Form::wysiwyg('body', null, $errors, $page, ['labelCol' => 0]) }}

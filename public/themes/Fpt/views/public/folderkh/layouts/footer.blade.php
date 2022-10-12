@@ -195,7 +195,7 @@
                                 <img class="" src="{{ v(theme::url('assets/images/footer_logo.png')) }}" alt="Logo FPT Telecom">
                             </a>
                             <p>
-                                © 2018 <a href="https://fpttelecom.net.vn/">FPT Telecom</a> - Designed by
+                                © 2018 <a href="https://ftel.vn/">FPT Telecom</a> - Designed by
                                 <a href="https://webmaster.com.vn/">Webmaster Việt Nam</a>
                             </p>
                         </div>

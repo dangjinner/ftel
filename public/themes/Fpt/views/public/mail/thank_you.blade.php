@@ -36,14 +36,14 @@
        <div class="jumbotron text-center">
            <h1 class="display-3">Thank You!</h1>
            <i class="fa fa-check size-xl"></i>
-           <p class="lead"><strong>Bạn đã đăng ký thành công. Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất có thể.<br> Thank you who have used the services of <a href="https://fpttelecom.net.vn/" style="color: #034ea2;"> FPT Telecom!</a></strong> </p>
+           <p class="lead"><strong>Bạn đã đăng ký thành công. Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất có thể.<br> Thank you who have used the services of <a href="https://ftel.vn/" style="color: #034ea2;"> FPT Telecom!</a></strong> </p>
            <hr>
            <p>
-            Hotline: <a href="tel:0978888659">0978888659</a> -  <a href="https://fpttelecom.net.vn/">Back to Home</a>
+            Hotline: <a href="tel:0978888659">0978888659</a> -  <a href="https://ftel.vn/">Back to Home</a>
            </p>
            
            <p class="lead" style="margin-top: 10px;">
-             <a class="btn btn-primary btn-sm" href="https://fpttelecom.net.vn/" role="button"><i class="fa fa-home" ></i></a>
+             <a class="btn btn-primary btn-sm" href="https://ftel.vn/" role="button"><i class="fa fa-home" ></i></a>
            </p>
          </div>
     </section>

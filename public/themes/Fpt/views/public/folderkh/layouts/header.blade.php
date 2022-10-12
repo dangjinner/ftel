@@ -159,7 +159,7 @@
                     <ul class="list-group list-group-horizontal-xl">
                         <li class="active "><a href="{{ route('pages.individualFiber') }}" title="Khách hàng cá nhân">Khách hàng cá nhân</a></li>
                         <li><a href="{{ route('pages.enterpriseFiber') }}" title="Khách hàng doanh nghiệp">Khách hàng doanh nghiệp</a></li>
-                        <li><a href="https://fpttelecom.net.vn/gioi-thieu-ve-fpttelecom" title="Về FPT Telecom">Về FPT Telecom</a></li>
+                        <li><a href="https://ftel.vn/gioi-thieu-ve-fpttelecom" title="Về FPT Telecom">Về FPT Telecom</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-1 col-md-2 col-lg-3 header__2">

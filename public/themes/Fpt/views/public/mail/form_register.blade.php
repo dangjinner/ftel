@@ -23,7 +23,7 @@
 @endsection
 @section('content')
 <div class="single-banner" style="margin-bottom: 30px;">
-    <img src="https://fpttelecom.net.vn/storage/media/OKZay0uJNsx2ICACVfxObxnu2Fl9n9yvLy2NpA4j.png" alt="" class="img-fluid">
+    <img src="https://ftel.vn/storage/media/OKZay0uJNsx2ICACVfxObxnu2Fl9n9yvLy2NpA4j.png" alt="" class="img-fluid">
 </div>
 <main class="col-md-8 col-md-offset-2 center">
 

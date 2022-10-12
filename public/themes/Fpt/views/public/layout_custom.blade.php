@@ -12,10 +12,10 @@
     <meta name="keywords" content="{{ isset($keywords) ? $keywords : '' }}"> --}}
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!--<meta property="og:type" content="website" />-->
-    <!--<meta property="og:url" content="https://fpttelecom.net.vn/" />-->
+    <!--<meta property="og:url" content="https://ftel.vn/" />-->
     <!--<meta property="og:title" content="Lắp mạng FPT - FPT Telecom - Công ty Cổ phần Viễn thông FPT - FPT Telecom" />-->
     <!--<meta property="og:description" content="Website chính thức cung cấp đầy đủ, chính xác thông tin về khuyến mại lắp mạng FPT, Truyền hình FPT, FPT Play Box, FPT Camera, FPT Internet, FPT iHome - FPT Telecom!" />-->
-    <!--<meta property="og:image" content="https://fpttelecom.net.vn/themes/fpt/assets/images/logo.png" />-->
+    <!--<meta property="og:image" content="https://ftel.vn/themes/fpt/assets/images/logo.png" />-->
     <!--<meta property="og:locale" content="vi_VN" />-->
     <meta property="fb:app_id" content="151028583643197" />
     <meta property="fb:admins" content="100005895009679" />
