@@ -61,8 +61,8 @@
                         </div>
                         <!-- Offcanvas Menu End -->
                         <div class="offcanvas_footer">
-                            <span><a href="mailto:Longtv6@fpt.com.vn"><i class="fa fa-envelope-o"></i>
-                                    Longtv6@fpt.com.vn</a></span>
+                            <span><a href="mailto:"><i class="fa fa-envelope-o"></i>
+                                    </a></span>
                             <div class="footer_social">
                                 <ul class="d-flex">
                                     <li>

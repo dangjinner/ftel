@@ -1381,7 +1381,7 @@ class PageController
         // $email_to = [
         //     'info@webmaster.com.vn',
         //     'hanhpt7@fpt.com.vn',
-        //     'longtv6@fpt.com.vn',
+        //     '',
         // ];
 
         // Mail::to($email_to)->send(new SendMail($data,$provinces,$district));
