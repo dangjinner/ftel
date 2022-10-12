@@ -116,8 +116,9 @@ class HomeController
             $utmTerm = request()->input('utm_term') ?? '';
             $utmContent = request()->input('utm_content') ?? '';
             $ipAddress = request()->ip();
+            $currentURL = request()->input('current_url');
             $this->google_sheet_adsen->saveDataToSheet([
-                [$currentDate, $name, $phone, $address, $service ,$message, $utmSource, $utmMedium, $utmCapaign, $utmTerm,  $utmContent, $ipAddress]
+                [$currentDate, $name, $phone, $address, $service ,$message, $utmSource, $utmMedium, $utmCapaign, $utmTerm,  $utmContent, $ipAddress,  $currentURL]
                 // [$currentDate, $name, $phone, $address, $service ,$message]
             ]);
 
