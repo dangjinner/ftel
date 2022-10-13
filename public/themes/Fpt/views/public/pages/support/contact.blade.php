@@ -267,7 +267,7 @@
 @section('script')
 {{-- AIzaSyAFzPNhREuUZn3Ppl16zaMsJCys1HbmwCM --}}
 <script async defer
-    src="https://maps.googleapis.com/maps/api/js?v=3.33&key=AIzaSyAYGqg6-BEV97_FSW1GPbjDvsL1l8ldFWs&libraries=places&callback=initMap&language=vi">
+    src="https://maps.googleapis.com/maps/api/js?v=3.33&key=AIzaSyBbXUP_zG6YVRItVpg4_e8DZvj-JctbGwY&libraries=places&callback=initMap&language=vi">
 </script>
 {{-- <script src="{{ v(theme::url('assets/js/storeLocators.js')) }}"></script> --}}
 <script src="{{ v(theme::url('assets/js/province.js')) }}"></script>
@@ -361,7 +361,7 @@
 
     function setUserLocator(pos) {
 
-        $.getJSON('https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyAYGqg6-BEV97_FSW1GPbjDvsL1l8ldFWs&latlng=' + pos.lat +  ',' + pos.lng  + '&sensor=false', null, function (data) {
+        $.getJSON('https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyBbXUP_zG6YVRItVpg4_e8DZvj-JctbGwY&latlng=' + pos.lat +  ',' + pos.lng  + '&sensor=false', null, function (data) {
 
             if (!data.error_message) {
 
