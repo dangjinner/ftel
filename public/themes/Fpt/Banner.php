@@ -74,6 +74,57 @@ class Banner
     {
         return self::findByName('fpt_service_banner_canhan10');
     }
+    
+    // Internet Lux
+     public static function getBannerInternetLux1()
+     {
+         return self::findByName('fpt_service_banner_internet_lux_1');
+     }
+ 
+     public static function getBannerInternetLux2()
+     {
+         return self::findByName('fpt_service_banner_internet_lux_2');
+     }
+ 
+     public static function getBannerInternetLux3()
+     {
+         return self::findByName('fpt_service_banner_internet_lux_3');
+     }
+ 
+     public static function getBannerInternetLux4()
+     {
+         return self::findByName('fpt_service_banner_internet_lux_4');
+     }
+ 
+     public static function getBannerInternetLux5()
+     {
+         return self::findByName('fpt_service_banner_internet_lux_5');
+     }
+ 
+     public static function getBannerInternetLux6()
+     {
+         return self::findByName('fpt_service_banner_internet_lux_6');
+     }
+ 
+     public static function getBannerInternetLux7()
+     {
+         return self::findByName('fpt_service_banner_internet_lux_7');
+     }
+ 
+     public static function getBannerInternetLux8()
+     {
+         return self::findByName('fpt_service_banner_internet_lux_8');
+     }
+ 
+     public static function getBannerInternetLux9()
+     {
+         return self::findByName('fpt_service_banner_internet_lux_9');
+     }
+ 
+     public static function getBannerInternetLux10()
+     {
+         return self::findByName('fpt_service_banner_internet_lux_10');
+     }
 
     // Chức năng doanh nghiệp
     public static function getBannerFeatureEenterprise1()

@@ -59,7 +59,7 @@ Route::get('san-pham-dich-vu/internet-fpt', function(){
 Route::get('san-pham-dich-vu/internet-fpt/cap-quang-ca-nhan', 'PageController@individualFiber')->name('pages.individualFiber');
 Route::get('san-pham-dich-vu/internet-fpt/cap-quang-doanh-nghiep', 'PageController@enterpriseFiber')->name('pages.enterpriseFiber');
 Route::get('san-pham-dich-vu/internet-fpt/net-truyen-hinh-fpt', 'PageController@netTv')->name('pages.netTv');
-
+Route::get('san-pham-dich-vu/internet-fpt/lux', 'PageController@internetLux')->name('pages.lux');
 
 // Route::get('san-pham-dich-vu/truyen-hinh-fpt', 'PageController@maxyTv')->name('pages.maxyTv');
 Route::get('san-pham-dich-vu/truyen-hinh-fpt', 'PageController@maxy')->name('pages.maxyTv');

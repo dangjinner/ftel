@@ -65,6 +65,7 @@ return [
             'home_2' => 'Home 2',
             'feature'  => 'Feature',
             'home_section'  => 'Home Section',
+            'register_form'  => 'Register Form',
             'support_section'   => 'Support',
             'setting_seo_for_page'  => 'SEO Setting'
         ],
@@ -74,6 +75,7 @@ return [
         'footer' => 'Footer',
         'newsletter' => 'Newsletter',
         'features' => 'Features',
+        'register_form_service' => 'Service',
         'product_page' => 'Product Page',
         'social_links' => 'Social Links',
         'slider_banners' => 'Slider Banners',
@@ -91,6 +93,7 @@ return [
         'capquang_doanhnghiep'  => 'Cáp quang doanh nghiệp',
         'netfpt'                => 'NET + Truyền hình FPT',
         'goimaxy'               => 'Truyền hình FPT',
+        'internet_lux'         => 'Internet Lux',
         'fptplaybox'            => 'FPT Play Box',
         'fptplay'               => 'FPT Play',
         'section1'              => [

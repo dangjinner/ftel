@@ -282,27 +282,11 @@
                             <div class="col-lg-6 col-md-6 col-6  form-email">
                                 <select name="options_service" id="options_service" class="form-control">
                                     <option value="">Vui lòng lựa chọn dịch vụ</option>
-                                     <option value="Gói cáp quang Cá nhân"
-                                    {{ old('options_service')=="Gói cáp quang Cá nhân" ? 'selected' : '' }}>
-                                          Gói cáp quang Cá nhân</option>
-                                     <option value="Gói cáp quang Doanh nghiệp"
-                                    {{ old('options_service')=="Gói cáp quang Doanh nghiệp" ? 'selected' : '' }}>
-                                         Gói cáp quang Doanh nghiệp</option>
-                                    <option value="Truyền hình FPT"
-                                    {{ old('options_service')=="Truyền hình FPT" ? 'selected' : '' }}>Truyền hình FPT </option>
-                                    <option value="Combo Internet + Truyền hình FPT"
-                                    {{ old('options_service')=="Combo Internet + Truyền hình FPT" ? 'selected' : '' }}>Combo Internet + Truyền
-                                        hình FPT</option>
-                                    <option value="FPT Camera"
-                                    {{ old('options_service')=="FPT Camera" ? 'selected' : '' }}>FPT Camera</option>
-                                    <option value="Combo Internet + Camera"
-                                    {{ old('options_service')=="Combo Internet + Camera" ? 'selected' : '' }}>Combo Internet + Camera</option>
-                                    <option value="FPT Play Box"
-                                    {{ old('options_service')=="FPT Play Box" ? 'selected' : '' }}>FPT Play Box</option>
-                                    <option value="FPT iHome"
-                                    {{ old('options_service')=="FPT iHome" ? 'selected' : '' }}>FPT iHome</option>
-                                    <option value="Dịch vụ khác"
-                                    {{ old('options_service')=="Dịch vụ khác" ? 'selected' : '' }}>Dịch vụ khác</option>
+                                   @foreach($registerServiceOptions as $option)
+                                        <option value="{{ $option }}"
+                                        {{ old('options_service') == $option ? 'selected' : '' }}>
+                                            {{$option}}</option>
+                                    @endforeach
                                 </select>
                                 @if (isset($errors) && $errors->first('options_service'))
                                 <span class="help-block text-danger">{!! $errors->first('options_service') !!}</span>

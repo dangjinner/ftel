@@ -21,6 +21,7 @@ class LayoutComposer {
             // 'footerLogo' => $this->getFooterLogo(),
             // 'servicesThumbnail' => $this->getServicesThumbnail(setting('footer_services_thumbnail')),
             'primaryMenu' => $this->getPrimaryMenu(),
+            'registerServiceOptions' => $this->getRegisterServiceOption(),
         ]);
     }
 
@@ -67,5 +68,15 @@ class LayoutComposer {
         return $files;     
     }
 
-   
+     public function getRegisterServiceOption()
+    {
+        $services = [];
+        for($i = 1; $i <= 10; $i++) {
+             $service = setting('register_form_service_option_'.$i);
+             if($service) {
+                $services[] = $service;
+             }
+        }
+        return $services;
+    }
 }

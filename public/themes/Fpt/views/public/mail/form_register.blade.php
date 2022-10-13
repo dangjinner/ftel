@@ -151,18 +151,11 @@
                                             <select name="ward" onchange="Check.changeWard(this)" class="form-control"
                                                 id="ward">
                                                 <option value="">-- Chọn sản phẩm dịch vụ --</option>
-                                                 <option value="Gói cáp quang Cá nhân">
-                                                     Gói cáp quang Cá nhân</option>
-                                                 <option value="Gói cáp quang Doanh nghiệp">
-                                                     Gói cáp quang Doanh nghiệp</option>
-                                                <option value="Truyền hình FPT ">Truyền hình FPT </option>
-                                                <option value="Combo Internet + Truyền hình FPT">Combo Internet + Truyền
-                                                    hình FPT</option>
-                                                <option value="FPT Camera">FPT Camera</option>
-                                                <option value="Combo Internet + Camera">Combo Internet + Camera</option>
-                                                <option value="FPT Play Box">FPT Play Box</option>
-                                                <option value="FPT iHome">FPT iHome</option>
-                                                <option value="Dịch vụ khác">Dịch vụ khác</option>
+                                               @foreach($registerServiceOptions as $option)
+                                                    <option value="{{ $option }}"
+                                                    {{ old('options_service') == $option ? 'selected' : '' }}>
+                                                        {{$option}}</option>
+                                                @endforeach
                                             </select>
                                         </div>
                                         @if($errors->has('ward'))

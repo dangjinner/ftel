@@ -37,9 +37,13 @@ class FptTabs extends Tabs
             ->add($this->sectionFeatureCapQuangCaNhan())
             ->add($this->sectionFeatureCapQuangDoanhNghiep())
             ->add($this->sectionFeatureNetFpt())
+            ->add($this->sectionFeatureInternetLux())
             ->add($this->sectionFeatureGoiMaxy())
             ->add($this->sectionFeatureFptPlayBox())
             ->add($this->sectionFeatureFptPlay());
+            
+         $this->group('register_form', trans('fpt::fpt.tabs.group.register_form'))
+            ->add($this->registerFormService());
 
         $this->group('home_section', trans('fpt::fpt.tabs.group.home_section'))
             ->add($this->section1());
@@ -346,6 +350,22 @@ class FptTabs extends Tabs
             $tab->view('admin.fpt.tabs.social_links');
         });
     }
+    
+     private function sectionFeatureInternetLux()
+    {
+        $data = [];
+
+        for ($i=1; $i <= 10; $i++) {
+            $func = 'getBannerInternetLux'.$i;
+            $data['banner'.$i] = Banner::$func();
+        }
+        $data['tab_name'] = 'internet_lux_';
+        // dd($data);
+        return tap(new Tab('features_internet_lux', trans('fpt::fpt.tabs.internet_lux')), function (Tab $tab) use ($data){
+            $tab->weight(20);
+            $tab->view('admin.fpt.tabs.internet_lux', $data);
+        });
+    }
 
 
     private function sectionFeatureCapQuangCaNhan()
@@ -443,6 +463,14 @@ class FptTabs extends Tabs
         return tap(new Tab('features_fptplay', trans('fpt::fpt.tabs.fptplay')), function (Tab $tab) use ($data){
             $tab->weight(20);
             $tab->view('admin.fpt.tabs.fptplay', $data);
+        });
+    }
+    
+     private function registerFormService()
+    {
+        return tap(new Tab('register_form_service', trans('fpt::fpt.tabs.register_form_service')), function (Tab $tab) {
+            $tab->weight(1);
+            $tab->view('admin.fpt.tabs.register_form.service');
         });
     }
 

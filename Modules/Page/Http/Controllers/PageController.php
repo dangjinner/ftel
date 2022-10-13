@@ -46,6 +46,8 @@ use Modules\StoreBranch\Entities\StoreBranch;
 use Themes\Fpt\Http\Services\GoogleSheet;
 use Themes\Fpt\Http\Services\GoogleSheetAdz;
 use Themes\Fpt\Http\Services\GoogleSheetAdsen;
+use Modules\Setting\Entities\Setting;
+use Modules\Setting\Entities\SettingTranslation;
 
 class PageController
 {
@@ -227,6 +229,10 @@ class PageController
     {
         if ($slug == 'lap-mang-cap-quang-fpt-gia-re-toan-quoc') {
             return redirect()->route('pages.news.show', ['slug' => 'lap-mang-cap-quang-fpt-gia-re']);
+        }
+        
+        if ($slug == 'fpt-play-hd') {
+            return redirect()->route('pages.play');
         }
 
         // if ($slug == 'fpt-play-hd') {
@@ -1079,6 +1085,39 @@ class PageController
 
         return view('public.pages.product_and_service.individual_fiber_optic_cable', $data);
     }
+    
+     public function internetLux()
+    {
+        $features = [];
+        for ($i = 1; $i <= 10; $i++) {
+            $func = 'getBannerInternetLux' . $i;
+            $features['banner' . $i] = Banner::$func();
+        }
+        // $data['title'] = "[Cập nhật] Các gói cáp quang FPT mới nhất 2021";
+        $data['category_services'] = CategoryService::with('services')->findOrFail(25);
+        $data['features'] = $features;
+        $data['provinces'] = Province::all()->pluck('name', 'id');
+        $data['area_id'] = null;
+
+        if (request()->get('locationId')) {
+            $data['area_id'] = AreaProvince::where('province_id', request()->get('locationId'))
+                ->pluck('area_id')
+                ->toArray();
+        }
+
+        // dd($data['area_id']);
+        // SEO
+        SEO::setTitle($data['category_services']->meta->meta_title);
+        SEO::setDescription($data['category_services']->meta->meta_description);
+        SEOMeta::addKeyword($data['category_services']->meta->meta_keyword);
+        SEO::opengraph()->setUrl(url()->current());
+        SEO::opengraph()->addProperty('type', 'articles');
+        SEO::jsonLd()->addImage($data['category_services']->logo->path);
+        OpenGraph::addImage($data['category_services']->logo->path);
+        SEO::twitter()->setSite(route('home'));
+
+        return view('public.pages.product_and_service.internet_lux', $data);
+    }
 
     // public function individualFiber1()
     // {
@@ -1357,13 +1396,20 @@ class PageController
         $email = $request->get('email') ?? '---';
         $message = $request->get('note') ?? '---';
         $currentDate = date('d/m/Y H:i:s');
+        $utmSource = request()->input('utm_source') ?? '';
+        $utmMedium = request()->input('utm_medium') ?? '';
+        $utmCapaign = request()->input('utm_campaign') ?? '';
+        $utmTerm = request()->input('utm_term') ?? '';
+        $utmContent = request()->input('utm_content') ?? '';
+        $ipAddress = request()->ip();
+        $currentURL = request()->url();
 
         // $this->google_sheet_adz->saveDataToSheet([
         //     [$name, $email, $phone, $provinces, $district, $address, $housetype, $service, $message, $currentDate]
         // ]);
         
          $this->google_sheet_adsen->saveDataToSheet([
-                [$currentDate, $name, $phone, $address, $service ,$message]
+                [$currentDate, $name, $phone, $address, $service ,$message, $utmSource, $utmMedium, $utmCapaign, $utmTerm,  $utmContent, $ipAddress,  $currentURL]
         ]);
 
 
