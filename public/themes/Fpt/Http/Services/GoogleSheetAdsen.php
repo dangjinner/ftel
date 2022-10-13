@@ -28,7 +28,7 @@ class GoogleSheetAdsen
     public function readGoogleSheet()
     {
         $dimensions = $this->getDimensions($this->spreadSheetId);
-        $range = 'DangKy!A1:' . $dimensions['colCount'];
+        $range = 'FTEL!A1:' . $dimensions['colCount'];
         $data = $this->googleSheetService
             ->spreadsheets_values
             ->batchGet($this->spreadSheetId, ['ranges' => $range]);
@@ -58,7 +58,7 @@ class GoogleSheetAdsen
     {
         $rowDimensions = $this->googleSheetService->spreadsheets_values->batchGet(
             $spreadSheetId,
-            ['ranges' => 'DangKy!A:A', 'majorDimension' => 'COLUMNS']
+            ['ranges' => 'FTEL!A:A', 'majorDimension' => 'COLUMNS']
         );
 
         //if data is present at nth row, it will return array till nth row
@@ -73,7 +73,7 @@ class GoogleSheetAdsen
 
         $colDimensions = $this->googleSheetService->spreadsheets_values->batchGet(
             $spreadSheetId,
-            ['ranges' => 'DangKy!1:1', 'majorDimension' => 'ROWS']
+            ['ranges' => 'FTEL!1:1', 'majorDimension' => 'ROWS']
         );
 
         //if data is present at nth col, it will return array till nth col
