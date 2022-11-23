@@ -21,6 +21,7 @@
                         <div class="col-md-9">
                             <select id="select-shortcode">
                                 <option value="">-- Choose shortcode --</option>
+                                <option value="[contact_form_custom]">Contact Form</option>
                                 <option value="[camera_prices]">Camera Prices</option>
                             </select>
                         </div>
@@ -51,6 +52,10 @@
         shortCodeSelected = value;
         if(value === '[camera_prices]') {
             $("input[name=render_shortcode]").val(`[camera_prices]`);
+        }
+
+        if(value == "[contact_form_custom]") {
+            $("input[name=render_shortcode]").val(`[contact_form_custom]`);
         }
 
         if(value === '') {
