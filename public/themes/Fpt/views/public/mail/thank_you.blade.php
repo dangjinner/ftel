@@ -36,21 +36,21 @@
        <div class="jumbotron text-center">
            <h1 class="display-3">Thank You!</h1>
            <i class="fa fa-check size-xl"></i>
-           <p class="lead"><strong>Bạn đã đăng ký thành công. Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất có thể.<br> Thank you who have used the services of <a href="https://ftel.vn/" style="color: #034ea2;"> FPT Telecom!</a></strong> </p>
+           <p class="lead"><strong>Bạn đã đăng ký thành công. Chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất có thể.<br> Thank you who have used the services of <a href="/" style="color: #034ea2;"> FPT Telecom!</a></strong> </p>
            <hr>
            <p>
-            Hotline: <a href="tel:0978888659">0978888659</a> -  <a href="https://ftel.vn/">Back to Home</a>
+            Hotline: <a href="tel:{{ setting('fpt_hotline') }}">{{ setting('fpt_hotline') }}</a> -  <a href="/">Back to Home</a>
            </p>
-           
+
            <p class="lead" style="margin-top: 10px;">
-             <a class="btn btn-primary btn-sm" href="https://ftel.vn/" role="button"><i class="fa fa-home" ></i></a>
+             <a class="btn btn-primary btn-sm" href="/" role="button"><i class="fa fa-home" ></i></a>
            </p>
          </div>
     </section>
     <!-- <section class="formsignin">
        <div class="container">
           <div class="row">
-             
+
              <div class="block-title block__orange">
                 <h2>
                 <span class="block__image">
@@ -59,7 +59,7 @@
                 THÔNG TIN KHÁCH HÀNG
                 </h2>
              </div>
-             
+
           </div>
           <div class="row formsignin__row">
              <div class="col-lg-6">
@@ -97,7 +97,7 @@
     <section class="formsignin">
        <div class="container">
           <div class="row">
-             
+
              <div class="block-title block__orange">
                 <h2>
                 <span class="block__image">
@@ -106,7 +106,7 @@
                 THÔNG TIN ĐỊA CHỈ LẮP ĐẶT
                 </h2>
              </div>
-             
+
           </div>
           <div class="row formsignin__row">
              <div class="col-lg-6">
@@ -116,10 +116,10 @@
                    </div>
                    <div class="col-lg-8 formsignin__col">
                       <select class="form-control" id="exampleFormControlSelect1">
-                         
+
                          <option value="HNI">Hà Nội</option>
                          <option value="HCM">Hồ Chí Minh</option>
-                         
+
                          <option value="HGG">Hà Giang</option>
                          <option value="CBG">Cao Bằng</option>
                          <option value="BKN">Bắc Kạn</option>
@@ -168,7 +168,7 @@
                          <option value="BDG">Bình Dương</option>
                          <option value="DNI">Đồng Nai</option>
                          <option value="VTU">Bà Rịa - Vũng Tàu</option>
-                         
+
                          <option value="LAN">Long An</option>
                          <option value="TGG">Tiền Giang</option>
                          <option value="BTE">Bến Tre</option>
@@ -182,8 +182,8 @@
                          <option value="STG">Sóc Trăng</option>
                          <option value="BLU">Bạc Liêu</option>
                          <option value="CMU">Cà Mau</option>
-                         
-                         
+
+
                       </select>
                    </div>
                    <div class="col-lg-4 formsignin__col">
@@ -224,7 +224,7 @@
                       <select class="form-control" id="exampleFormControlSelect1">
                          <option>Nhà riêng</option>
                          <option>Chung cư</option>
-                     
+
                       </select>
                    </div>
                    <div class="col-lg-4 formsignin__col">
@@ -233,7 +233,7 @@
                    <div class="col-lg-8 formsignin__col">
                       <input type="text" class="form-control" placeholder="Địa chỉ" id="exampleInputEmail1" aria-describedby="emailHelp">
                    </div>
-                   
+
                 </div>
              </div>
 
@@ -244,7 +244,7 @@
              </p>
           </div>
        </div>
-     
+
     </section>
     <section class="map">
 

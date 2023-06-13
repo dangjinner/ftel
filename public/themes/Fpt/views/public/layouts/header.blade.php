@@ -98,7 +98,7 @@
                                 title="Khách hàng cá nhân">Khách hàng cá nhân</a></li>
                         <li><a href="{{ route('pages.enterpriseFiber') }}" title="Khách hàng doanh nghiệp">Khách hàng
                                 doanh nghiệp</a></li>
-                        <li><a href="https://ftel.vn/gioi-thieu-ve-fpttelecom" title="Về FPT Telecom">Về FPT
+                        <li><a href="/gioi-thieu-ve-fpttelecom" title="Về FPT Telecom">Về FPT
                                 Telecom</a></li>
                     </ul>
                 </div>

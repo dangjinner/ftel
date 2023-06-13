@@ -214,7 +214,7 @@
 
                     <div class="pad-l-r-5 pad-hotline">
                         <p class="text-uppercase">Hotline bán hàng</p>
-                        <a class="number-call" href="{{setting('fpt_setting_hotline_sale_support_url')}}">0978888659</a>
+                        <a class="number-call" href="{{setting('fpt_setting_hotline_sale_support_url')}}">{{ setting('fpt_hotline') }}</a>
                     </div>
                 </div>
 

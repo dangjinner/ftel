@@ -17,13 +17,13 @@
         padding: 2.3px;
         transform: rotate(45deg);
     }
-    
-  
+
+
 </style>
 @endsection
 @section('content')
 <div class="single-banner" style="margin-bottom: 30px;">
-    <img src="https://ftel.vn/storage/media/OKZay0uJNsx2ICACVfxObxnu2Fl9n9yvLy2NpA4j.png" alt="" class="img-fluid">
+    <img src="/storage/media/OKZay0uJNsx2ICACVfxObxnu2Fl9n9yvLy2NpA4j.png" alt="" class="img-fluid">
 </div>
 <main class="col-md-8 col-md-offset-2 center">
 
@@ -226,8 +226,8 @@
         </form>
         <div class="row" style="margin-top: 5rem; background-color: #e9ecef; padding: 1rem">
             <div class="col-lg-12 col-md-12 col-sm-12 text-center mgt30">
-                <span class="text-default" style="font-size: 18px">Bạn gặp khó khăn khi đặt hàng ? Gọi ngay 
-                <span style="color: red">0978888659</span> để được hỗ trợ.</span>
+                <span class="text-default" style="font-size: 18px">Bạn gặp khó khăn khi đặt hàng ? Gọi ngay
+                <span style="color: red">{{ setting('fpt_hotline') }}</span> để được hỗ trợ.</span>
             </div>
         </div>
     </section>
@@ -248,7 +248,7 @@
                             $.each(data ,function (key,value) {
                                 $("#district").append(`<option value="${key}">${value}</option>`);
                             });
-                          
+
 
                         } else {
                             $("#district").empty();

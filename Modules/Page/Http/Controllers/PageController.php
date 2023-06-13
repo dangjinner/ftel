@@ -230,7 +230,7 @@ class PageController
         if ($slug == 'lap-mang-cap-quang-fpt-gia-re-toan-quoc') {
             return redirect()->route('pages.news.show', ['slug' => 'lap-mang-cap-quang-fpt-gia-re']);
         }
-        
+
         if ($slug == 'fpt-play-hd') {
             return redirect()->route('pages.play');
         }
@@ -265,7 +265,7 @@ class PageController
             $isPostSlug = false;
         }
         if ($page == null) {
-            return redirect('https://ftel.vn/', 301);
+            return redirect('/', 301);
         }
         SEO::setTitle($page->meta->meta_title);
         SEO::setDescription($page->meta->meta_description);
@@ -295,8 +295,8 @@ class PageController
         } else {
             return view('public.pages.custom_page', $data);
         }
- 
-        
+
+
     }
 
     public function contact()
@@ -307,7 +307,7 @@ class PageController
         SEOMeta::addKeyword(setting('meta_keyword_of_supportTransactionLocation') ?? 'FPT Telecom - Hỗ trợ - Liên hệ 24/7 - Điểm giao dịch');
         SEO::opengraph()->setUrl(url()->current());
         SEO::twitter()->setSite(route('home'));
-        SEO::jsonLd()->addImage('https://ftel.vn/themes/fpt/assets/images/logo.png?v=60cc09b3d36e8');
+        SEO::jsonLd()->addImage('/themes/fpt/assets/images/logo.png?v=60cc09b3d36e8');
 
         // $data['title'] = 'FPT Telecom - Hỗ trợ - Liên hệ 24/7 - Điểm giao dịch';
         $data['provinces'] = Province::all()->pluck('name', 'id');
@@ -419,7 +419,7 @@ class PageController
         SEOMeta::addKeyword(setting('meta_keyword_of_supportProcedureGuide') ?? 'FPT Telecom - Hỗ trợ - Hỗ trợ thông tin - Hướng dẫn thủ tục');
         SEO::opengraph()->setUrl(url()->current());
         SEO::twitter()->setSite(route('home'));
-        SEO::jsonLd()->addImage('https://ftel.vn/themes/fpt/assets/images/logo.png?v=60cc09b3d36e8');
+        SEO::jsonLd()->addImage('/themes/fpt/assets/images/logo.png?v=60cc09b3d36e8');
 
         $polices = [];
         for ($i = 1; $i <= 11; $i++) {
@@ -452,7 +452,7 @@ class PageController
         SEOMeta::addKeyword(setting('meta_keyword_of_privacyPolicy') ?? 'FPT Telecom - Hỗ trợ - Hỗ trợ thông tin - Điều khoản bảo mật');
         SEO::opengraph()->setUrl(url()->current());
         SEO::twitter()->setSite(route('home'));
-        SEO::jsonLd()->addImage('https://ftel.vn/themes/fpt/assets/images/logo.png?v=60cc09b3d36e8');
+        SEO::jsonLd()->addImage('/themes/fpt/assets/images/logo.png?v=60cc09b3d36e8');
 
         // $data['title'] = 'FPT Telecom - Hỗ trợ - Hỗ trợ thông tin - Điều khoản bảo mật';
         return view('public.pages.support.privacyPolicy', $data);
@@ -660,8 +660,8 @@ class PageController
         SEO::setDescription(setting('meta_description_of_news') ?? 'Tin tức - Cập nhật các tin tức mới nhất FPT Telecom!');
         SEOMeta::addKeyword(setting('meta_keyword_of_news') ?? 'Tin tức - Cập nhật các tin tức mới nhất FPT Telecom!');
         SEO::opengraph()->setUrl(url()->current());
-        SEO::jsonLd()->addImage('https://ftel.vn/themes/fpt/assets/images/logo.png?v=60cc09b3d36e8');
-        OpenGraph::addImage('https://ftel.vn/themes/fpt/assets/images/logo.png?v=60cc09b3d36e8');
+        SEO::jsonLd()->addImage('/themes/fpt/assets/images/logo.png?v=60cc09b3d36e8');
+        OpenGraph::addImage('/themes/fpt/assets/images/logo.png?v=60cc09b3d36e8');
         SEO::twitter()->setSite(route('home'));
 
         $categories = Group::with('childrenRecursive')->where('id', 268)->get();
@@ -1085,7 +1085,7 @@ class PageController
 
         return view('public.pages.product_and_service.individual_fiber_optic_cable', $data);
     }
-    
+
      public function internetLux()
     {
         $features = [];
@@ -1336,7 +1336,7 @@ class PageController
         SEOMeta::addKeyword(setting('meta_keyword_of_onlineService') ?? 'Dịch vụ online');
         SEO::opengraph()->setUrl(url()->current());
         SEO::twitter()->setSite(route('home'));
-        SEO::jsonLd()->addImage('https://ftel.vn/themes/fpt/assets/images/logo.png?v=60cc09b3d36e8');
+        SEO::jsonLd()->addImage('/themes/fpt/assets/images/logo.png?v=60cc09b3d36e8');
 
         // $data['title'] = "Dịch vụ online";
         return view('public.pages.product_and_service.online_service', $data);
@@ -1361,7 +1361,7 @@ class PageController
         SEOMeta::addKeyword(setting('meta_keyword_of_registerInformation') ?? 'Đăng ký thông tin lắp đặt');
         SEO::opengraph()->setUrl(url()->current());
         SEO::twitter()->setSite(route('home'));
-        SEO::jsonLd()->addImage('https://ftel.vn/themes/fpt/assets/images/logo.png?v=60cc09b3d36e8');
+        SEO::jsonLd()->addImage('/themes/fpt/assets/images/logo.png?v=60cc09b3d36e8');
 
         $districts = District::all();
         $provinces = Province::all();
@@ -1407,7 +1407,7 @@ class PageController
         // $this->google_sheet_adz->saveDataToSheet([
         //     [$name, $email, $phone, $provinces, $district, $address, $housetype, $service, $message, $currentDate]
         // ]);
-        
+
          $this->google_sheet_adsen->saveDataToSheet([
                 [$currentDate, $name, $phone, $address, $service ,$message, $utmSource, $utmMedium, $utmCapaign, $utmTerm,  $utmContent, $ipAddress,  $currentURL]
         ]);
@@ -1446,7 +1446,7 @@ class PageController
         if (isset($lib[$newslug])) {
             return redirect($lib[$newslug], 301);
         } else {
-            // return redirect('https://ftel.vn/', 301 );
+            // return redirect('/', 301 );
         }
 
         return view('public.pages.register', $data);
@@ -1459,7 +1459,7 @@ class PageController
         if (isset($lib[$newslug])) {
             return redirect($lib[$newslug], 301);
         } else {
-            // return redirect('https://ftel.vn/', 301 );
+            // return redirect('/', 301 );
         }
 
         return view('public.pages.register', $data);

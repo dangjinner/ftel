@@ -11,12 +11,6 @@
     <meta name="description" content="{{ isset($description) ? $description : '' }}">
     <meta name="keywords" content="{{ isset($keywords) ? $keywords : '' }}"> --}}
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!--<meta property="og:type" content="website" />-->
-    <!--<meta property="og:url" content="https://ftel.vn/" />-->
-    <!--<meta property="og:title" content="Lắp mạng FPT - FPT Telecom - Công ty Cổ phần Viễn thông FPT - FPT Telecom" />-->
-    <!--<meta property="og:description" content="Website chính thức cung cấp đầy đủ, chính xác thông tin về khuyến mại lắp mạng FPT, Truyền hình FPT, FPT Play Box, FPT Camera, FPT Internet, FPT iHome - FPT Telecom!" />-->
-    <!--<meta property="og:image" content="https://ftel.vn/themes/fpt/assets/images/logo.png" />-->
-    <!--<meta property="og:locale" content="vi_VN" />-->
     <meta property="fb:app_id" content="151028583643197" />
     <meta property="fb:admins" content="100005895009679" />
     <meta property="fb:admins" content="100002259878240" />
@@ -173,7 +167,7 @@
                 justify-content: center;
                 align-content: center;
         }
-        
+
         .pay .pay_form .form__content .form_submit .fa-spin-loading-form {
                 background: none;
                 color:#FFF;
@@ -186,18 +180,18 @@
             color: #dc3545 !important;
             font-size: 14px;
         }
-        
+
          @media (max-width: 747px) {
                  #register_custom_modal .modal-content {
                     width: 47%;
                 }
-                
+
                 #register_custom_modal .col-md-6 {
                     flex: 0 0 100%;
                     max-width: 100%;
                 }
         }
-        
+
         @media (max-width: 650px) {
         footer .always-on .zalo-contact {
                 position: fixed;
@@ -206,7 +200,7 @@
                 z-index: 100;
             }
         }
-        
+
         @media (max-width: 650px) {
             footer .always-on > div.group-call {
                 position: fixed;
@@ -215,7 +209,7 @@
                 z-index: 200;
             }
         }
-        
+
     </style>
     @yield('css')
 
@@ -430,22 +424,22 @@
                     }
                 }
             });
-            
-            
+
+
             $('#formdk').submit(function(e) {
                      e.preventDefault();
                     $('.btn-submit-custom-form').html('<i class="fa fa-refresh fa-spin fa-spin-loading-form"></i> Đang đăng ký');
-                    $(this).unbind('submit').submit(); 
+                    $(this).unbind('submit').submit();
             });
-            
+
              $('.register_custom_modal').submit(function(e) {
                      e.preventDefault();
                     $('.btn-submit-custom-form').html('<i class="fa fa-refresh fa-spin fa-spin-loading-form"></i> Đang đăng ký');
-                    $(this).unbind('submit').submit(); 
+                    $(this).unbind('submit').submit();
             });
         });
     </script>
-    
+
 </body>
 
 </html>

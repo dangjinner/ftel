@@ -102,7 +102,7 @@
                                                 <!-- <li><a href="https://hi.fpt.vn/" target="_black">Hi FPT</a></li> -->
                                                 <li><a href="{{ route('pages.support.contact') }}">Điểm giao dịch</a>
                                                 </li>
-                                                <li><a href="tel:0978888659">Tổng đài 0978888659</a></li>
+                                                <li><a href="tel:{{ setting('fpt_hotline') }}">Tổng đài {{ setting('fpt_hotline') }}</a></li>
                                                 <li><a href="https://www.facebook.com/fpttelecom.net.vn"
                                                         target="_black">Fanpage</a></li>
                                             </ul>
@@ -159,7 +159,7 @@
                     <ul class="list-group list-group-horizontal-xl">
                         <li class="active "><a href="{{ route('pages.individualFiber') }}" title="Khách hàng cá nhân">Khách hàng cá nhân</a></li>
                         <li><a href="{{ route('pages.enterpriseFiber') }}" title="Khách hàng doanh nghiệp">Khách hàng doanh nghiệp</a></li>
-                        <li><a href="https://ftel.vn/gioi-thieu-ve-fpttelecom" title="Về FPT Telecom">Về FPT Telecom</a></li>
+                        <li><a href="/gioi-thieu-ve-fpttelecom" title="Về FPT Telecom">Về FPT Telecom</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-1 col-md-2 col-lg-3 header__2">
@@ -368,7 +368,7 @@
                                                                         FPT</a></li> -->
                                                                 <li><a href="{{ route('pages.support.contact') }}">Điểm
                                                                         giao dịch</a></li>
-                                                                <li><a href="tel:0978888659">Tổng đài 0978888659</a>
+                                                                <li><a href="tel:{{ setting('fpt_hotline') }}">Tổng đài {{ setting('fpt_hotline') }}</a>
                                                                 </li>
                                                                 <li><a href="https://www.facebook.com/fpttelecom.net.vn"
                                                                         target="_black">Fanpage</a></li>

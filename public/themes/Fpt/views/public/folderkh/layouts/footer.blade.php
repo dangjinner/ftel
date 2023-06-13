@@ -4,11 +4,11 @@
     <div class="always-on">
         <div class="group-call col-xs-12 fix-pad " style="display: none">
             <div id="group-call" class="bg-gray text-center pull-right">
-                <a  href="tel:0978888659" title="0978888659"><img src="{{ v(theme::url('assets/images/call.png')) }}" alt="Call FPT"></a>
+                <a  href="tel:{{ setting('fpt_hotline') }}" title="{{ setting('fpt_hotline') }}"><img src="{{ v(theme::url('assets/images/call.png')) }}" alt="Call FPT"></a>
             </div>
             <div id="group-call-text" class="text-number hide text-center pull-right">
                 <p>Hotline Đăng ký</p>
-                <a>0978888659</a>
+                <a>{{ setting('fpt_hotline') }}</a>
             </div>
         </div>
         <div class="group-chat col-xs-12 fix-pad ">
@@ -38,7 +38,7 @@
                                             <a href="https://www.google.com/maps/place/48+V%E1%BA%A1n+B%E1%BA%A3o,+Ng%E1%BB%8Dc+Kh%C3%A1nh,+Ba+%C4%90%C3%ACnh,+H%C3%A0+N%E1%BB%99i+100000,+Vi%E1%BB%87t+Nam/@21.0313123,105.8147063,17z/data=!3m1!4b1!4m5!3m4!1s0x3135ab0d6877eb63:0xc3b2c8454971e218!8m2!3d21.0313073!4d105.816895?hl=vi" target="_black">Địa chỉ: 48 Vạn Bảo, Ba Đình, Hà Nội</a>
                                         </li>
                                         <li>
-                                            <a href="tel:0372911111">Hotline: 0978888659</a>
+                                            <a href="tel:0372911111">Hotline: {{ setting('fpt_hotline') }}</a>
                                         </li>
                                         <li>
                                             <a href="mailto:hungtt3@fpt.com.vn">Email: hungtt3@fpt.com.vn</a>
@@ -195,7 +195,7 @@
                                 <img class="" src="{{ v(theme::url('assets/images/footer_logo.png')) }}" alt="Logo FPT Telecom">
                             </a>
                             <p>
-                                © 2018 <a href="https://ftel.vn/">FPT Telecom</a> - Designed by
+                                © 2018 <a href="/">FPT Telecom</a> - Designed by
                                 <a href="https://webmaster.com.vn/">Webmaster Việt Nam</a>
                             </p>
                         </div>

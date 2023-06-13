@@ -357,7 +357,7 @@
                                             src="{{ $item->base_image->path }}"></span>
                                 </div>
                                 <div class="price">
-                                    
+
                                     <!--@if($item->price_area_discount != null)-->
 
                                     <!--        <h4>{{ number_format($item->price_area_discount,0,",",".") }}-->
@@ -662,12 +662,12 @@
                     </p>
                 </div>
                 <div class="col-xs-12 col-sm-4 text-center support--center">
-                    <a href="tel:0978888659" title="Hotline bán hàng: 0978888659">
+                    <a href="tel:{{ setting('fpt_hotline') }}" title="Hotline bán hàng: {{ setting('fpt_hotline') }}">
                         <img src="{{ v(theme::url('assets/images/icon/hotline-fpt.png')) }}" alt="Hotline bán hàng FPT">
                     </a>
                     <p>
-                        <a href="tel:0978888659" title="Hotline bán hàng: 0978888659" class="text-uppercase">Hotline
-                            : 0978888659</a>
+                        <a href="tel:{{ setting('fpt_hotline') }}" title="Hotline bán hàng: {{ setting('fpt_hotline') }}" class="text-uppercase">Hotline
+                            : {{ setting('fpt_hotline') }}</a>
                     </p>
                 </div>
                 <div class="col-xs-12 col-sm-4 text-center support--right">

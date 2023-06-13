@@ -13,7 +13,7 @@
                 <a>{{ json_decode($page->custom)->phone_contact ?? "" }}</a>
             </div>
         </div>
-        
+
         @if(json_decode($page->custom)->zalo_contact ?? false)
         <div class=" col-xs-12 fix-pad zalo-contact ">
             <a href="https://zalo.me/{{ json_decode($page->custom)->zalo_contact }}"
@@ -50,7 +50,7 @@
                                 <h6>Về FPT Telecom</h6>
                                 <div class="footer_menu">
                                     <ul>
-                                        <li><a href="https://ftel.vn/gioi-thieu-ve-fpttelecom"
+                                        <li><a href="/gioi-thieu-ve-fpttelecom"
                                                 title="Giới thiệu chung">Giới thiệu chung</a></li>
                                         <li><a href="#" title="Liên kết - Thành viên">Liên kết - Thành viên</a></li>
                                         <li><a href="#" title="Khách hàng - Đối tác">Khách hàng - Đối tác</a></li>
@@ -94,7 +94,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6 col-6">
                             <div class="widgets_container">
-                                <!--<a href="https://ftel.vn/fpt-telecom-tuyen-dung-chuyen-vien-kd-tai-ha-noi">-->
+                                <!--<a href="/fpt-telecom-tuyen-dung-chuyen-vien-kd-tai-ha-noi">-->
                                 <!--    <img style="width: 250px;" class="img-fluid" src="{{ v(theme::url('assets/images/footer_new.png')) }}" alt="FPT Telecom">-->
                                 <!--</a>-->
                                 <a class="gif-thietkewebsite" href="https://webmaster.com.vn/thiet-ke-website"
@@ -144,7 +144,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a class="linkedin" href="https://zalo.me/0978888659">
+                                        <a class="linkedin" href="https://zalo.me/{{ setting('fpt_hotline') }}">
                                             <img src="{{ v(theme::url('assets/images/sc5.png')) }}" alt="Linkedin FPT">
                                         </a>
                                     </li>
@@ -249,7 +249,7 @@
                                     alt="Logo FPT Telecom">
                             </a>
                             <p>
-                                © 2018 <a href="https://ftel.vn/">FPT Telecom</a> - Designed by
+                                © 2018 <a href="/">FPT Telecom</a> - Designed by
                                 <a href="https://webmaster.com.vn/">Webmaster Việt Nam</a>
                             </p>
                         </div>

@@ -35,11 +35,11 @@
                             <a href="{{ route('pages.register') }}" title="Đăng ký Online" class="text-uppercase">Đăng ký Online</a></p>
                         </div>
                         <div class="col-xs-12 col-sm-4 text-center support--center">
-                            <a href="tel:0978888659" title="0978888659">
-                                <img  src="{{ v(theme::url('assets/images/call111.png')) }}" alt="Hotline bán hàng: 0978888659">
+                            <a href="tel:{{ setting('fpt_hotline') }}" title="{{ setting('fpt_hotline') }}">
+                                <img  src="{{ v(theme::url('assets/images/call111.png')) }}" alt="Hotline bán hàng: {{ setting('fpt_hotline') }}">
                             </a>
                             <p>
-                                <a href="tel:0978888659" title="0978888659" class="text-uppercase">Hotline : 0978888659</a>
+                                <a href="tel:{{ setting('fpt_hotline') }}" title="{{ setting('fpt_hotline') }}" class="text-uppercase">Hotline : {{ setting('fpt_hotline') }}</a>
                             </p>
                         </div>
                         <div class="col-xs-12 col-sm-4 text-center support--right">

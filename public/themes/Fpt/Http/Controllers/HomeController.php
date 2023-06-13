@@ -26,7 +26,7 @@ use Modules\Page\Entities\Page;
 
 class HomeController
 {
-    
+
     protected $google_sheet;
     protected $google_sheet_fpt;
     protected $google_sheet_adsen;
@@ -36,7 +36,7 @@ class HomeController
         $this->google_sheet_fpt = $google_sheet_fpt;
         $this->google_sheet_adsen = $google_sheet_adsen;
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -54,7 +54,7 @@ class HomeController
         SEOMeta::addKeyword(setting('meta_keyword_of_home') ?? 'lắp mạng fpt, truyền hình fpt, wifi fpt, cáp quang fpt, fpt play box, fpt camera, fpt ihome, combo internet và truyền hình, mạng fpt');
         SEO::opengraph()->setUrl(url()->current());
         SEO::twitter()->setSite(route('home'));
-        SEO::jsonLd()->addImage('https://ftel.vn/themes/fpt/assets/images/logo.png?v=60cc09b3d36e8');
+        SEO::jsonLd()->addImage('/themes/fpt/assets/images/logo.png?v=60cc09b3d36e8');
 
         $data['postsFPT'] = Group::findOrFail(258)->posts()->limit(3)->get();
         $data['postsPress'] = Group::findOrFail(259)->posts()->limit(3)->get();
@@ -74,7 +74,7 @@ class HomeController
     {
         return 'ok';
     }
-    
+
     public function customerRegister(RegisterServiceRequest $request){
         $name = $request->get('name');
         $phone = $request->get('phone');
@@ -92,7 +92,7 @@ class HomeController
             'message' => $message,
             'option_service' => $service,
             'google_sheet_link' => request()->get('google_sheet_link'),
-            
+
         ];
         $googleSheetCustom = new GoogleSheetCustom($spreadSheetId, $sheetName);
         if($sheetName !== null && $spreadSheetId !== null) {
@@ -107,7 +107,7 @@ class HomeController
         if(request()->get('email_received') !== null) {
             Mail::to($emailsReceive)->send(new RegisterOnlineMail($data));
             // $sendMail = new SendMailRegister($emailsReceive, $data);
-            // dispatch($sendMail);  
+            // dispatch($sendMail);
         } else {
             // Marketing Keywords Query Parameters
             $utmSource = request()->input('utm_source') ?? '';
@@ -122,33 +122,33 @@ class HomeController
                 // [$currentDate, $name, $phone, $address, $service ,$message]
             ]);
 
-        }   
+        }
         if(request()->get('email_received') !== null) {
             return redirect()->route('home.custom.dangkydichvu.thank', ['slug' => request()->get('slug_page')]);
         }
         return redirect()->route('pages.thankyou');
     }
-    
+
     public function customerRegisterThank()
     {
         return view('public.folderkh.thank-you');
     }
-    
+
      public function customThanksRegister($slug) {
         $page = Page::withoutGlobalScope('active')->where('slug', $slug)->first();
         return view('public.layouts_custom.thankyou_custom', ['page' => $page]);
     }
-    
+
     public function registerOnline(Request $request)
     {
-        
+
         SEO::setTitle('Đăng ký trực tuyến FPT - FPT Telecom');
         SEO::setDescription('Đăng ký trực tuyến FPT - FPT Telecom');
         SEOMeta::addKeyword('Đăng ký trực tuyến FPT - FPT Telecom');
         SEO::opengraph()->setUrl(url()->current());
         SEO::twitter()->setSite(route('home'));
-        SEO::jsonLd()->addImage('https://ftel.vn/themes/fpt/assets/images/logo.png?v=60cc09b3d36e8');
-        
+        SEO::jsonLd()->addImage('/themes/fpt/assets/images/logo.png?v=60cc09b3d36e8');
+
         $data['category_services_1'] = CategoryService::findOrFail(5)->services()->get();
         $data['category_services_2'] = CategoryService::findOrFail(6)->services()->get();
 
@@ -244,7 +244,7 @@ class HomeController
             $data['title'] = 'Đăng ký Online - Cập nhật các gói cước mới nhất FPT Telecom!';
             return view('public.folderkh.page.register_online', $data );
     }
-    
+
     public function postContactForm(RegisterServiceRequest $request)
     {
         if($this->checkSpam($request))
