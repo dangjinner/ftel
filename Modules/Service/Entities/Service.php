@@ -13,6 +13,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use Modules\CategoryService\Entities\CategoryService;
 use Modules\Service\Admin\ServiceTable;
 use Modules\Area\Entities\Area;
+use Illuminate\Database\Eloquent\Builder;
 
 class Service extends Model
 {
@@ -36,7 +37,10 @@ class Service extends Model
         'bandwidth',
         'slug',
         'category_service_id',
-        'is_hot'
+        'is_hot',
+        'title',
+        'is_show_title',
+        'status',
     ];
 
     protected $append = [
@@ -82,6 +86,11 @@ class Service extends Model
             if (! empty(request()->all())) {
                 $service->saveRelations(request()->all());
             }
+        });
+        
+        static::addGlobalScope('active', function (Builder $builder) {
+            // 1 - Active, 0 - Deactive
+            $builder->where('status', 1);
         });
     }
 

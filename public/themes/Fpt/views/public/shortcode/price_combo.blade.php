@@ -58,8 +58,12 @@
                 <div class="pricing__inner">
                     <div class="top">
                         <div>
+                             @if($item->is_show_title)
+                            {!! $item->title !!}
+                            @else
                             <div class="img-combo"><span><img alt="" src="{{ $item->base_image->path }}"></span>
                             </div>
+                            @endif
                             <div class="price">
                                 @if($area_id != null)
                                     @if ($item->areas($area_id)->count() > 0)
@@ -77,15 +81,20 @@
                                     <h4>{{ number_format($item->price->amount(),0,",",".") }}</h4>
                                 @endif
                                 <span>vnđ/ tháng</span>
-                                <p><b>{{$item->bandwidth}}</b>Mbps</p>
+                                <p><b>{{$item->bandwidth}}</b>
+                                    @if(is_numeric($item->bandwidth)) Mbps @endif
+                                </p>
                             </div>
                         </div>
                     </div>
                     {{-- <div class="top">
                         <div>
-                            <div class="img-combo"><span><img alt="Combo FPT 25MB"
-                                        src="{{ $item->base_image->path }}"></span>
+                             @if($item->is_show_title)
+                            {!! $item->title !!}
+                            @else
+                            <div class="img-combo"><span><img alt="" src="{{ $item->base_image->path }}"></span>
                             </div>
+                            @endif
                             <div class="price">
                                 @if($area_id != null)
                                 @if ($item->areas($area_id)->count() > 0)
@@ -98,7 +107,9 @@
                                 <h4>{{ number_format($item->price->amount(),0,",",".") }}</h4>
                                 @endif
                                 <span>vnđ/ tháng</span>
-                                <p><b>{{ $item->bandwidth }}</b>Mbps</p>
+                                <p><b>{{$item->bandwidth}}</b>
+                                    @if(is_numeric($item->bandwidth)) Mbps @endif
+                                </p>
                             </div>
                         </div>
                     </div> --}}

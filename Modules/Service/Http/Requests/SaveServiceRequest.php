@@ -22,7 +22,10 @@ class SaveServiceRequest extends Request
     {
         return [
             'name' => 'required',
-            'feature' => 'required'
+            'feature' => 'required',
+            'title' => 'nullable|string',
+            'is_show_title' => 'nullable|int',
+            'status' => 'nullable|int',
         ];
     }
 }

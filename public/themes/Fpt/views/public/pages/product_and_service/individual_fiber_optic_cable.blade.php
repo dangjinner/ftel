@@ -115,9 +115,12 @@
                 <div class="pricing__inner">
                     <div class="top">
                         <div>
-                            <div class="img-combo"><span><img alt=""
-                                        src="{{ $service->base_image->path }}"></span>
+                            @if($service->is_show_title)
+                            {!! $service->title !!}
+                            @else
+                            <div class="img-combo"><span><img alt="" src="{{ $service->base_image->path }}"></span>
                             </div>
+                            @endif
                             <div class="price">
                                 @if($area_id != null)
                                     @if ($service->areas($area_id)->count() > 0)
@@ -136,7 +139,9 @@
                                 @endif
                                 {{-- <h4>{{number_format($service->price->amount(),0,",",".")}}</h4> --}}
                                 <span>vnđ/ tháng</span>
-                                <p><b>{{$service->bandwidth}}</b>Mbps</p>
+                                 <p><b>{{$service->bandwidth}}</b>
+                                    @if(is_numeric($service->bandwidth)) Mbps @endif
+                                </p>
                             </div>
                         </div>
                     </div>

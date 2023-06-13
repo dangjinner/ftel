@@ -91,6 +91,49 @@
     padding-bottom: 150px;
 }
 
+
+
+footer .group-zalo-chat .bg-gray{
+    background: #0068ff;
+}
+
+footer .group-zalo-chat:hover #zalo-chat-text{
+    display: block!important;
+    position: absolute;
+    right: 0;
+    padding: 5px 0;
+    padding-right: 45px;
+}
+
+footer .group-zalo-chat #zalo-chat-text{
+    color: #fff;
+    text-align: center;
+    border-radius: 50px;
+    box-shadow: 0 0 40px -4px rgba(17,17,17,.7);
+    font-size: 26px;
+    height: 60px;
+    width: 254px;
+    background: #0068ff;
+}
+
+footer #zalo-chat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+footer #zalo-chat a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer #zalo-chat img {
+    width: 60px;
+    height: 60px;
+}
+
 @media screen and (max-width: 1250px) {
     .landing .menu-area li {
         margin: 0 25px;
@@ -421,15 +464,27 @@
 
     footer .always-on > div.group-call {
         position: fixed;
-        bottom: -6px;
-        right: calc(61.5% + 25px);
+        bottom: 100px;
+        right: 15px;
         z-index: 200;
     }
 
     footer .always-on > div.group-chat {
         position: fixed;
-        bottom: -6 px;
-        right: calc(38.5% + 15px);
+        bottom: 175px;
+        right: 15px;
         z-index: 100;
+    }
+    
+        footer .group-zalo-chat{
+        position: fixed;
+        bottom: 250px;
+        right: 15px;
+        z-index: 100;
+    }
+
+    footer #zalo-chat img {
+        width: 50px;
+        height: 50px;
     }
 }

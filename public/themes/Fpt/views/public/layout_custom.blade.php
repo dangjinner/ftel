@@ -53,6 +53,16 @@
     <link rel="stylesheet" href="{{ v(theme::url('assets/css/main.min.css')) }}">
     <link rel="stylesheet" href="{{ v(theme::url('assets/css/customize.css')) }}">
     <style>
+        @font-face {font-family: "Board of Directors W00 Bold It";
+        src: url("{{ asset('assets/font_custom/822e935dcddc46d70d16fe5d6c6a5f9e.eot') }}"); /* IE9*/
+        src: url("{{ asset('assets/font_custom/822e935dcddc46d70d16fe5d6c6a5f9e.eot?#iefix') }}") format("embedded-opentype"), /* IE6-IE8 */
+        url("{{ asset('assets/font_custom/822e935dcddc46d70d16fe5d6c6a5f9e.woff2') }}") format("woff2"), /* chrome、firefox */
+        url("{{ asset('assets/font_custom/822e935dcddc46d70d16fe5d6c6a5f9e.woff') }}") format("woff"), /* chrome、firefox */
+        url("{{ asset('assets/font_custom/822e935dcddc46d70d16fe5d6c6a5f9e.ttf') }}") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+        url("{{ asset('assets/font_custom/822e935dcddc46d70d16fe5d6c6a5f9e.svg#Board of Directors W00 Bold It') }}") format("svg"); /* iOS 4.1- */
+        }
+    </style>
+    <style>
         span.select2-container {
             transition: unset;
         }

@@ -8,5 +8,8 @@ return [
     'feature'           => 'Feature',
     'category_service'  => 'Category Service',
     'price'             => 'Price',
-    'is_hot'            => 'Hot Service'
+    'is_hot'            => 'Hot Service',
+    'title'             => 'Title',
+    'is_show_title'     => 'Show Title',
+    'status'            => 'Status',
 ];

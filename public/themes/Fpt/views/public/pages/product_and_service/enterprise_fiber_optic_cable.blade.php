@@ -115,16 +115,21 @@
                 <div class="pricing__inner">
                     <div class="top">
                         <div>
+                             @if($service->is_show_title)
+                            {!! $service->title !!}
+                            @else
                             <div class="img-combo">
-                                <span><img alt="Cáp quang FPT 100MB"
-                                        src="{{ $service->base_image->path }}"></span>
+                                <span><img alt="Cáp quang FPT 100MB" src="{{ $service->base_image->path }}"></span>
                             </div>
+                            @endif
                             <div class="price">
                                 <span class="img-package">
                                     <img src="{{ $service->base_image_icon->path }}"
                                         alt="net-ico-100.png">
                                 </span>
-                                <p><b>{{$service->bandwidth}}</b>Mbps</p>
+                                <p><b>{{$service->bandwidth}}</b>
+                                    @if(is_numeric($service->bandwidth)) Mbps @endif
+                                </p>
                             </div>
                         </div>
                     </div>

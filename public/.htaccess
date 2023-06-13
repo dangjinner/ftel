@@ -6,6 +6,9 @@
 
     RewriteEngine On
 
+    RewriteCond %{HTTP_HOST} ^www.ftel.vn/ [NC]
+    RewriteRule ^(.*)$ https://ftel.vn/$1 [L,R=301]
+
     # Redirect Trailing Slashes If Not A Folder...
     RewriteCond %{REQUEST_FILENAME} !-d
     RewriteCond %{REQUEST_URI} (.+)/$

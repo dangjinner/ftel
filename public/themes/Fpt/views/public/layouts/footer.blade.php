@@ -2,13 +2,22 @@
     <!-- Newslatter area start -->
 
     <div class="always-on">
+       <div class="group-zalo-chat col-xs-12 fix-pad ">
+            <div id="zalo-chat" class="bg-gray text-center pull-right">
+                <a href="https://zalo.me/{{ setting('fpt_zalo') }}" title="{{ setting('fpt_zalo') }}"><img src="/storage/media/7wLH2u10XbW7riz9Fo6eY8jsDPkE7bODTvRfft6u.png" alt="Zalo Chat"></a>
+            </div>
+            <div id="zalo-chat-text" class="text-number hide text-center pull-right">
+                <p>Zalo</p>
+                <a>{{ setting('fpt_zalo') }}</a>
+            </div>
+        </div>
         <div class="group-call col-xs-12 fix-pad ">
             <div id="group-call" class="bg-gray text-center pull-right">
-                <a  href="tel:0978888659" title="0978888659"><img src="{{ v(theme::url('assets/images/call.png')) }}" alt="Call FPT"></a>
+                <a  href="tel:{{ setting('fpt_hotline') }}" title="{{ setting('fpt_hotline') }}"><img src="{{ v(theme::url('assets/images/call.png')) }}" alt="Call FPT"></a>
             </div>
             <div id="group-call-text" class="text-number hide text-center pull-right">
                 <p>Hotline Đăng ký</p>
-                <a>0978888659</a>
+                <a>{{ setting('fpt_hotline') }}</a>
             </div>
         </div>
         <div class="group-chat col-xs-12 fix-pad ">
@@ -76,8 +85,8 @@
                                 <!--<a href="https://ftel.vn/fpt-telecom-tuyen-dung-chuyen-vien-kd-tai-ha-noi">-->
                                 <!--    <img style="width: 250px;" class="img-fluid" src="{{ v(theme::url('assets/images/footer_new.png')) }}" alt="FPT Telecom">-->
                                 <!--</a>-->
-                                <a class="gif-thietkewebsite" href="https://webmaster.com.vn/thiet-ke-website" title="Thiết kế website">
-                                    <img style="width: 250px; margin-top: 5px;" alt="Thiết kế website" src="/storage/media/LySfjeOuQ3Wo3fZDkUp8OFfLBUPgGuLzoyIgMrfc.gif">
+                                <a class="gif-thietkewebsite" href="https://webmaster.com.vn/product-list/telecom" title="Thiết kế website">
+                                    <img style="width: 250px; margin-top: 5px;" alt="Thiết kế website" src="/storage/media/Fw1BBndmXGgwKqkSURA1sOES3tWaF7JZp6oLYxA7.jpeg">
                                 </a>
                             </div>
                         </div>
