@@ -20,15 +20,6 @@
                 <a>{{ setting('fpt_hotline') }}</a>
             </div>
         </div>
-        <div class="group-chat col-xs-12 fix-pad ">
-            <div livechat-show="true" id="group-chat" class="bg-gray text-center pull-right">
-                <a href="javascript:void(Tawk_API.toggle())"><img src="{{ v(theme::url('assets/images/chat.png')) }}"  alt="Live Chat FPT"></a>
-            </div>
-            <div id="group-chat-text" class="text-number hide text-center pull-right">
-                <p>Live Chat</p>
-            </div>
-
-        </div>
     </div>
     <!-- Newslatter area End -->
     <!-- Footer Top Start -->
@@ -39,46 +30,13 @@
                 <div class="col-lg-12">
                     <div class="row">
                         <div class="col-lg-2 col-md-6 col-6">
-                            <div class="widgets_container">
-                                <h6>Về FPT Telecom</h6>
-                                <div class="footer_menu">
-                                    <ul>
-                                        <li><a href="/gioi-thieu-ve-fpttelecom" title="Giới thiệu chung">Giới thiệu chung</a></li>
-                                        <li><a href="#" title="Liên kết - Thành viên">Liên kết - Thành viên</a></li>
-                                        <li><a href="#" title="Khách hàng - Đối tác">Khách hàng - Đối tác</a></li>
-                                        <li><a href="#" title="Quan hệ cổ đông">Quan hệ cổ đông</a></li>
-                                        <li><a href="#" title="Tập đoàn FPT">Tập đoàn FPT</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                           {!! setting('footer_col_1') !!}
                         </div>
                         <div class="col-lg-3 col-md-6 col-6">
-                            <div class="widgets_container">
-                                <h6>Khách hàng FPT Telecom</h6>
-                                <div class="footer_menu">
-                                    <ul>
-                                        <li><a href="{{ route('pages.support.fptTelevision') }}" title="Hướng dẫn sử dụng dịch vụ">Hướng dẫn sử dụng dịch vụ</a></li>
-                                        <li><a href="#" title="Giới thiệu bạn bè">Giới thiệu bạn bè</a></li>
-
-                                        <li><a href="#" title="Góp ý khách hàng">Góp ý khách hàng</a></li>
-
-                                    </ul>
-                                </div>
-                            </div>
+                            {!! setting('footer_col_2') !!}
                         </div>
                         <div class="col-lg-3 col-md-6 col-6">
-                            <div class="widgets_container">
-                                <h6>Chưa là khách hàng của FPT Telecom</h6>
-                                <div class="footer_menu">
-                                    <ul>
-                                        <li><a href="{{ route('pages.regisOnl') }}" title="Đăng ký Online">Đăng ký Online</a></li>
-                                        <li><a href="{{ route('pages.individualFiber') }}" title="Sản phẩm dịch vụ">Sản phẩm dịch vụ</a></li>
-                                        <li><a href="{{ route('pages.sale') }}" title="Khuyến mại">Khuyến mại</a></li>
-                                        <li><a href="{{ route('pages.support.contact') }}" title="Tìm điểm giao dịch">Tìm điểm giao dịch</a></li>
-                                        <li><a href="{{  route('pages.news') }}" title="Tin tức">Tin tức</a></li>
-                                    </ul>
-                                </div>
-                            </div>
+                            {!! setting('footer_col_3') !!}
                         </div>
                         <div class="col-lg-4 col-md-6 col-6">
                             <div class="widgets_container">
@@ -86,7 +44,7 @@
                                 <!--    <img style="width: 250px;" class="img-fluid" src="{{ v(theme::url('assets/images/footer_new.png')) }}" alt="FPT Telecom">-->
                                 <!--</a>-->
                                 <a class="gif-thietkewebsite" href="https://webmaster.com.vn/product-list/telecom" title="Thiết kế website">
-                                    <img style="width: 250px; margin-top: 5px;" alt="Thiết kế website" src="/storage/media/Fw1BBndmXGgwKqkSURA1sOES3tWaF7JZp6oLYxA7.jpeg">
+                                    <img style="width: 250px; margin-top: 5px;" width="250" alt="Thiết kế website" src="/storage/media/Fw1BBndmXGgwKqkSURA1sOES3tWaF7JZp6oLYxA7.jpeg">
                                 </a>
                             </div>
                         </div>
@@ -95,112 +53,18 @@
                 <div class="col-lg-12 footer__followus">
                     <div class="row footer__followus--row">
 
-                        <div class="col-lg-5 footer__followus--left">
-                            <h3 class="title-footer-item">Follow Us</h3>
-                            <a href="https://www.facebook.com/fpttelecom.net.vn" class="inline-sm" target="_blank">
-                                <img class="icon" src="{{ v(theme::url('assets/images/face.png')) }}" alt="Facebook FPT">
-                                <span class="hidden-xs">Find us on Facebook</span>
-                            </a>
-                            <div id="fb">
-
-                            </div>
-
-
-                            <div class="footer_social">
-                                <ul class="d-flex">
-                                    <li>
-                                        <a class="facebook" href="#">
-                                            <img src="{{ v(theme::url('assets/images/sc1.png')) }}" alt="Facebook FPT">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="twitter" href="#">
-                                            <img src="{{ v(theme::url('assets/images/sc2.png')) }}" alt="Twitter FPT">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="youtube" href="#">
-                                            <img src="{{ v(theme::url('assets/images/sc3.png')) }}" alt="Youtube FPT">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="google" href="#">
-                                            <img src="{{ v(theme::url('assets/images/sc4.png')) }}" alt="Google FPT">
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="linkedin" href="https://zalo.me/{{ setting('fpt_hotline') }}">
-                                            <img src="{{ v(theme::url('assets/images/sc5.png')) }}" alt="Linkedin FPT">
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        {!! setting('footer_col_4') !!}
                         <div class="col-lg-7 footer__followus--right">
-                            <h3 class="title-footer-item">Link sản phẩm dịch vụ</h3>
+                            <h3 class="title-footer-item">
+                                {!! setting('footer_col_5_title') !!}
+                            </h3>
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="brand-logo">
-                                        <div class="single-brand">
-                                            <a href="{{ route('pages.individualFiber') }}">
-                                                <img src="{{ v(theme::url('assets/images/logo/logo-fpt-internet.png')) }}" alt="FPT Internet">
-                                            </a>
-                                        </div>
-                                        <div class="single-brand">
-                                            <a href="{{ route('pages.netTv') }}">
-                                                <img src="{{ v(theme::url('assets/images/logo/logo-fpt-truyenhinh.png')) }}" alt="FPT Truyền hình">
-                                            </a>
-                                        </div>
-                                        <div class="single-brand">
-                                            <a href="{{ route('pages.fptCamera') }}">
-                                                <img src="{{ v(theme::url('assets/images/logo/logo-camera-fpt.png')) }}" alt="FPT Camera">
-                                            </a>
-                                        </div>
-                                        <div class="single-brand">
-                                            <a href="{{ route('pages.playBox') }}">
-                                                <img src="{{ v(theme::url('assets/images/logo/logo-fpt-play-box.png')) }}" alt="FPT Play Box">
-                                            </a>
-                                        </div>
-                                        <div class="single-brand">
-                                            <a href="{{ route('pages.fptIhome') }}">
-                                                <img src="{{ v(theme::url('assets/images/logo/ihome-icon-fpt.png')) }}" alt="FPT iHome">
-                                            </a>
-                                        </div>
-                                        <div class="single-brand">
-                                            <a href="{{ route('pages.play') }}">
-                                                <img src="{{ v(theme::url('assets/images/logo/logo-fpt-play.png')) }}" alt="FPT Play">
-                                            </a>
-                                        </div>
-                                        <div class="single-brand">
-                                            <a href="#">
-                                                <img src="{{ v(theme::url('assets/images/logo/logo-fshare-fpt.png')) }}" alt="FPT Fshare">
-                                            </a>
-                                        </div>
-                                        <div class="single-brand">
-                                            <a href="#">
-                                                <img src="{{ v(theme::url('assets/images/logo/logo-fsend-fpt.png')) }}" alt="FPT Fsend">
-                                            </a>
-                                        </div>
-                                        <div class="single-brand">
-                                            <a href="#">
-                                                <img src="{{ v(theme::url('assets/images/logo/fox-logo-fpt.png')) }}" alt="FPT Fox">
-                                            </a>
-                                        </div>
-                                        <div class="single-brand">
-                                            <a href="#">
-                                                <img src="{{ v(theme::url('assets/images/logo/logo-startalk-fpt.png')) }}" alt="FPT Startalk">
-                                            </a>
-                                        </div>
+                                       {!! setting('footer_col_5_images') !!}
                                     </div>
                                 </div>
-                                <div class="col-lg-6 col-md-12">
-                                    <p>Giấy chứng nhận ĐKKD số 0101778163 do Sở Kế hoạch Đầu tư Thành phố Hà Nội cấp ngày 28/07/2005</p>
-                                </div>
-                                <div class="col-lg-3 col-md-6 footer__img">
-                                    <a href="https://www.dmca.com/Protection/Status.aspx?ID=a371cce1-5b0b-4fe9-a25f-f870668d100a">
-                                        <img src="https://images.dmca.com/Badges/_dmca_premi_badge_1.png?ID=a371cce1-5b0b-4fe9-a25f-f870668d100a" class="img-responsive" alt="DMCA FPT">
-                                    </a>
-                                </div>
+                              {!! setting('footer_col_6') !!}
                             </div>
                         </div>
                     </div>
@@ -215,14 +79,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-12 col-md-12 col-12">
                     <div class="footer-bottom-content">
-                        <div class="footer-copyright">
-                            <a class="" href="">
-                                <img class="" src="{{ v(theme::url('assets/images/footer_logo.png')) }}" alt="Logo FPT Telecom">
-                            </a>
-                            <p>
-                                © 2018 <a href="/">FPT Telecom</a>
-                            </p>
-                        </div>
+                        {!!  setting('footer_copyright') !!}
                     </div>
                 </div>
 

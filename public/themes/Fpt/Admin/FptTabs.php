@@ -41,7 +41,7 @@ class FptTabs extends Tabs
             ->add($this->sectionFeatureGoiMaxy())
             ->add($this->sectionFeatureFptPlayBox())
             ->add($this->sectionFeatureFptPlay());
-            
+
          $this->group('register_form', trans('fpt::fpt.tabs.group.register_form'))
             ->add($this->registerFormService());
 
@@ -290,6 +290,14 @@ class FptTabs extends Tabs
         });
     }
 
+    private function getMediaFiles($fileIds) {
+        if($fileIds == null) {
+            $fileIds = [];
+        }
+        $files = File::whereIn('id', $fileIds)->get();
+        return $files;
+    }
+
     private function newsletter()
     {
         if (! setting('newsletter_enabled')) {
@@ -350,7 +358,7 @@ class FptTabs extends Tabs
             $tab->view('admin.fpt.tabs.social_links');
         });
     }
-    
+
      private function sectionFeatureInternetLux()
     {
         $data = [];
@@ -465,7 +473,7 @@ class FptTabs extends Tabs
             $tab->view('admin.fpt.tabs.fptplay', $data);
         });
     }
-    
+
      private function registerFormService()
     {
         return tap(new Tab('register_form_service', trans('fpt::fpt.tabs.register_form_service')), function (Tab $tab) {

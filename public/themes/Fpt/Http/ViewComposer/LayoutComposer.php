@@ -30,7 +30,7 @@ class LayoutComposer {
         // dd($this->getMenu(8)[0]->children()->first());
         return $this->getMenu(5);
     }
-    
+
     public function getFooterMenu()
     {
         return [
@@ -64,8 +64,8 @@ class LayoutComposer {
         if($fileIds == null) {
             $fileIds = [];
         }
-        $files = File::whereIn('id', $fileIds)->get();   
-        return $files;     
+        $files = File::whereIn('id', $fileIds)->get();
+        return $files;
     }
 
      public function getRegisterServiceOption()
@@ -78,5 +78,18 @@ class LayoutComposer {
              }
         }
         return $services;
+    }
+
+    private function getMediaFiles($fileIds) {
+        if($fileIds == null) {
+            $fileIds = [];
+        }
+        $files = File::whereIn('id', $fileIds)->get();
+        return $files;
+    }
+
+    public function getFooterImages()
+    {
+        return $this->getMediaFiles(setting('footer_col_5_images'));
     }
 }
