@@ -1,7 +1,8 @@
 @extends('public.layout')
 
 @section('css')
-    <link rel="stylesheet" href="{{ v(theme::url('assets/css/jquery.tocify.css')) }}">
+    <link rel="stylesheet" href="{{ v(theme::url('assets/css/toctoc.css')) }}" >
+
     <style>
         .btn.btn-mucluc{
             width: 100%;
@@ -28,7 +29,7 @@
             outline: none;
         }
         .box-mucluc{
-            display: none;
+            display: block;
         }
         .box {
             padding: 20px;
@@ -273,14 +274,8 @@
                 </div>
                 @if ($page->is_toc)
                 <div class="row box-mucluc" style="margin-bottom: 30px;">
-                    <div class="col-lg-6">
-                        <button class="btn btn-mucluc" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-                            <i class="fa fa-list-ol" aria-hidden="true"></i>
-                            <span>Mục lục</span>
-                        </button>
-                        <div class="collapse" id="collapseExample">
-                            <div id="toc">
-                            </div>
+                    <div class="col-lg-7">
+                        <div id="toctoc">
                         </div>
                     </div>
                 </div>
@@ -367,7 +362,7 @@
         }
     });
 </script>
-<script src="{{ v(theme::url('assets/js/jquery.tocify.js')) }}"></script>
+<script src="{{ v(theme::url('assets/js/toctoc.js')) }}"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
 <script>
     $(document).ready(function(){
@@ -414,55 +409,41 @@
         });
 </script>
 <script>
+    $(document).ready(function() {
+        $(function(){
+            $.toctoc({
+                target: '.content_post',
+                headText:'Mục lục',
+                headLinkText: ['',''],
+                smooth:true,
+                //Css
+                headBackgroundColor: 'rgb(228 225 225)',
+                headTextColor:'#333',
+                headLinkColor:'#333',
+                bodyBackgroundColor:'#f5f5f5',
+                bodyLinkColor: '#f06e28',
+                borderStyle:'solid',
+                borderColor: '#333',
+                borderWidth:'2px',
+                iconHead: `<span>
+                        <svg width="30px" height="25px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 7a1 1 0 0 1 1-1h1a1 1 0 0 1 0 2H5a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h9a1 1 0 1 1 0 2h-9a1 1 0 0 1-1-1zm-5 5a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h9a1 1 0 1 1 0 2h-9a1 1 0 0 1-1-1zm-5 5a1 1 0 0 1 1-1h1a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1zm5 0a1 1 0 0 1 1-1h9a1 1 0 1 1 0 2h-9a1 1 0 0 1-1-1z" fill="#333"/></svg>
+                        </span>`
+            });
+        });
+
+    })
+
+</script>
+<script>
     $(document).ready(function(){
-        
+
         // var p_empty = $('.content_post p:not(:has(img)), .content_post p:not(:has(iframe))').filter(function(){
         //     return $.trim($(this).text()).length == 0
         // });
         // $(p_empty).addClass('hidden');
 
         $('p iframe').parent().addClass('hasIframe');
-        if($('.content_post h1').length){
-            $('.box-mucluc').fadeIn();
-            $("#toc").tocify({
-                context: '.content_post',
-                selectors: "h1, h2, h3, h4",
-                showAndHide: false,
-                history: false,
-                scrollTo: 150,
-                extendPage: false
-            }).data("toc-tocify");
-        }else if($('.content_post h2').length){
-            $('.box-mucluc').fadeIn();
-            $("#toc").tocify({
-                context: '.content_post',
-                selectors: "h2, h3, h4, h5",
-                showAndHide: false,
-                history: false,
-                scrollTo: 150,
-                extendPage: false
-            }).data("toc-tocify");
-        }else if($('.content_post h3').length){
-            $('.box-mucluc').fadeIn();
-            $("#toc").tocify({
-                context: '.content_post',
-                selectors: "h3, h4, h5",
-                showAndHide: false,
-                history: false,
-                scrollTo: 150,
-                extendPage: false
-            }).data("toc-tocify");
-        }else if($('.content_post h4').length){
-            $('.box-mucluc').fadeIn();
-            $("#toc").tocify({
-                context: '.content_post',
-                selectors: "h4, h5",
-                showAndHide: false,
-                history: false,
-                scrollTo: 150,
-                extendPage: false
-            }).data("toc-tocify");
-        }
+
     });
 </script>
 <script>

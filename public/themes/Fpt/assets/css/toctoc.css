@@ -1,0 +1,72 @@
+.smooth-scroll {
+    scroll-behavior: smooth;
+}
+#toctoc {
+    width: 100%;
+    margin-bottom: 2rem;
+    text-align: left;
+    border-radius: 7px;
+    overflow: hidden;
+}
+#toctoc #toctoc-head {
+    padding: 0.8rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    width: 60%;
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+}
+
+#toctoc #toctoc-head a {
+    font-weight: 500;
+    font-size: 16px;
+}
+
+#toctoc #toctoc-head a:hover {
+    opacity: 0.9;
+}
+#toctoc #toctoc-head span {
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+#toctoc #toctoc-head span:before {
+
+}
+
+#toctoc #toctoc-body {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}
+#toctoc #toctoc-body .link {
+    margin: 0.2rem 0;
+}
+#toctoc #toctoc-body a {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-weight: 600;
+}
+#toctoc #toctoc-body a:hover::after {
+    content: "👈";
+}
+#toctoc #toctoc-body .link-h3 {
+    padding-left: 1rem;
+}
+#toctoc #toctoc-body .link-h4 {
+    padding-left: 2rem;
+}
+#toctoc #toctoc-body .link-h5 {
+    padding-left: 3rem;
+}
+#toctoc #toctoc-body .link-h6 {
+    padding-left: 4rem;
+}
+#toctoc a {
+    text-decoration: none;
+}
