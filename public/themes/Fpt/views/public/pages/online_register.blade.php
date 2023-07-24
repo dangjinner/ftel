@@ -196,9 +196,14 @@
                         @if ($item->base_image_icon->path)
                         <div class="top">
                             <div>
-                                <div class="img-combo">
-                                    <span><img alt="{{$item->name}}" src="{{ $item->base_image->path }}"></span>
-                                </div>
+                                @if($item->is_show_title)
+                                    {!! $item->title !!}
+                                @else
+                                    <div class="img-combo">
+                                    <span><img alt="Cáp quang FPT 100MB"
+                                               src="{{ $item->base_image->path }}"></span>
+                                    </div>
+                                @endif
                                 <div class="price">
                                     <span class="img-package">
                                         <img src="{{ $item->base_image_icon->path }}" alt="net-ico-100.png">
@@ -210,9 +215,14 @@
                         @else
                         <div class="top">
                             <div>
-                                <div class="img-combo"><span><img alt="Combo cáp quang FPT 25MB"
-                                            src="{{ $item->base_image->path }}"></span>
-                                </div>
+                                @if($item->is_show_title)
+                                    {!! $item->title !!}
+                                @else
+                                    <div class="img-combo">
+                                    <span><img alt="Cáp quang FPT 100MB"
+                                               src="{{ $item->base_image->path }}"></span>
+                                    </div>
+                                @endif
                                 <div class="price">
                                     @if($item->price_area_discount != null)
 
