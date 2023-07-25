@@ -203,8 +203,7 @@
                     <div class="pad-l-r-5 pad-hotline">
                         <p class="text-uppercase">Ứng dụng CSKH</p>
                         <a class="number-call" href="{{setting('fpt_setting_hifpt_support_url')}}" target="_blank"
-                            rel="noreferrer noopener">Hi
-                            FPT</a>
+                            rel="noreferrer noopener">{{setting('fpt_setting_hifpt_support_text') ?? 'Hi FPT'}}</a>
                     </div>
                 </div>
 
@@ -214,7 +213,7 @@
 
                     <div class="pad-l-r-5 pad-hotline">
                         <p class="text-uppercase">Hotline bán hàng</p>
-                        <a class="number-call" href="{{setting('fpt_setting_hotline_sale_support_url')}}">{{ setting('fpt_hotline') }}</a>
+                        <a class="number-call" href="{{setting('fpt_setting_hotline_sale_support_url')}}">{{ setting('fpt_setting_hotline_sale_support_text') ?? setting('fpt_hotline') }}</a>
                     </div>
                 </div>
 
@@ -224,7 +223,9 @@
 
                     <div class="pad-l-r-5 pad-hotline">
                         <p class="text-uppercase">Hỗ trợ kỹ thuật</p>
-                        <a class="number-call" href="{{setting('fpt_setting_hotline_sale_tech_support_url')}}">1900 6600</a>
+                        <a class="number-call" href="{{setting('fpt_setting_hotline_sale_tech_support_url')}}">
+                            {{setting('fpt_setting_hotline_sale_tech_support_text') ?? '1900 6600'}}
+                        </a>
                     </div>
                 </div>
 
@@ -234,7 +235,9 @@
 
                     <div class="pad-l-r-5">
                         <p class="text-uppercase">Email</p>
-                        <a class="txt-ellipsis" href="{{setting('fpt_setting_email_support_url')}}">info@fpttelecom.net.vn</a>
+                        <a class="txt-ellipsis" href="{{setting('fpt_setting_email_support_url')}}">
+                            {{setting('fpt_setting_email_support_text') ?? 'info@fpttelecom.net.vn'}}
+                        </a>
                     </div>
                 </div>
 
@@ -244,7 +247,9 @@
 
                     <div class="pad-l-r-5">
                         <p class="text-uppercase">Live Chat</p>
-                        <a href="{{setting('fpt_setting_live_chat_support_url')}}" class="txt-ellipsis" id="chatbox_trigger">Giải đáp mọi thắc mắc</a>
+                        <a href="{{setting('fpt_setting_live_chat_support_url')}}" class="txt-ellipsis" id="chatbox_trigger">
+                            {{setting('fpt_setting_live_chat_support_text') ?? 'Giải đáp mọi thắc mắc'}}
+                        </a>
                     </div>
                 </div>
 
@@ -255,7 +260,9 @@
                     <div class="pad-l-r-5">
                         <p class="text-uppercase">facebook</p>
                         <a class="txt-ellipsis" href="{{setting('fpt_setting_fb_support_url')}}" target="_blank"
-                            rel="noreferrer noopener">www.facebook.com/fpttelecom.net.vn</a>
+                            rel="noreferrer noopener">
+                            {{setting('fpt_setting_fb_support_text') ?? 'www.facebook.com/fpttelecom.net.vn'}}
+                        </a>
                     </div>
                 </div>
             </div>
