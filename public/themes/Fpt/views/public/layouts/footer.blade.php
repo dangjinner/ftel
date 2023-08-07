@@ -2,24 +2,26 @@
     <!-- Newslatter area start -->
 
     <div class="always-on">
-       <div class="group-zalo-chat col-xs-12 fix-pad ">
-            <div id="zalo-chat" class="bg-gray text-center pull-right">
-                <a href="https://zalo.me/{{ setting('fpt_zalo') }}" title="{{ setting('fpt_zalo') }}"><img src="/storage/media/7wLH2u10XbW7riz9Fo6eY8jsDPkE7bODTvRfft6u.png" alt="Zalo Chat"></a>
+        @if(setting('fpt_zalo'))
+            <div class="group-zalo-chat col-xs-12 fix-pad ">
+                <div id="zalo-chat" class="bg-gray text-center pull-right">
+                    <a href="https://zalo.me/{{ setting('fpt_zalo') }}" title="{{ setting('fpt_zalo') }}"><img src="/storage/media/7wLH2u10XbW7riz9Fo6eY8jsDPkE7bODTvRfft6u.png" alt="Zalo Chat"></a>
+                </div>
+                <div id="zalo-chat-text" class="text-number hide text-center pull-right">
+                    <p>Zalo</p>
+                    <a>{{ setting('fpt_zalo') }}</a>
+                </div>
             </div>
-            <div id="zalo-chat-text" class="text-number hide text-center pull-right">
-                <p>Zalo</p>
-                <a>{{ setting('fpt_zalo') }}</a>
+        @endif
+            <div class="group-call col-xs-12 fix-pad ">
+                <div id="group-call" class="bg-gray text-center pull-right">
+                    <a  href="tel:{{ setting('fpt_hotline') }}" title="{{ setting('fpt_hotline') }}"><img src="{{ v(theme::url('assets/images/call.png')) }}" alt="Call FPT"></a>
+                </div>
+                <div id="group-call-text" class="text-number hide text-center pull-right">
+                    <p>Hotline Đăng ký</p>
+                    <a>{{ setting('fpt_hotline') }}</a>
+                </div>
             </div>
-        </div>
-        <div class="group-call col-xs-12 fix-pad ">
-            <div id="group-call" class="bg-gray text-center pull-right">
-                <a  href="tel:{{ setting('fpt_hotline') }}" title="{{ setting('fpt_hotline') }}"><img src="{{ v(theme::url('assets/images/call.png')) }}" alt="Call FPT"></a>
-            </div>
-            <div id="group-call-text" class="text-number hide text-center pull-right">
-                <p>Hotline Đăng ký</p>
-                <a>{{ setting('fpt_hotline') }}</a>
-            </div>
-        </div>
     </div>
     <!-- Newslatter area End -->
     <!-- Footer Top Start -->
