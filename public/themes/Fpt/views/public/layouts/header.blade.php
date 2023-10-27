@@ -32,29 +32,29 @@
                         <div class="offcanvas_menu_cover text-left">
                             <ul class="offcanvas_main_menu">
                                 @foreach($primaryMenu as $menu)
-                                <li class="menu-item-has-children">
-                                    <a title="{{ $menu->name }}" href="{{ $menu->url }}">
-                                        {{ $menu->name }}
-                                    </a>
-                                    <ul class="sub-menu">
-                                        @foreach($menu->children()->get() as $menuItem)
-                                        <li class="menu-item-has-children">
-                                            <a title="{{ $menuItem->name }}" href="{{ $menuItem->url }}">
-                                                {{ $menuItem->name }}
-                                            </a>
-                                            <ul class="sub-menu">
-                                                @foreach($menuItem->children()->get() as $menuItemChild)
-                                                <li>
-                                                    <a href="{{ $menuItemChild->url }}">
-                                                        {{ $menuItemChild->name }}
+                                    <li class="menu-item-has-children">
+                                        <a title="{{ $menu->name }}" href="{{ $menu->url }}">
+                                            {{ $menu->name }}
+                                        </a>
+                                        <ul class="sub-menu">
+                                            @foreach($menu->children()->get() as $menuItem)
+                                                <li class="menu-item-has-children">
+                                                    <a title="{{ $menuItem->name }}" href="{{ $menuItem->url }}">
+                                                        {{ $menuItem->name }}
                                                     </a>
+                                                    <ul class="sub-menu">
+                                                        @foreach($menuItem->children()->get() as $menuItemChild)
+                                                            <li>
+                                                                <a href="{{ $menuItemChild->url }}">
+                                                                    {{ $menuItemChild->name }}
+                                                                </a>
+                                                            </li>
+                                                        @endforeach
+                                                    </ul>
                                                 </li>
-                                                @endforeach
-                                            </ul>
-                                        </li>
-                                        @endforeach
-                                    </ul>
-                                </li>
+                                            @endforeach
+                                        </ul>
+                                    </li>
 
                                 @endforeach
                             </ul>

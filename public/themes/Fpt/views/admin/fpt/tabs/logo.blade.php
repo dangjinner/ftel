@@ -19,3 +19,5 @@
     'inputName' => 'translatable[fpt_mail_logo]',
     'file' => $mailLogo,
 ])
+
+

@@ -1,4 +1,12 @@
 
+@include('media::admin.image_picker.single', [
+    'title' => 'Footer Banner',
+    'inputName' => 'fpt_footer_banner',
+    'file' => $footerBanner,
+])
+{{ Form::text('footer_banner_url', 'Banner URL', $errors, $settings, ['labelCol' => 2, 'required' => true]) }}
+<div class="media-picker-divider"></div>
+
 {{ Form::wysiwyg('footer_col_1', 'Column 1', $errors, $settings, ['labelCol' => 2, 'required' => true]) }}
 {{ Form::wysiwyg('footer_col_2', 'Column 2', $errors, $settings, ['labelCol' => 2, 'required' => true]) }}
 {{ Form::wysiwyg('footer_col_3', 'Column 3', $errors, $settings, ['labelCol' => 2, 'required' => true]) }}

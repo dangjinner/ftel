@@ -286,6 +286,7 @@ class FptTabs extends Tabs
             $tab->view('admin.fpt.tabs.footer', [
                 'tags' => Tag::list(),
                 'acceptedPaymentMethodsImage' => $this->getMedia(setting('fpt_accepted_payment_methods_image')),
+                'footerBanner' => $this->getMedia(setting('fpt_footer_banner')),
             ]);
         });
     }

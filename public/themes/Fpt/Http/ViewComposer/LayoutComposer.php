@@ -22,6 +22,7 @@ class LayoutComposer {
             // 'servicesThumbnail' => $this->getServicesThumbnail(setting('footer_services_thumbnail')),
             'primaryMenu' => $this->getPrimaryMenu(),
             'registerServiceOptions' => $this->getRegisterServiceOption(),
+            'footerBanner' => $this->getFooterBanner(),
         ]);
     }
 
@@ -48,8 +49,13 @@ class LayoutComposer {
     public function getFooterLogo()
     {
         return [
-            'copyrightLogo' => $this->getMedia(setting('copyright_logo'))
+            'copyrightLogo' => $this->getMedia(setting('copyright_logo')),
         ];
+    }
+
+    public function getFooterBanner()
+    {
+       return $this->getMedia(setting('fpt_footer_banner'));
     }
 
     private function getMedia($fileId)
