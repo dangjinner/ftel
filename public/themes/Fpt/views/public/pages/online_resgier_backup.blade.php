@@ -176,11 +176,10 @@
                         @endif
                         {!! $item->feature !!}
                         <div class="bottom">
-                            @if ($item->base_image_icon->path)
-                            <p>Các thiết bị đi kèm/ IP tĩnh được kinh doanh theo chính sách hiện hành tại từng thời điểm
-                            </p>
+                            @if($item->bonus)
+                                {!! $item->bonus !!}
                             @else
-                            <p>Mức giá trên đã bao gồm VAT.</p>
+                                <p>Mức giá trên đã bao gồm VAT. Giá này sẽ thay đổi theo khu vực, theo từng thời điểm.</p>
                             @endif
                             <a href="#" data-toggle="modal" data-target="#exampleModalCenter">Đăng ký ngay</a>
                         </div>

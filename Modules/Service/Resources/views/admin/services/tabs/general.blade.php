@@ -11,6 +11,8 @@ $service, ['labelCol' => 2, 'class' => 'selectize prevent-creation']) }}
 {{ Form::checkbox('is_show_title', trans('service::attributes.is_show_title'), 'Show/Hide Title', $errors, $service, ['labelCol' => 2]) }}
 {{ Form::wysiwyg('feature', trans('service::attributes.feature'), $errors, $service, ['labelCol' => 2, 'required' =>
 true]) }}
+{{ Form::wysiwyg('bonus', trans('service::attributes.bonus'), $errors, $service, ['labelCol' => 2, 'required' =>
+false]) }}
 {{ Form::text('bandwidth', trans('service::attributes.bandwidth'), $errors, $service, ['labelCol' => 2]) }}
 {{ Form::checkbox('is_hot', trans('service::attributes.is_hot'), null, $errors, $service, ['labelCol' => 2]) }}
 {{ Form::checkbox('status', trans('service::attributes.status'), 'Show/Hide this service', $errors, $service, ['labelCol' => 2]) }}

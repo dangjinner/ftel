@@ -115,7 +115,11 @@
             @endif
             {{-- {!! $item->feature !!} --}}
             <div class="bottom">
-                <p>Mức giá trên đã bao gồm VAT. Giá này sẽ thay đổi theo khu vực, theo từng thời điểm.</p>
+                @if($item->bonus)
+                    {!! $item->bonus !!}
+                @else
+                    <p>Mức giá trên đã bao gồm VAT. Giá này sẽ thay đổi theo khu vực, theo từng thời điểm.</p>
+                @endif
                 <a href="#" data-toggle="modal" data-target="#modalRegisterService">Đăng ký ngay</a>
             </div>
         </div>

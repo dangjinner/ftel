@@ -11,5 +11,5 @@ class ServiceTranslation extends TranslationModel
      *
      * @var array
      */
-    protected $fillable = ['name', 'feature'];
+    protected $fillable = ['name', 'feature', 'bonus'];
 }

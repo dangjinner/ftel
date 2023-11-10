@@ -402,7 +402,11 @@
                         </div>
                         {!! $item->feature !!}
                         <div class="bottom">
-                            <p>Mức giá trên đã bao gồm VAT. Giá này sẽ thay đổi theo khu vực, theo từng thời điểm.</p>
+                            @if($item->bonus)
+                                {!! $item->bonus !!}
+                            @else
+                                <p>Mức giá trên đã bao gồm VAT. Giá này sẽ thay đổi theo khu vực, theo từng thời điểm.</p>
+                            @endif
                             <a href="{{ route('pages.register') }}">Đăng ký ngay</a>
                         </div>
                     </div>

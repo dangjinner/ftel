@@ -70,7 +70,7 @@ class Service extends Model
      *
      * @var array
      */
-    public $translatedAttributes = ['name', 'feature'];
+    public $translatedAttributes = ['name', 'feature', 'bonus'];
 
     /**
      * The attribute that will be slugged.
@@ -87,7 +87,7 @@ class Service extends Model
                 $service->saveRelations(request()->all());
             }
         });
-        
+
         static::addGlobalScope('active', function (Builder $builder) {
             // 1 - Active, 0 - Deactive
             $builder->where('status', 1);

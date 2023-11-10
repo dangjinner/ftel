@@ -26,6 +26,7 @@ class SaveServiceRequest extends Request
             'title' => 'nullable|string',
             'is_show_title' => 'nullable|int',
             'status' => 'nullable|int',
+            'bonus' => 'nullable|string',
         ];
     }
 }

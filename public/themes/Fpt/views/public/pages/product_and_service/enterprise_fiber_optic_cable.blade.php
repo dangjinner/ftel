@@ -163,7 +163,11 @@
                     {!! sprintf($service->feature, ($price . ' đ')) !!}
                     {{-- {!! $service->feature !!} --}}
                     <div class="bottom">
-                        <p>Các thiết bị đi kèm/ IP tĩnh được kinh doanh theo chính sách hiện hành tại từng thời điểm</p>
+                        @if($service->bonus)
+                            {!! $service->bonus !!}
+                        @else
+                            <p>Mức giá trên đã bao gồm VAT. Giá này sẽ thay đổi theo khu vực, theo từng thời điểm.</p>
+                        @endif
                         <!--<a href="{{ route('pages.register', ['service' => 'Internet FPT']) }}">Đăng ký ngay</a>-->
                         <a href="#" data-toggle="modal" data-target="#modalRegisterService">Đăng ký ngay</a>
                     </div>

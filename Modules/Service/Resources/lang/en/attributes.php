@@ -6,6 +6,7 @@ return [
     'bandwidth'         => 'Bandwidth',
     'slug'              => 'URL',
     'feature'           => 'Feature',
+    'bonus'             => 'Bonus',
     'category_service'  => 'Category Service',
     'price'             => 'Price',
     'is_hot'            => 'Hot Service',
