@@ -45,7 +45,7 @@
                                 <!--<a href="/fpt-telecom-tuyen-dung-chuyen-vien-kd-tai-ha-noi">-->
                                 <!--    <img style="width: 250px;" class="img-fluid" src="{{ v(theme::url('assets/images/footer_new.png')) }}" alt="FPT Telecom">-->
                                 <!--</a>-->
-                                <a class="gif-thietkewebsite" href="{{ setting('footer_banner_url') ?? 'https://webmaster.com.vn/product-list/telecom' }}" title="Thiết kế website">
+                                <a class="gif-thietkewebsite" href="{{ setting('footer_banner_url') ?? 'https://webmaster.com.vn/thiet-ke-website' }}" title="Thiết kế website">
                                     <img style="width: 250px; margin-top: 5px;" width="250" alt="Thiết kế website"
                                          src="{{ $footerBanner->path ?? '/storage/media/Fw1BBndmXGgwKqkSURA1sOES3tWaF7JZp6oLYxA7.jpeg' }}"
                                     >
