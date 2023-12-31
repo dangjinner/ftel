@@ -42,5 +42,7 @@
     "Area": true,
     "Province": true,
     "FptBranch": true,
-    "StoreBranch": true
+    "StoreBranch": true,
+    "Comment": true,
+    "Rating": true
 }

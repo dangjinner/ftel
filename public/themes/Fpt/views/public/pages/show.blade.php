@@ -286,6 +286,20 @@
                             {!! $page->content !!}
                         </div>
                     </div>
+                    <div class="col-lg-12">
+                        @include('public.sections.review.root-review', [
+                            'type' => 2,
+                            'url' => '#',
+                            'post_id' => $page->id
+                        ])
+                    </div>
+                    <div class="col-lg-12">
+                        @include('public.sections.comment.root-comment', [
+                            'type' => 2,
+                            'url' => '#',
+                            'post_id' => $page->id
+                        ])
+                    </div>
                     <div class="col-lg-12 col-md-12">
                         {!! '[contact-form-7][/contact-form-7]' !!}
                         @if ($currentUser && ($currentUser->hasRoleName('admin') || $currentUser->hasAccess('admin.posts.edit')))
@@ -490,4 +504,17 @@
     });
 
 </script>
+
+@include('public.sections.review.review-script', [
+   'type' => 2,
+   'url' => '#',
+   'post_id' => $page->id
+])
+
+@include('public.sections.comment.comment-script', [
+    'type' => 2,
+    'url' => '#',
+    'post_id' => $page->id
+])
+
 @endsection

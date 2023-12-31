@@ -17,8 +17,8 @@ class SocialLoginServiceProvider extends ServiceProvider
             return;
         }
 
-        $this->setupFacebook();
-        $this->setupGoogle();
+//        $this->setupFacebook();
+//        $this->setupGoogle();
     }
 
     private function setupFacebook()

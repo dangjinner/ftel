@@ -19,10 +19,10 @@ return [
     'password' => env('MAIL_PASSWORD'),
     'sendmail' => '/usr/sbin/sendmail -bs',
     'pretend' => env('MAIL_PRETEND', false),
-    
+
     'default' => env('MAIL_MAILER', 'smtp'),
 
-   
+
     /*
     |--------------------------------------------------------------------------
     | Mailer Configurations
@@ -50,6 +50,9 @@ return [
             'username' => env('MAIL_USERNAME'),
             'password' => env('MAIL_PASSWORD'),
             'timeout' => null,
+            'verify_peer' => false,
+            'verify_peer_name' => false,
+            'allow_self_signed' => true
         ],
 
         'ses' => [
@@ -111,6 +114,14 @@ return [
 
         'paths' => [
             resource_path('views/vendor/mail'),
+        ],
+    ],
+
+    'stream' => [
+        'ssl' => [
+            'allow_self_signed' => true,
+            'verify_peer' => false,
+            'verify_peer_name' => false,
         ],
     ],
 ];

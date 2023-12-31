@@ -19,6 +19,8 @@ class User extends EloquentUser implements AuthenticatableContract
 {
     use Authenticatable;
 
+    protected $fillable = ['google_id', 'first_name', 'last_name', 'email', 'password', 'avatar'];
+
     /**
      * The attributes that should be mutated to dates.
      *
@@ -63,6 +65,16 @@ class User extends EloquentUser implements AuthenticatableContract
         }
 
         return $this->hasRoleId(setting('customer_role'));
+    }
+
+    public function isAdmin()
+    {
+        return $this->hasRoleName('admin');
+    }
+
+    public function isEditor()
+    {
+        $this->hasRoleName('editor');
     }
 
     /**

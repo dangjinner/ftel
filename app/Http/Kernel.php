@@ -2,6 +2,7 @@
 
 namespace FleetCart\Http;
 
+use FleetCart\Http\Middleware\VerifyAdministrator;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
 class Kernel extends HttpKernel
@@ -37,6 +38,7 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \FleetCart\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
+            VerifyAdministrator::class
         ],
         'api' => [
             'throttle:60,1',

@@ -15,7 +15,9 @@ class SidebarExtender extends BaseSidebarExtender
                 $item->icon('fa fa-cube');
                 $item->weight(10);
                 $item->route('admin.posts.index');
-
+                $item->authorize(
+                    $this->auth->hasAccess('admin.posts.index')
+                );
                 $item->item(trans('post::sidebar.add_new'), function (Item $item) {
                     $item->weight(5);
                     $item->route('admin.posts.create');

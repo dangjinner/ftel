@@ -36,7 +36,7 @@ class UpdateSettingRequest extends Request
             'default_currency' => 'required|in_array:supported_currencies.*',
 
             'translatable.store_name' => 'required',
-            'store_email' => 'required|email',
+            'store_email' => 'required|string',
             'store_country' => ['required', Rule::in(Country::codes())],
 
             'fixer_access_key' => 'required_if:currency_rate_exchange_service,fixer',

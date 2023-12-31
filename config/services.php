@@ -37,17 +37,33 @@ return [
     'google_sheet' => [
         'id'    => env('GOOGLE_SHEET_ID'),
     ],
+
     'google_sheet_customer' => [
         'id'    => env('GOOGLE_SHEET_ID_2'),
     ],
+
     'google_sheet_adsen' => [
         'id' => env('GOOGLE_SHEET_ADSEN'),
     ],
+
      'google_sheet_adz' => [
         'id' => env('GOOGLE_SHEET_ADZ'),
     ],
+
     'google_recaptcha' => [
         'key' => env('SITE_KEY_GOOGLE_API'),
         'secret' => env('SECRET_KEY_GOOGLE_API'),
-    ]
+    ],
+
+    'facebook' => [
+        'client_id' => env('FACEBOOK_CLIENT_ID', ''),
+        'client_secret' => env('FACEBOOK_CLIENT_SECRET', ''),
+        'redirect' => env('FACEBOOK_CLIENT_CALLBACK_URL', ''),
+    ],
+
+    'google' => [
+        'client_id' => env('GOOGLE_CLIENT_ID', ''),
+        'client_secret' => env('GOOGLE_CLIENT_SECRET', ''),
+        'redirect' => env('GOOGLE_CLIENT_CALLBACK_URL', ''),
+    ],
 ];

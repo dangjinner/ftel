@@ -92,6 +92,9 @@
     </div>
     <!-- Footer Bottom End -->
 </footer>
+
+@include('public.sections.login-modal')
+
 <!-- Scroll To Top Start -->
 <a class="scroll-to-top" href="#">
     <img src="{{ v(theme::url('assets/images/top.png')) }}" alt="icon">
