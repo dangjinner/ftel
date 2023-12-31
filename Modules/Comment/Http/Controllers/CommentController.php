@@ -48,7 +48,7 @@ class CommentController extends Controller
             Comment::CONTENT => $request->get('content'),
             Comment::POST_ID => $request->post_id,
             Comment::URL => $request->url,
-            Comment::CUSTOMER_NAME => $user->first_name,
+            Comment::CUSTOMER_NAME => $user->full_name,
             Comment::CUSTOMER_EMAIL => $user->email,
             Comment::STATUS => ($user->isAdmin() || $user->isEditor()) ? Comment::APPROVED : Comment::PENDING,
 

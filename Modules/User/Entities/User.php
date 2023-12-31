@@ -21,6 +21,10 @@ class User extends EloquentUser implements AuthenticatableContract
 
     protected $fillable = ['google_id', 'first_name', 'last_name', 'email', 'password', 'avatar'];
 
+    protected $appends = [
+      'full_name'
+    ];
+
     /**
      * The attributes that should be mutated to dates.
      *
@@ -187,7 +191,7 @@ class User extends EloquentUser implements AuthenticatableContract
      */
     public function getFullNameAttribute()
     {
-        return "{$this->first_name} {$this->last_name}";
+        return "{$this->last_name} {$this->first_name}";
     }
 
     /**

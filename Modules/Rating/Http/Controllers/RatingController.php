@@ -43,7 +43,7 @@ class RatingController extends Controller
             Rating::URL => $request->get('url'),
             Rating::RATING => $request->rating,
             Rating::USER_ID => $user->id,
-            Rating::CUSTOMER_NAME => $user->first_name,
+            Rating::CUSTOMER_NAME => $user->full_name,
             Rating::CUSTOMER_EMAIL => $user->email,
         ]);
         return response()->json($rating, 201);
@@ -117,7 +117,7 @@ class RatingController extends Controller
                 Rating::REVIEW => $request->review,
                 Rating::TYPE => $request->type,
                 Rating::USER_ID => $user->id,
-                Rating::CUSTOMER_NAME => $user->first_name,
+                Rating::CUSTOMER_NAME => $user->full_name,
                 Rating::STATUS => $user->isAdmin() || $user->isEditor() ? Rating::APPROVED : Rating::PENDING,
             ]);
             DB::commit();

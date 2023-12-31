@@ -79,12 +79,13 @@ class AuthSocialController extends Controller
         try {
             $user = Socialite::driver('google')->user();
             $finduser = User::where('google_id', $user->id)->first();
+
             if($finduser){
                 Auth::login($finduser, true);
             }else{
                 $newUser = $this->auth->registerAndActivate([
-                    'first_name' => $user->name,
-                    'last_name' => '',
+                    'first_name' => $user->user['family_name'],
+                    'last_name' => $user->user['given_name'],
                     'email' => $user->email,
                     'google_id'=> $user->id,
                     'password' => Hash::make(Str::random(20)),

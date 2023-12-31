@@ -92,7 +92,7 @@
                 </div>
                 @if(auth()->check())
                     <div style="margin-top: 10px;margin-bottom: 10px; gap: 10px; align-items: center" class="d-flex">
-                        <p style="font-size: 16px">Xin chào, <b>{{ auth()->user()->first_name }}</b></p>
+                        <p style="font-size: 16px">Xin chào, <b>{{ auth()->user()->full_name }}</b></p>
                         <a class="btnChangeAccount" href="" style="color: blue">[Thay đổi]</a>
                     </div>
                 @endif
