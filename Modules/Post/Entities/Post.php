@@ -4,6 +4,7 @@ namespace Modules\Post\Entities;
 
 use Modules\Brand\Admin\BrandTable;
 use Modules\Group\Entities\Group;
+use Modules\Rating\Entities\Rating;
 use Modules\Support\Eloquent\Model;
 use Modules\Media\Eloquent\HasMedia;
 use Modules\Media\Entities\File;
@@ -29,7 +30,18 @@ class Post extends Model
      *
      * @var array
      */
-    protected $fillable = ['slug', 'is_active', 'is_toc', 'is_thumbnail_display', 'sidebar_layout', 'created_at', 'video'];
+    protected $fillable = [
+        'slug',
+        'is_active',
+        'is_toc',
+        'is_thumbnail_display',
+        'sidebar_layout',
+        'created_at',
+        'video',
+        'is_default_rating',
+        'custom_avg_rating',
+        'custom_rating_count',
+    ];
 
     /**
      * The attributes that should be cast to native types.
@@ -39,7 +51,8 @@ class Post extends Model
     protected $casts = [
         'is_active'             => 'boolean',
         'is_thumbnail_display'  => 'boolean',
-        'is_toc'                => 'boolean'
+        'is_toc'                => 'boolean',
+        'is_default_rating' => 'boolean',
     ];
 
     /**
@@ -55,7 +68,7 @@ class Post extends Model
      * @var string
      */
     protected $slugAttribute = 'name';
-    
+
      protected $postNotShow = [
         'lap-dat-adsl-fpt-tang-modem-wifi',
         'khuyen-mai-lap-mang-cap-quang-fpt-thang-2-2015',
@@ -149,7 +162,7 @@ class Post extends Model
         'fpt-telecom-chinh-thuc-lam-viec-7-ngay-tuan-tu-ngay-01-06-2015',
     ];
 
-    
+
     protected static function booted()
     {
         static::saved(function ($post) {
@@ -198,5 +211,27 @@ class Post extends Model
     public function groups()
     {
         return $this->belongsToMany(Group::class, 'post_groups');
+    }
+
+    public function ratings()
+    {
+        return $this->hasMany(Rating::class, Rating::POST_ID, 'id')
+            ->where(Rating::TYPE, Rating::TYPE_POST_ID);
+    }
+
+    public function getAvgRatingAttribute()
+    {
+        if($this->is_default_rating) {
+            return number_format($this->ratings()->active()->avg(Rating::RATING), 1);
+        }
+        return $this->custom_avg_rating;
+    }
+
+    public function getRatingCountAttribute()
+    {
+        if($this->is_default_rating) {
+            return $this->ratings()->active()->count();
+        }
+        return $this->custom_rating_count;
     }
 }

@@ -185,6 +185,7 @@
         @routes
         @yield('css')
         @stack('styles')
+        @stack('schemaJson')
         {!! setting('custom_header_assets') !!}
 
          <!--Không cho copy hình -->
