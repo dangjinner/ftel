@@ -39,6 +39,8 @@
                             </li>
                     <li class="seo-tab"><a data-toggle="tab"
                             href="#seo">{{ trans('categoryservice::category_services.tabs.seo') }}</a></li>
+                    <li class="rating-tab"><a data-toggle="tab"
+                                              href="#rating">{{ trans('categoryservice::category_services.tabs.rating') }}</a></li>
                 </ul>
 
                 <form method="POST" action="{{ route('admin.category_services.store') }}" class="form-horizontal"
@@ -100,7 +102,7 @@
                                 </div>
                                 <div class="col-md-10">
                                     <div>
-                                        {{ Form::text('meta[meta_keyword]', trans('group::attributes.meta_keyowrd'), $errors) }}
+                                        {{ Form::text('meta[meta_keyword]', trans('group::attributes.meta_keyword'), $errors) }}
                                     </div>
                                 </div>
                                 <div class="col-md-10">
@@ -111,6 +113,11 @@
                             </div>
                         </div>
 
+                        <div id="rating" class="tab-pane fade">
+                            {{ Form::checkbox('is_default_rating', trans('post::attributes.is_default_rating'), 'Enable', $errors, null) }}
+                            {{ Form::text('custom_avg_rating', trans('post::attributes.custom_avg_rating'), $errors, null, ['required' => true]) }}
+                            {{ Form::text('custom_rating_count', trans('post::attributes.custom_rating_count'), $errors, null, ['required' => true]) }}
+                        </div>
                     </div>
 
                     <div class="form-categoryservice">

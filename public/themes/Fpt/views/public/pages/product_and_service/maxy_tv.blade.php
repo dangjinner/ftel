@@ -649,4 +649,8 @@
     </div>
  </div>
 @include('public.sections.support')
+@include('public.sections.general.rv_cmt_for_pages_views')
+@endsection
+@section('script')
+    @include('public.sections.general.rv_cmt_for_pages_scripts')
 @endsection

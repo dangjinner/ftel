@@ -13,7 +13,8 @@ return [
         'general' => 'General',
         'image' => 'Image',
         'seo' => 'SEO',
-        'intro' => 'Mô tả'
+        'intro' => 'Mô tả',
+        'rating' => 'Rating',
     ],
     'form' => [
         'show_this_categoryservice_in_search_box' => 'Show this category in search box category list',

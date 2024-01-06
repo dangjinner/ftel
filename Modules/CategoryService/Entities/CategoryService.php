@@ -2,6 +2,8 @@
 
 namespace Modules\CategoryService\Entities;
 
+use Illuminate\Support\Facades\Route;
+use Modules\Rating\Entities\Rating;
 use Modules\Support\Eloquent\Model;
 use Modules\Support\Eloquent\Translatable;
 use Modules\Meta\Eloquent\HasMetaData;
@@ -29,7 +31,12 @@ class CategoryService extends Model
      * @var array
      */
     protected $fillable = [
-        'parent_id', 'slug', 'position'
+        'parent_id',
+        'slug',
+        'position',
+        'is_default_rating',
+        'custom_avg_rating',
+        'custom_rating_count',
     ];
 
     /**
@@ -40,6 +47,7 @@ class CategoryService extends Model
     protected $casts = [
         'is_searchable' => 'boolean',
         'is_active' => 'boolean',
+        'is_default_rating' => 'boolean',
     ];
 
     /**
@@ -144,5 +152,27 @@ class CategoryService extends Model
         }
 
         return $attributes;
+    }
+
+    public function ratings()
+    {
+        return Rating::where(Rating::URL, Route::current()->uri)
+            ->where(Rating::TYPE, Rating::TYPE_URL);
+    }
+
+    public function getAvgRatingAttribute()
+    {
+        if($this->is_default_rating) {
+            return number_format($this->ratings()->active()->avg(Rating::RATING), 1);
+        }
+        return $this->custom_avg_rating;
+    }
+
+    public function getRatingCountAttribute()
+    {
+        if($this->is_default_rating) {
+            return $this->ratings()->active()->count();
+        }
+        return $this->custom_rating_count;
     }
 }

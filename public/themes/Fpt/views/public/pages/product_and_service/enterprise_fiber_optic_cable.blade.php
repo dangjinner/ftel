@@ -1,5 +1,7 @@
 @extends('public.layout')
 
+@include('public.sections.general.custom_rating_for_pages')
+
 @section('content')
 <div class="single-banner">
     <img src="{{ $category_services->banner->path ?? $category_services->parent->banner->path }}" alt="" class="img-fluid">
@@ -245,6 +247,7 @@
     </div>
 </section>
 @include('public.sections.support')
+@include('public.sections.general.rv_cmt_for_pages_views')
 @endsection
 @section('script')
     <script>
@@ -256,4 +259,5 @@
             });
         });
     </script>
+    @include('public.sections.general.rv_cmt_for_pages_scripts')
 @endsection

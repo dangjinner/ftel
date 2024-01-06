@@ -1,5 +1,7 @@
 @extends('public.layout')
 
+@include('public.sections.general.custom_rating_for_pages')
+
 @section('css')
     <link rel="stylesheet" href="{{ v(theme::url('assets/css/jquery.tocify.css')) }}">
     <style>
@@ -362,10 +364,13 @@
                 {!! $service->feature !!}
                 @endforeach
             </div>
-            
+
         </div>
     </div>
 </div>
 @include('public.sections.support')
-
+@include('public.sections.general.rv_cmt_for_pages_views')
+@endsection
+@section('script')
+    @include('public.sections.general.rv_cmt_for_pages_scripts')
 @endsection
