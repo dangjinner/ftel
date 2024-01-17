@@ -163,6 +163,7 @@ footer #zalo-chat img {
     border-radius: 2px;
     background-color: #fff;
 }
+
 .google-icon {
     position: absolute;
     margin-top: 11px;
@@ -170,11 +171,14 @@ footer #zalo-chat img {
     width: 18px;
     height: 18px;
 }
+
 .google-btn-text {
     color: #fff;
     font-size: 16px;
     letter-spacing: 0.2px;
 }
+
+
 
 @media screen and (max-width: 1250px) {
     .landing .menu-area li {

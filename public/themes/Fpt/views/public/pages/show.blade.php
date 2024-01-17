@@ -250,6 +250,15 @@
         {
             display: none !important;
         }
+
+        .content_post em {
+            font-weight: 300;
+        }
+
+        .content_post strong em {
+            font-weight: bold;
+        }
+
         @media only screen and (max-width: 475px) {
             .block-title.block__orange > h1{
                 font-size: 20px;
