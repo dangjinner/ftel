@@ -64,7 +64,7 @@
             <p>(*) Vui lòng điền đầy đủ các thông tin này</p>
         </div>
         <div class=" col-lg-12 col-md-12 col-12 form_submit">
-            <button type="submit" id="btnSubmitCustomForm" class="btn-submit-custom-form"> 
+            <button type="submit" id="btnSubmitCustomForm" class="btn-submit-custom-form">
                 <!--<i class="fa fa-refresh fa-spin fa-spin-loading-form"></i> -->
                 <span>Đăng ký</span>
             </button>
@@ -122,7 +122,7 @@
         border: 1px solid #ccc;
         border-radius: 5px;
     }
-    
+
      form.form-dk-post .form__content .form_submit button[type=submit]{
                 width: auto;
                 padding: 0.5rem 4rem;
@@ -137,7 +137,7 @@
                 justify-content: center;
                 align-content: center;
     }
-        
+
      form.form-dk-post .form__content .form_submit .fa-spin-loading-form {
                 background: none;
                 color:#FFF;
@@ -195,7 +195,7 @@
         })
     }
     document.addEventListener("DOMContentLoaded", function(event) {
-        submitContactForm();
+
         $.validator.addMethod("regexPhone",
             function(value, element) {
                 return /(0[3|5|7|8|9])+([0-9]{8})\b/.test(value);
