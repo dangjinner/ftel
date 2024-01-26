@@ -486,6 +486,8 @@
 
         $('p iframe').parent().addClass('hasIframe');
 
+        $('table').wrap('<div style="overflow-x: auto;"></div>');
+
     });
 </script>
 <script>
