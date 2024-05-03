@@ -195,7 +195,6 @@
         })
     }
     document.addEventListener("DOMContentLoaded", function(event) {
-
         $.validator.addMethod("regexPhone",
             function(value, element) {
                 return /(0[3|5|7|8|9])+([0-9]{8})\b/.test(value);
