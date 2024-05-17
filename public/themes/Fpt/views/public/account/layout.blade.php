@@ -11,7 +11,7 @@
                   </div>
               </div>
               <div class="col-9">
-                  <div class="row">
+                  <div class="pl-2 pr-2">
                       @yield('sub_content')
                   </div>
               </div>
