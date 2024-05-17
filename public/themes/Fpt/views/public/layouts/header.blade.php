@@ -123,11 +123,19 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" title="Đăng nhập">
-                                <img alt="Đăng nhập" src="{{ v(theme::url('assets/images/topmenu-login.png')) }}"
-                                    alt="Đăng nhập">
-                                Đăng nhập
-                            </a>
+                            @if(auth()->check())
+                                <a href="{{ route('account.info') }}" title="Tài khoản">
+                                    <img alt="Tài khoản" src="{{ v(theme::url('assets/images/topmenu-login.png')) }}"
+                                         >
+                                    Tài khoản
+                                </a>
+                            @else
+                                <a href="{{ route('auth.login.get') }}" title="Đăng nhập">
+                                    <img alt="Đăng nhập" src="{{ v(theme::url('assets/images/topmenu-login.png')) }}"
+                                         alt="Đăng nhập">
+                                    Đăng nhập
+                                </a>
+                            @endif
                         </li>
                         <li>
                             <a href="">

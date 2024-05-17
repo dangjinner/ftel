@@ -14,28 +14,23 @@ Route::get('{slug}/thank-you', 'HomeController@customThanksRegister')->name('hom
 
 Route::post('cam-on-dang-ky', 'HomeController@postContactForm')->name('shortcode.dangkydichvu');
 
+Route::get('dang-nhap', 'AuthController@getLogin')->name('auth.login.get');
+Route::post('dang-nhap', 'AuthController@postLogin')->name('auth.login.post');
+Route::get('dang-ky', 'AuthController@getRegister')->name('auth.register.get');
+Route::post('dang-ky', 'AuthController@postRegister')->name('auth.register.post');
+Route::get('logout', 'AuthController@logout')->name('auth.logout')->middleware('auth');
+
+Route::get('tai-khoan/xac-thuc', 'AuthController@getVerifyAccount')
+    ->name('auth.verify.get');
+Route::get('tai-khoan/hoan-tat-xac-thuc', 'AuthController@completeVerifyAccount')
+    ->name('auth.verify.link');
+Route::post('tai-khoan/xac-thuc', 'AuthController@postVerifyAccount')
+    ->name('auth.verify.post');
+
+Route::prefix('tai-khoan')->name('account.')->middleware('auth')->group(function() {
+    Route::get('thong-tin', 'UserController@getAccountInfo')->name('info');
+});
+
 Route::get('{slug}', '\Modules\Page\Http\Controllers\PageController@show')->name('pages.news.show');
 Route::get('/{slug2}', '\Modules\Page\Http\Controllers\PageController@redirect')->name('pages.redirect')->where('slug2','^[a-zA-Z0-9-_\/]+$');
-// Route::get('test', function ()
-// {
-//     if (sha1($_SERVER['HTTP_HOST']) != '6615216f8b0ced03eba63080989c41652bfd774d') {
-//         dd("Website không hợp lệ !");
-//     }
-//     dd($_SERVER);
-//     return;
-// });
 
-// Route::get('dang-ky','SendMailController@register')->name('pages.register');
-// Route::get('dang-ky/{id}','SendMailController@getJson')->name('pages.getJson');
-// Route::post('dang-ky','SendMailController@sendMail')->name('pages.sendMail');
-
-// Route::get('fpt/featured-categories/{categoryNumber}/products', 'FeaturedCategoryProductController@index')->name('fpt.featured_category_products.index');
-// Route::get('fpt/tab-products/sections/{sectionNumber}/tabs/{tabNumber}', 'TabProductController@index')->name('fpt.tab_products.index');
-// Route::get('fpt/product-grid/tabs/{tabNumber}', 'ProductGridController@index')->name('fpt.product_grid.index');
-// Route::get('fpt/flash-sale-products', 'FlashSaleProductController@index')->name('fpt.flash_sale_products.index');
-// Route::get('fpt/vertical-products/{columnNumber}', 'VerticalProductController@index')->name('fpt.vertical_products.index');
-
-// Route::post('fpt/newsletter-popup', 'NewsletterPopup@store')->name('fpt.newsletter_popup.store');
-// Route::delete('fpt/newsletter-popup', 'NewsletterPopup@destroy')->name('fpt.newsletter_popup.destroy');
-
-// Route::delete('fpt/cookie-bar', 'CookieBarController@destroy')->name('fpt.cookie_bar.destroy');

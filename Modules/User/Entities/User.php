@@ -19,7 +19,7 @@ class User extends EloquentUser implements AuthenticatableContract
 {
     use Authenticatable;
 
-    protected $fillable = ['google_id', 'first_name', 'last_name', 'email', 'password', 'avatar'];
+    protected $fillable = ['google_id', 'first_name', 'last_name', 'email', 'password', 'avatar', 'phone_number'];
 
     protected $appends = [
       'full_name'

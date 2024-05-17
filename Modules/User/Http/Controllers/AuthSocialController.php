@@ -58,7 +58,7 @@ class AuthSocialController extends Controller
 
     public function redirectToGoogle(Request $request)
     {
-        Session::put('callbackUrl', $request->callbackUrl . '#root-review');
+        Session::put('callbackUrl', $request->callbackUrl);
         return Socialite::driver('google')->redirect();
     }
 
