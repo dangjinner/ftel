@@ -44,5 +44,6 @@
     "FptBranch": true,
     "StoreBranch": true,
     "Comment": true,
-    "Rating": true
+    "Rating": true,
+    "Affiliate": true
 }
