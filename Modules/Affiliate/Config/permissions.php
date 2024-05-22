@@ -7,4 +7,10 @@ return [
         'edit' => 'affiliate::permissions.products.edit',
         'destroy' => 'affiliate::permissions.products.destroy',
     ],
+    'admin.affiliate.accounts' => [
+        'index' => 'affiliate::permissions.accounts.index',
+        'create' => 'affiliate::permissions.accounts.create',
+        'edit' => 'affiliate::permissions.accounts.edit',
+        'destroy' => 'affiliate::permissions.accounts.destroy',
+    ],
 ];
