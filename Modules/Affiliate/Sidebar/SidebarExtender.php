@@ -37,6 +37,14 @@ class SidebarExtender extends BaseSidebarExtender
                         $this->auth->hasAccess('admin.affiliate.accounts.index')
                     );
                 });
+
+                $item->item(trans('affiliate::sidebar.links'), function (Item $item) {
+                    $item->weight(3);
+                    $item->route('admin.affiliate_links.index');
+                    $item->authorize(
+                        $this->auth->hasAccess('admin.affiliate.links.index')
+                    );
+                });
             });
         });
     }

@@ -13,4 +13,10 @@ return [
         'edit' => 'affiliate::permissions.accounts.edit',
         'destroy' => 'affiliate::permissions.accounts.destroy',
     ],
+    'admin.affiliate.links' => [
+        'index' => 'affiliate::permissions.links.index',
+        'create' => 'affiliate::permissions.links.create',
+        'edit' => 'affiliate::permissions.links.edit',
+        'destroy' => 'affiliate::permissions.links.destroy',
+    ],
 ];

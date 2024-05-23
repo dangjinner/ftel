@@ -4,6 +4,7 @@ namespace Modules\Affiliate\Providers;
 
 use Modules\Admin\Ui\Facades\TabManager;
 use Modules\Affiliate\Admin\AffiliateAccountTabs;
+use Modules\Affiliate\Admin\AffiliateLinkTabs;
 use Modules\Affiliate\Admin\AffiliateProductTabs;
 use Modules\Support\Traits\AddsAsset;
 use Illuminate\Support\ServiceProvider;
@@ -21,15 +22,14 @@ class AffiliateServiceProvider extends ServiceProvider
     {
         TabManager::register('affiliate_products', AffiliateProductTabs::class);
         TabManager::register('affiliate_accounts', AffiliateAccountTabs::class);
+        TabManager::register('affiliate_links', AffiliateLinkTabs::class);
 
         $this->addAdminAssets(
-            'admin.affiliate_products.(create|edit)'
-            , [
-            'admin.media.css', 'admin.media.js', 'admin.product.css', 'admin.product.js',
-        ]);
-
-        $this->addAdminAssets(
-            'admin.affiliate_accounts.(create|edit)'
+            [
+                'admin.affiliate_products.(create|edit)',
+                'admin.affiliate_accounts.(create|edit)',
+                'admin.affiliate_links.(create|edit)',
+            ]
             , [
             'admin.media.css', 'admin.media.js', 'admin.product.css', 'admin.product.js',
         ]);

@@ -19,12 +19,12 @@ class CreateAffiliateLinksTable extends Migration
             $table->unsignedBigInteger('aff_account_id')->index();
             $table->unsignedBigInteger('aff_product_id')->index();
             $table->string('code')->unique()->index();
-            $table->string('utm_source');
-            $table->string('utm_campaign');
-            $table->string('utm_content');
-            $table->string('utm_medium');
+            $table->string('utm_source')->nullable();
+            $table->string('utm_campaign')->nullable();
+            $table->string('utm_content')->nullable();
+            $table->string('utm_medium')->nullable();
             $table->boolean('status');
-            $table->dateTime('expired_at');
+            $table->dateTime('expired_at')->nullable();
             $table->timestamps();
             $table->softDeletes();
 
