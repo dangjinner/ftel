@@ -42,4 +42,5 @@ class AffiliateLinkController extends Controller
 
         return redirect()->to($redirectUrl)->withCookie($cookie);
     }
+
 }

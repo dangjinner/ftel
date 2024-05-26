@@ -10,6 +10,9 @@ class AffiliateLink extends Model
 {
     use SoftDeletes;
 
+    const ACTIVE = 1;
+    const DEACTIVATE = 0;
+
     protected $fillable = [
         'user_id',
         'aff_account_id',
@@ -44,5 +47,10 @@ class AffiliateLink extends Model
     public function ctvUrl()
     {
         return route('pages.individualFiber', ['affCode' => $this->code]);
+    }
+
+    public function getCreatedAttribute()
+    {
+        return $this->created_at->format('H:i d/m/Y');
     }
 }
