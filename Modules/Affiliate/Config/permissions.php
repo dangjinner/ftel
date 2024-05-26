@@ -19,4 +19,10 @@ return [
         'edit' => 'affiliate::permissions.links.edit',
         'destroy' => 'affiliate::permissions.links.destroy',
     ],
+    'admin.affiliate.customers' => [
+        'index' => 'affiliate::permissions.customers.index',
+        'create' => 'affiliate::permissions.customers.create',
+        'edit' => 'affiliate::permissions.customers.edit',
+        'destroy' => 'affiliate::permissions.customers.destroy',
+    ],
 ];

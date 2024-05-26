@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Modules\Affiliate\Http\Controllers\Admin\AffiliateProductController;
 use Modules\Affiliate\Http\Controllers\Admin\AffiliateAccountController;
 use Modules\Affiliate\Http\Controllers\Admin\AffiliateLinkController;
+use Modules\Affiliate\Http\Controllers\Admin\AffiliateCustomerController;
 
 Route::prefix('affiliate')->name('admin.affiliate_')->group(function() {
     Route::prefix('products')->name('products.')->group(function() {
@@ -67,6 +68,27 @@ Route::prefix('affiliate')->name('admin.affiliate_')->group(function() {
         Route::delete('/{ids}', [AffiliateLinkController::class, 'destroy'])
             ->name('destroy')
             ->middleware('can:admin.affiliate.links.destroy');
+    });
+
+    Route::prefix('customers')->name('customers.')->group(function() {
+        Route::get('/', [AffiliateCustomerController::class, 'index'])
+            ->name('index')
+            ->middleware('can:admin.affiliate.customers.index');
+        Route::get('/create', [AffiliateCustomerController::class, 'create'])
+            ->name('create')
+            ->middleware('can:admin.affiliate.customers.create');
+        Route::post('/store', [AffiliateCustomerController::class, 'store'])
+            ->name('store')
+            ->middleware('can:admin.affiliate.customers.edit');
+        Route::get('/{id}/edit', [AffiliateCustomerController::class, 'edit'])
+            ->name('edit')
+            ->middleware('can:admin.affiliate.customers.edit');
+        Route::put('/{id}/update', [AffiliateCustomerController::class, 'update'])
+            ->name('update')
+            ->middleware('can:admin.affiliate.customers.edit');
+        Route::delete('/{ids}', [AffiliateCustomerController::class, 'destroy'])
+            ->name('destroy')
+            ->middleware('can:admin.affiliate.customers.destroy');
     });
 });
 

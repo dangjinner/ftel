@@ -14,12 +14,19 @@ class AffiliateProduct extends Model
 
     protected $fillable = [
         'name',
+        'type',
+        'page_url',
+        'cookie_duration',
+        'is_set_cookie',
         'info',
         'description',
         'page_url',
         'commission',
         'status',
     ];
+
+    const FOR_PRODUCT_AND_SERVICE = 1;
+    const FOR_URL = 2;
 
     /**
      * Get the product's base image.

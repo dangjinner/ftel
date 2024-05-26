@@ -5,4 +5,5 @@ return [
     'products' => 'Products',
     'accounts' => 'Accounts',
     'links' => 'Links',
+    'customers' => 'Customers'
 ];
