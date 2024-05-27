@@ -19,6 +19,10 @@ class SaveAffiliateProductRequest extends Request
             'description' => 'nullable|string',
             'info' => 'nullable|string',
             'status' => 'boolean|required',
+            'type' => 'required|int|in:1,2',
+            'price' => 'required|numeric',
+            'commission' => 'required|numeric',
+            'commission_type' => 'required|int|in:1,2',
         ];
     }
 

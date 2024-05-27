@@ -12,6 +12,7 @@ class AffiliateProductTabs extends Tabs
         $this->group('basic_information', trans('affiliate::products.tabs.groups.basic_info'))
             ->active()
             ->add($this->general())
+            ->add($this->price())
             ->add($this->images());
     }
 
@@ -27,6 +28,17 @@ class AffiliateProductTabs extends Tabs
         });
     }
 
+    private function price()
+    {
+        return tap(new Tab('price', trans('affiliate::products.tabs.price')), function (Tab $tab) {
+            $tab->weight(2);
+            $tab->fields(['price', 'commission', 'commission_type']);
+            $tab->view('affiliate::admin.products.tabs.prices', [
+
+            ]);
+        });
+    }
+
     private function images()
     {
         if (! auth()->user()->hasAccess('admin.media.index')) {
@@ -34,7 +46,7 @@ class AffiliateProductTabs extends Tabs
         }
 
         return tap(new Tab('images', trans('affiliate::products.tabs.images')), function (Tab $tab) {
-            $tab->weight(2);
+            $tab->weight(3);
             $tab->view('affiliate::admin.products.tabs.images');
         });
     }

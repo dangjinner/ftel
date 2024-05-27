@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\URL;
 use Modules\Affiliate\Admin\AffiliateProductTable;
 use Modules\Media\Eloquent\HasMedia;
 use Modules\Media\Entities\File;
+use Modules\Support\Money;
 
 class AffiliateProduct extends Model
 {
@@ -23,11 +24,19 @@ class AffiliateProduct extends Model
         'description',
         'page_url',
         'commission',
+        'commission_type',
+        'price',
         'status',
     ];
 
     const FOR_PRODUCT_AND_SERVICE = 1;
     const FOR_URL = 2;
+    const COMMISSION_MONEY = 1;
+    const COMMISSION_PERCENT = 2;
+
+    protected $appends = [
+        'fm_commission'
+    ];
 
     /**
      * Get the product's base image.
@@ -63,6 +72,17 @@ class AffiliateProduct extends Model
     public function ownLinks()
     {
         return $this->links()->where('user_id', auth()->id());
+    }
+
+    public function getFmCommissionAttribute()
+    {
+        $commission = $this->commission;
+
+        if($this->commission_type == self::COMMISSION_PERCENT) {
+            $commission = ($this->commission / 100) * $this->price;
+        }
+
+        return Money::inDefaultCurrency($commission);
     }
 
     public function table($request)

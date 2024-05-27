@@ -26,6 +26,10 @@
                         <p class="mb-3">{{ $product->name }}</p>
                     </div>
                     <div>
+                        <b>Hoa hồng: </b>
+                        <p class="mb-3">{{ $product->fm_commission->format() }}</p>
+                    </div>
+                    <div>
                         <b>Link gốc: </b>
                         <p class="mb-3">
                             <a class="text-primary" href="{{ $product->original_link }}"
