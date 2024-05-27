@@ -26,6 +26,7 @@ class SaveAffiliateCustomerRequest extends Request
             'utm_campaign' => 'nullable|string',
             'utm_term' => 'nullable|string',
             'from_page_url' => 'nullable|string',
+            'status' => 'required|int|in:1,2,3',
         ];
     }
 

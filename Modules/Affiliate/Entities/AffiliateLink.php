@@ -44,6 +44,11 @@ class AffiliateLink extends Model
         return $this->belongsTo(AffiliateProduct::class, 'aff_product_id', 'id');
     }
 
+    public function customers()
+    {
+        return $this->hasMany(AffiliateCustomer::class, 'aff_code', 'code');
+    }
+
     public function ctvUrl()
     {
         return route('pages.individualFiber', ['affCode' => $this->code]);

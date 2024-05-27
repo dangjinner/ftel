@@ -43,4 +43,11 @@ class AffiliateLinkController extends Controller
         return redirect()->to($redirectUrl)->withCookie($cookie);
     }
 
+    public function getSingleLink($code)
+    {
+        $link = AffiliateLink::where('code', $code)
+            ->firstOrFail();
+        $customers = $link->customers()->paginate(15);
+        return view('public.affiliate.single_link', compact('link', 'customers'));
+    }
 }

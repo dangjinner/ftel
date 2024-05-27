@@ -10,6 +10,10 @@ class AffiliateCustomer extends Model
 {
     use SoftDeletes;
 
+    const PROCESSING = 1;
+    const COMPLETED = 2;
+    const REJECTED = 3;
+
     protected $fillable = [
         'name',
         'phone_number',
@@ -24,6 +28,7 @@ class AffiliateCustomer extends Model
         'utm_term',
         'from_page_url',
         'aff_code',
+        'status'
     ];
 
     public function table($request)
@@ -31,5 +36,10 @@ class AffiliateCustomer extends Model
         $query = $this->newQuery();
 
         return new AffiliateCustomerTable($query);
+    }
+
+    public function getCreatedAttribute()
+    {
+        return $this->created_at->format('H:i d/m/Y');
     }
 }

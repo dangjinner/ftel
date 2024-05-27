@@ -125,7 +125,7 @@
                                     <th scope="row">{{ $loop->iteration }}</th>
                                     <td>
                                         <a class="text-primary"
-                                           href="{{ route('affiliate.ctv.link', ['code' => $link->code]) }}" target="_blank">
+                                           href="{{ route('affiliate.single_link', ['code' => $link->code]) }}" >
                                             {{ route('affiliate.ctv.link', ['code' => $link->code]) }}
                                         </a>
                                     </td>

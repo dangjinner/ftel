@@ -2,6 +2,7 @@
 
 namespace Modules\Affiliate\Http\Controllers;
 
+use Artesaos\SEOTools\Facades\SEOMeta;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Str;
 use Modules\Affiliate\Entities\AffiliateLink;
@@ -13,14 +14,14 @@ class AffiliateProductController extends Controller
     public function products()
     {
         $products = AffiliateProduct::paginate(12);
-
+        SEOMeta::setTitle('Danh sách sản phẩm');
         return view('public.affiliate.products', compact('products'));
     }
 
     public function getSingleProduct($id)
     {
         $product = AffiliateProduct::with(['ownLinks'])->findOrFail($id);
-
+        SEOMeta::setTitle($product->name);
         return view('public.affiliate.single_product', compact('product'));
     }
 
@@ -58,5 +59,4 @@ class AffiliateProductController extends Controller
         }
         return $this->generateUniqueCode();
     }
-
 }

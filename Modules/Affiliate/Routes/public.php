@@ -16,6 +16,7 @@ Route::prefix('affiliate')
             Route::get('products', [AffiliateProductController::class, 'products'])->name('products');
             Route::get('products/{id}', [AffiliateProductController::class, 'getSingleProduct'])->name('single_product');
             Route::post('products/{id}/create-link', [AffiliateProductController::class, 'createAffiliateLink'])->name('products.create_link');
+            Route::get('links/{code}', [AffiliateLinkController::class, 'getSingleLink'])->name('single_link');
         });
 
         Route::middleware('affiliate.not_pending')->group(function () {

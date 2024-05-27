@@ -3,6 +3,8 @@
 namespace Modules\Affiliate\Admin;
 
 use Modules\Admin\Ui\AdminTable;
+use Modules\Affiliate\Entities\AffiliateCustomer;
+use Modules\Affiliate\Entities\AffiliateLink;
 
 class AffiliateCustomerTable extends AdminTable
 {
@@ -20,6 +22,18 @@ class AffiliateCustomerTable extends AdminTable
      */
     public function make()
     {
-        return $this->newTable();
+        return $this->newTable()
+            ->editColumn('status', function($affiliateCustomer) {
+                $text = trans('affiliate::customers.form.status')[$affiliateCustomer->status];
+                $class = "bg-warning";
+                if($affiliateCustomer->status == AffiliateCustomer::COMPLETED) {
+                    $class = "bg-success";
+                }elseif($affiliateCustomer->status == AffiliateCustomer::REJECTED) {
+                    $class = "bg-danger";
+                }
+
+                $elm = "<span class='{$class}'>{$text}</span>";
+                return $elm;
+            });
     }
 }
