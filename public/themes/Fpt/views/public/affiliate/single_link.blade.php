@@ -3,8 +3,8 @@
     <div>
         <div class="text-center ">
             <h2>Thông tin affiliate link</h2>
-            <a class="text-primary" href="{{ route('affiliate.ctv.link', ['code' => $link->code]) }}" target="_blank">
-                {{ route('affiliate.ctv.link', ['code' => $link->code]) }}
+            <a class="text-primary" href="{{ $link->ctv_link }}" target="_blank">
+                {{ $link->ctv_link }}
             </a>
         </div>
         <div class="mt-3">

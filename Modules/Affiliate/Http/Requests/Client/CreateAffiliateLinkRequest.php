@@ -18,6 +18,7 @@ class CreateAffiliateLinkRequest extends Request
             'utm_campaign' => 'nullable|string',
             'utm_content' => 'nullable|string',
             'utm_medium' => 'nullable|string',
+            'is_short_link' => 'nullable|boolean',
         ];
     }
 

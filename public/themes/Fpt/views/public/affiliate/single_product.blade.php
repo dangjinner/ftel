@@ -56,6 +56,13 @@
                 <h3 class="mb-3">Tạo affiliate link - {{ $product->name }}</h3>
                 <form method="POST" action="{{ route('affiliate.products.create_link', ['id' => $product->id]) }}">
                     @csrf
+                    <div class="form-check">
+                        <input class="form-check-input" name="is_short_link" type="checkbox" value="1"  id="is_short_link" >
+                        <label class="form-check-label" for="is_short_link">
+                            Create short link
+                        </label>
+                    </div>
+
                     <div class="form-row form-group">
                         <div class="col">
                             <label for="utm_source">Utm Source</label>
@@ -130,7 +137,7 @@
                                     <td>
                                         <a class="text-primary"
                                            href="{{ route('affiliate.single_link', ['code' => $link->code]) }}" >
-                                            {{ route('affiliate.ctv.link', ['code' => $link->code]) }}
+                                            {{ $link->ctv_link }}
                                         </a>
                                     </td>
                                     <td>{{ $link->created }}</td>
@@ -157,6 +164,7 @@
             const btnCreateLink = $('#createAffiliateLinkButton');
             const createLinkForm = $('#createLinkForm');
             const btnCopyLink = $('.btnCopyLink');
+
 
             btnCreateLink.click(function (e) {
                 e.preventDefault();

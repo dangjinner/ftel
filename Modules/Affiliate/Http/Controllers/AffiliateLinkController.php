@@ -22,7 +22,7 @@ class AffiliateLinkController extends Controller
         }
 
         if($affiliateProduct->type == AffiliateProduct::FOR_PRODUCT_AND_SERVICE) {
-            $redirectUrl = $affiliateLink->ctvUrl();
+            $redirectUrl = '/';
         } elseif($affiliateProduct->type == AffiliateProduct::FOR_URL) {
             $params = http_build_query([
                 'affCode' => $code

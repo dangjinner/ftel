@@ -35,7 +35,7 @@ class AffiliateLinkTable extends AdminTable
                     : '<span class="dot red"></span>';
             })
             ->editColumn('affLink', function ($affiliateLink) {
-                $affLink = route('affiliate.ctv.link', ['code' => $affiliateLink->code]);
+                $affLink = $affiliateLink->ctv_link;
                 return "<a href='{$affLink}' >{$affiliateLink->code}</a>";
             });
     }

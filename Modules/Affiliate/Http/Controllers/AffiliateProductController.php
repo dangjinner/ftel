@@ -36,6 +36,7 @@ class AffiliateProductController extends Controller
             'utm_campaign',
             'utm_links',
             'utm_content',
+            'is_short_link'
         );
         $data['code'] = $this->generateUniqueCode();
         $data['user_id'] = auth()->id();

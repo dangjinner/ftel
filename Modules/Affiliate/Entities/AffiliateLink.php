@@ -4,6 +4,7 @@ namespace Modules\Affiliate\Entities;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use Illuminate\Support\Facades\URL;
 use Modules\Affiliate\Admin\AffiliateLinkTable;
 
 class AffiliateLink extends Model
@@ -12,6 +13,9 @@ class AffiliateLink extends Model
 
     const ACTIVE = 1;
     const DEACTIVATE = 0;
+
+    const SHORT_LINK_DEACTIVATE = 0;
+    const SHORT_LINK_ACTIVATE = 1;
 
     protected $fillable = [
         'user_id',
@@ -24,6 +28,11 @@ class AffiliateLink extends Model
         'utm_medium',
         'status',
         'expired_at',
+        'is_short_link'
+    ];
+
+    protected $appends = [
+        'ctv_link'
     ];
 
     public function table($request)
@@ -49,9 +58,24 @@ class AffiliateLink extends Model
         return $this->hasMany(AffiliateCustomer::class, 'aff_code', 'code');
     }
 
-    public function ctvUrl()
+    public function getCtvLinkAttribute()
     {
-        return route('pages.individualFiber', ['affCode' => $this->code]);
+        if ($this->is_short_link) {
+            return route('affiliate.ctv.link', ['code' => $this->code]);
+        }
+
+        $product = $this->product()->first();
+        $redirectUrl = '/';
+
+        if ($product) {
+            $redirectUrl = $product->page_url;
+        }
+
+        $params = http_build_query([
+            'affCode' => $this->code
+        ]);
+
+        return URL::to($redirectUrl) . '?' . $params;
     }
 
     public function getCreatedAttribute()
