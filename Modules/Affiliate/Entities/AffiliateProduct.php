@@ -85,6 +85,19 @@ class AffiliateProduct extends Model
         return Money::inDefaultCurrency($commission);
     }
 
+    public function getCookieTimeAttribute()
+    {
+        if($this->is_set_cookie) {
+            $cookieMinutes = 60 * 24 * 7;
+            if ($this->cookie_duration > 0) {
+                $cookieMinutes = 60 * 24 * $this->cookie_duration;
+            }
+            return $cookieMinutes;
+        }
+
+        return 0;
+    }
+
     public function table($request)
     {
         $query = $this->newQuery();

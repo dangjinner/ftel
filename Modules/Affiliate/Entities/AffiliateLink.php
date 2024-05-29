@@ -72,7 +72,9 @@ class AffiliateLink extends Model
         }
 
         $params = http_build_query([
-            'affCode' => $this->code
+            'affCode' => $this->code,
+            'cookie_time' => $product->cookie_time,
+            'set_cookie' => $product->is_set_cookie ? 'true' : 'false'
         ]);
 
         return URL::to($redirectUrl) . '?' . $params;
