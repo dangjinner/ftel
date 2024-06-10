@@ -3,6 +3,8 @@
 namespace Themes\Fpt\Http\Controllers;
 
 use FleetCart\Jobs\SendMailRegister;
+use Illuminate\Support\Facades\Cookie;
+use Modules\Affiliate\Entities\AffiliateCustomer;
 use Modules\Group\Entities\Group;
 use Modules\Slider\Entities\Slider;
 use Modules\Menu\Entities\Menu;
@@ -92,7 +94,6 @@ class HomeController
             'message' => $message,
             'option_service' => $service,
             'google_sheet_link' => request()->get('google_sheet_link'),
-
         ];
         $googleSheetCustom = new GoogleSheetCustom($spreadSheetId, $sheetName);
         if($sheetName !== null && $spreadSheetId !== null) {
@@ -119,9 +120,23 @@ class HomeController
             $currentURL = request()->input('current_url');
             $this->google_sheet_adsen->saveDataToSheet([
                 [$currentDate, $name, $phone, $address, $service ,$message, $utmSource, $utmMedium, $utmCapaign, $utmTerm,  $utmContent, $ipAddress,  $currentURL]
-                // [$currentDate, $name, $phone, $address, $service ,$message]
             ]);
 
+            AffiliateCustomer::create([
+                'name' => $name,
+                'phone_number' => $phone,
+                'address' => $address,
+                'note' => $message,
+                'service_option' => $service,
+                'utm_source' => $utmSource,
+                'utm_campaign' => $utmCapaign,
+                'utm_term' => $utmTerm,
+                'utm_content' => $utmContent,
+                'utm_medium' => $utmMedium,
+                'ip' => $ipAddress,
+                'from_page_url' => $currentURL,
+                'aff_code' => Cookie::get('aff_code')
+            ]);
         }
         if(request()->get('email_received') !== null) {
             return redirect()->route('home.custom.dangkydichvu.thank', ['slug' => request()->get('slug_page')]);

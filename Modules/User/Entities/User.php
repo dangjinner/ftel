@@ -2,6 +2,7 @@
 
 namespace Modules\User\Entities;
 
+use Modules\Affiliate\Entities\AffiliateAccount;
 use Modules\Order\Entities\Order;
 use Modules\User\Admin\UserTable;
 use Modules\Review\Entities\Review;
@@ -244,5 +245,10 @@ class User extends EloquentUser implements AuthenticatableContract
     public function table()
     {
         return new UserTable($this->newQuery());
+    }
+
+    public function affiliateAccount()
+    {
+        return $this->hasOne(AffiliateAccount::class, 'user_id', 'id');
     }
 }
