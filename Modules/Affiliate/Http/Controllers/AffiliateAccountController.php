@@ -16,7 +16,17 @@ class AffiliateAccountController extends Controller
 
     public function postRegister(RegisterAffiliateAccountRequest $request)
     {
-        $data = $request->only('first_name', 'last_name', 'email', 'phone_number', 'address');
+        $data = $request->only(
+            'first_name',
+            'last_name',
+            'email',
+            'phone_number',
+            'address',
+            'bank_account_name',
+            'bank_account_number',
+            'bank_name',
+            'bank_branch',
+        );
         $data['user_id'] = auth()->id();
         $data['status'] = AffiliateAccount::PENDING;
         AffiliateAccount::create($data);

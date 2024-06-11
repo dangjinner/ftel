@@ -3,7 +3,9 @@
 namespace Modules\User\Entities;
 
 use Modules\Affiliate\Entities\AffiliateAccount;
+use Modules\Currency\Currency;
 use Modules\Order\Entities\Order;
+use Modules\Support\Money;
 use Modules\User\Admin\UserTable;
 use Modules\Review\Entities\Review;
 use Illuminate\Auth\Authenticatable;
@@ -250,5 +252,10 @@ class User extends EloquentUser implements AuthenticatableContract
     public function affiliateAccount()
     {
         return $this->hasOne(AffiliateAccount::class, 'user_id', 'id');
+    }
+
+    public function getTotalCommissionAttribute()
+    {
+        return Money::inDefaultCurrency($this->affiliateAccount()->sum('total_commission'));
     }
 }

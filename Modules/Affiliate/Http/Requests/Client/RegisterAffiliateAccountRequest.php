@@ -19,6 +19,10 @@ class RegisterAffiliateAccountRequest extends Request
             'email' => 'required|email|unique:affiliate_accounts,email',
             'phone_number' => ['required', 'regex:/(0[3|5|7|8|9])+([0-9]{8})\b/u'],
             'address' => 'required|string',
+            'bank_account_name' => 'required|string',
+            'bank_account_number' => 'required|string',
+            'bank_name' => 'required|string',
+            'bank_branch' => 'required|string',
         ];
     }
 
