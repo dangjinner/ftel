@@ -22,6 +22,11 @@ class AffiliateAccount extends Model
         'phone_number',
         'address',
         'status',
+        'bank_account_name',
+        'bank_account_number',
+        'bank_name',
+        'bank_branch',
+        'total_commission'
     ];
 
     protected $appends = [

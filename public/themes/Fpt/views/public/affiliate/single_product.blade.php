@@ -52,68 +52,77 @@
                     </div>
                 </div>
             </div>
-            <div class="mt-3" id="createLinkForm" style="display: none">
+            <div class="mt-3 bg-light p-3 shadow-lg" id="createLinkForm" style="display: none">
                 <h3 class="mb-3">Tạo affiliate link - {{ $product->name }}</h3>
                 <form method="POST" action="{{ route('affiliate.products.create_link', ['id' => $product->id]) }}">
                     @csrf
-                    <div class="form-check">
-                        <input class="form-check-input" name="is_short_link" type="checkbox" value="1"  id="is_short_link" >
+                    <div class="form-check mb-2">
+                        <input class="form-check-input" name="is_short_link" type="checkbox" value="1"
+                               id="is_short_link">
                         <label class="form-check-label" for="is_short_link">
-                            Create short link
+                            Tạo short link
                         </label>
+                        <span class="text-primary">({{ route('affiliate.ctv.link', ['code' => 'Zn5BHab9Hd']) }})</span>
                     </div>
 
-                    <div class="form-row form-group">
-                        <div class="col">
-                            <label for="utm_source">Utm Source</label>
-                            <input type="text" id="utm_source" name="utm_source" value=""
-                                   class="form-control @error('utm_source') is-invalid @enderror"
-                                   placeholder="Enter utm source">
-                            @error('utm_source')
-                            <div class="invalid-feedback">
-                                {{ $message }}
+                      <div class="d-flex align-items-center">
+                          <a id="btnAddOption" class=" mr-1" style="font-weight: bold; color: #0738b7" data-toggle="collapse" href="#utm-section" role="button"
+                             aria-expanded="false" aria-controls="multiCollapseExample1">+ Thêm tùy chọn
+                          </a>
+                      </div>
+                    <div id="utm-section" class="collapse multi-collapse">
+                        <div class="form-row form-group">
+                            <div class="col">
+                                <label for="utm_source">Utm Source</label>
+                                <input type="text" id="utm_source" name="utm_source" value=""
+                                       class="form-control @error('utm_source') is-invalid @enderror"
+                                       placeholder="Enter utm source">
+                                @error('utm_source')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
-                            @enderror
-                        </div>
-                        <div class="col">
-                            <label for="utm_medium">Utm Medium</label>
-                            <input type="text" id="utm_medium" name="utm_medium" value=""
-                                   class="form-control @error('utm_medium') is-invalid @enderror"
-                                   placeholder="Enter utm medium">
-                            @error('utm_medium')
-                            <div class="invalid-feedback">
-                                {{ $message }}
+                            <div class="col">
+                                <label for="utm_medium">Utm Medium</label>
+                                <input type="text" id="utm_medium" name="utm_medium" value=""
+                                       class="form-control @error('utm_medium') is-invalid @enderror"
+                                       placeholder="Enter utm medium">
+                                @error('utm_medium')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
-                            @enderror
-                        </div>
 
-                    </div>
-                    <div class="form-row form-group">
-                        <div class="col">
-                            <label for="utm_campaign">Utm campaign</label>
-                            <input type="text" id="utm_campaign" name="utm_campaign" value=""
-                                   class="form-control @error('utm_campaign') is-invalid @enderror"
-                                   placeholder="Enter campaign">
-                            @error('utm_campaign')
-                            <div class="invalid-feedback">
-                                {{ $message }}
-                            </div>
-                            @enderror
                         </div>
-                        <div class="col">
-                            <label for="utm_content">Utm content</label>
-                            <input type="text" id="utm_content" name="utm_content" value=""
-                                   class="form-control @error('utm_content') is-invalid @enderror"
-                                   placeholder="Enter content">
-                            @error('utm_content')
-                            <div class="invalid-feedback">
-                                {{ $message }}
+                        <div class="form-row form-group">
+                            <div class="col">
+                                <label for="utm_campaign">Utm campaign</label>
+                                <input type="text" id="utm_campaign" name="utm_campaign" value=""
+                                       class="form-control @error('utm_campaign') is-invalid @enderror"
+                                       placeholder="Enter campaign">
+                                @error('utm_campaign')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
-                            @enderror
+                            <div class="col">
+                                <label for="utm_content">Utm content</label>
+                                <input type="text" id="utm_content" name="utm_content" value=""
+                                       class="form-control @error('utm_content') is-invalid @enderror"
+                                       placeholder="Enter content">
+                                @error('utm_content')
+                                <div class="invalid-feedback">
+                                    {{ $message }}
+                                </div>
+                                @enderror
+                            </div>
                         </div>
                     </div>
-
-                    <button type="submit" class="btn btn-primary w-100">Tạo link</button>
+                    <br/>
+                    <button type="submit" class="btn btn-primary w-30">Xác nhận tạo link</button>
                 </form>
             </div>
             @if(count($product->ownLinks) > 0)
@@ -136,14 +145,16 @@
                                     <th scope="row">{{ $loop->iteration }}</th>
                                     <td>
                                         <a class="text-primary"
-                                           href="{{ route('affiliate.single_link', ['code' => $link->code]) }}" >
+                                           href="{{ route('affiliate.single_link', ['code' => $link->code]) }}">
                                             {{ $link->ctv_link }}
                                         </a>
                                     </td>
                                     <td>{{ $link->created }}</td>
                                     <td>{{ $link->status == 1 ? 'Đang hoạt động' : 'Đã bị hủy' }}</td>
                                     <td>
-                                        <button data-link="{{ route('affiliate.ctv.link', ['code' => $link->code]) }}" class="btn btn-sm btn-primary btnCopyLink">Copy Link</button>
+                                        <button data-link="{{ route('affiliate.ctv.link', ['code' => $link->code]) }}"
+                                                class="btn btn-sm btn-primary btnCopyLink">Copy Link
+                                        </button>
                                     </td>
                                 </tr>
                             @endforeach
@@ -164,14 +175,20 @@
             const btnCreateLink = $('#createAffiliateLinkButton');
             const createLinkForm = $('#createLinkForm');
             const btnCopyLink = $('.btnCopyLink');
-
+            const btnAddOption = $('#btnAddOption');
 
             btnCreateLink.click(function (e) {
                 e.preventDefault();
                 createLinkForm.show();
+                $('html, body').animate({
+                    scrollTop: $("#createLinkForm").offset().top - 200
+                }, 1000);
+
+
+                createLinkForm.css('box-shadow', "rgba(0, 0, 0, 0.24) 0px 3px 8px");
             });
 
-            btnCopyLink.click(function(e) {
+            btnCopyLink.click(function (e) {
                 e.preventDefault();
                 const link = $(this).data('link');
 
@@ -184,6 +201,13 @@
                     });
             });
 
+            btnAddOption.click(function(e) {
+                if($(this).attr('aria-expanded') == 'false') {
+                    $(this).text('- Ẩn tùy chọn');
+                } else {
+                    $(this).text('+ Thêm tùy chọn');
+                }
+            })
         })
 
         async function copyContent(text) {

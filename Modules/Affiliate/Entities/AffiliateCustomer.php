@@ -42,4 +42,9 @@ class AffiliateCustomer extends Model
     {
         return $this->created_at->format('H:i d/m/Y');
     }
+
+    public function link()
+    {
+        return $this->belongsTo(AffiliateLink::class, 'aff_code', 'code');
+    }
 }
