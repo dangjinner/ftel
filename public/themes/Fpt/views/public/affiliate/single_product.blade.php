@@ -152,7 +152,7 @@
                                     <td>{{ $link->created }}</td>
                                     <td>{{ $link->status == 1 ? 'Đang hoạt động' : 'Đã bị hủy' }}</td>
                                     <td>
-                                        <button data-link="{{ route('affiliate.ctv.link', ['code' => $link->code]) }}"
+                                        <button data-link="{{ $link->ctv_link }}"
                                                 class="btn btn-sm btn-primary btnCopyLink">Copy Link
                                         </button>
                                     </td>
