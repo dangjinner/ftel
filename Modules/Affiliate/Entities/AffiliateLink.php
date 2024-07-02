@@ -2,10 +2,12 @@
 
 namespace Modules\Affiliate\Entities;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Support\Facades\URL;
 use Modules\Affiliate\Admin\AffiliateLinkTable;
+use Spatie\SchemaOrg\Car;
 
 class AffiliateLink extends Model
 {
@@ -32,7 +34,7 @@ class AffiliateLink extends Model
     ];
 
     protected $appends = [
-        'ctv_link'
+        'ctv_link', 'is_expired'
     ];
 
     public function table($request)
@@ -83,5 +85,12 @@ class AffiliateLink extends Model
     public function getCreatedAttribute()
     {
         return $this->created_at->format('H:i d/m/Y');
+    }
+
+    public function getIsExpiredAttribute()
+    {
+        $expireTime = Carbon::parse($this->expired_at);
+        $now = Carbon::now();
+        return $now->greaterThanOrEqualTo($expireTime);
     }
 }
