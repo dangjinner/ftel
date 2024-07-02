@@ -5,6 +5,7 @@ namespace Themes\Fpt\Http\Controllers;
 use FleetCart\Jobs\SendMailRegister;
 use Illuminate\Support\Facades\Cookie;
 use Modules\Affiliate\Entities\AffiliateCustomer;
+use Modules\Affiliate\Entities\AffiliateLink;
 use Modules\Group\Entities\Group;
 use Modules\Slider\Entities\Slider;
 use Modules\Menu\Entities\Menu;
@@ -118,30 +119,61 @@ class HomeController
             $utmContent = request()->input('utm_content') ?? '';
             $ipAddress = request()->ip();
             $currentURL = request()->input('current_url');
+
             $this->google_sheet_adsen->saveDataToSheet([
                 [$currentDate, $name, $phone, $address, $service ,$message, $utmSource, $utmMedium, $utmCapaign, $utmTerm,  $utmContent, $ipAddress,  $currentURL]
             ]);
 
-            AffiliateCustomer::create([
-                'name' => $name,
-                'phone_number' => $phone,
-                'address' => $address,
-                'note' => $message,
-                'service_option' => $service,
-                'utm_source' => $utmSource,
-                'utm_campaign' => $utmCapaign,
-                'utm_term' => $utmTerm,
-                'utm_content' => $utmContent,
-                'utm_medium' => $utmMedium,
-                'ip' => $ipAddress,
-                'from_page_url' => $currentURL,
-                'aff_code' => Cookie::get('aff_code')
-            ]);
+           $this->saveAffiliateCustomer([
+               'name' => $name,
+               'phone' => $phone,
+               'address' => $address,
+               'note' => $message,
+               'service' => $service,
+               'utm_source' => $utmSource,
+               'utm_campaign' => $utmCapaign,
+               'utm_term' => $utmTerm,
+               'utm_content' => $utmContent,
+               'utm_medium' => $utmMedium,
+               'ip' => $ipAddress,
+               'current_url' => $currentURL,
+           ]);
         }
         if(request()->get('email_received') !== null) {
             return redirect()->route('home.custom.dangkydichvu.thank', ['slug' => request()->get('slug_page')]);
         }
         return redirect()->route('pages.thankyou');
+    }
+
+    public function saveAffiliateCustomer($attributes)
+    {
+        $affCode = Cookie::get('aff_code');
+        $affliateLink = AffiliateLink::where('code', $affCode)->first();
+        if($affliateLink && !$affliateLink->is_expired) {
+            $attributes['utm_source'] = $affliateLink->utm_source;
+            $attributes['utm_campaign'] = $affliateLink->utm_campaign;
+            $attributes['utm_term'] = $affliateLink->utm_term;
+            $attributes['utm_medium'] = $affliateLink->utm_medium;
+            $attributes['utm_content'] = $affliateLink->utm_content;
+        } else {
+            $affCode = null;
+        }
+
+        AffiliateCustomer::create([
+            'name' => $attributes['name'],
+            'phone_number' => $attributes['phone'],
+            'address' => $attributes['address'],
+            'note' => $attributes['note'],
+            'service_option' => $attributes['service'],
+            'utm_source' => $attributes['utm_source'],
+            'utm_campaign' => $attributes['utm_campaign'],
+            'utm_term' => $attributes['utm_term'],
+            'utm_content' => $attributes['utm_content'],
+            'utm_medium' => $attributes['utm_medium'],
+            'ip' => $attributes['ip'],
+            'from_page_url' => $attributes['current_url'],
+            'aff_code' => $affCode
+        ]);
     }
 
     public function customerRegisterThank()
