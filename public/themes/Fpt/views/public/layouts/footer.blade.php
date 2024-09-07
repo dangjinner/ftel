@@ -22,6 +22,15 @@
                     <a>{{ setting('fpt_hotline') }}</a>
                 </div>
             </div>
+            <div class="group-chat col-xs-12 fix-pad " id="chatBoxIcon">
+                <div livechat-show="true" id="group-chat" class="bg-gray text-center pull-right" style="background: {{ setting('wmt_chat_icon_bg_color') }}">
+                    <a href="#" ><img src="{{ v(theme::url('assets/images/chat.png')) }}" loading="lazy"  alt="Live Chat FPT"></a>
+                </div>
+                <div id="group-chat-text" class="text-number hide text-center pull-right"  style="background: {{ setting('wmt_chat_icon_bg_color') }}">
+                    <p>{{ setting('wmt_chat_icon_text') }}</p>
+                </div>
+
+            </div>
     </div>
     <!-- Newslatter area End -->
     <!-- Footer Top Start -->
@@ -93,7 +102,9 @@
     <!-- Footer Bottom End -->
 </footer>
 
+@include('public.sections.chat_box.chat_box')
 @include('public.sections.login-modal')
+
 
 <!-- Scroll To Top Start -->
 <a class="scroll-to-top" href="#">

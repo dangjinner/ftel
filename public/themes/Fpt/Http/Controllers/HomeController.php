@@ -2,7 +2,9 @@
 
 namespace Themes\Fpt\Http\Controllers;
 
+use FleetCart\Jobs\ChatRegisterServiceJob;
 use FleetCart\Jobs\SendMailRegister;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Cookie;
 use Modules\Affiliate\Entities\AffiliateCustomer;
 use Modules\Affiliate\Entities\AffiliateLink;
@@ -347,6 +349,28 @@ class HomeController
             }
         }
         return false;
+    }
+
+    public function chatRegisterService(Request $request)
+    {
+        $request->validate([
+            'chat_customer_name' => 'required|string|min:3',
+            'chat_customer_phone' => ['required', 'regex:/(0[3|5|7|8|9])+([0-9]{8})\b/u'],
+            'chat_customer_address' => 'required|string',
+            'chat_service_option' => 'required|string',
+            'chat_customer_note' => 'nullable|string',
+            'chat_current_url' => 'nullable|string'
+        ]);
+
+        try {
+            $data = $request->all();
+            $data['ip'] = $request->ip();
+            Log::info('data', $data);
+            ChatRegisterServiceJob::dispatch($data);
+            return response()->json(true, 200);
+        }catch (\Exception $e) {
+            return response()->json(false, 500);
+        }
     }
 }
 

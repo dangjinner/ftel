@@ -1,0 +1,166 @@
+#wmt-chat-box {
+    width: 370px;
+    display: none;
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+    border-radius: 8px;
+    z-index: 99999999;
+    overflow: hidden;
+    background: #FFFFFF;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.wmt-chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f06e28;
+    padding: 15px;
+
+}
+
+.wmt-chat-header-title {
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+.wmt-chat-dropdown-icon svg{
+    width: 30px;
+    fill: #FFFFFF;
+}
+
+.wmt-chat-pre-content {
+    padding-top: 20px;
+    color: #FFFFFF;
+    text-align: center;
+    display: none;
+}
+
+.wmt-chat-register-info {
+    padding-top: 20px;
+    color: #FFFFFF;
+    text-align: center;
+    display: none;
+}
+
+.wmt-chat-body {
+    margin-top: 20px;
+}
+
+.wmt-chat-form {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    padding: 20px 10px;
+    display: none;
+}
+
+.wmt-chat-form input:focus,textarea:focus {
+    border: 2px solid #f06e28;
+    box-shadow: none !important;
+}
+
+.wmt-chat-form textarea:focus {
+    border-color: #f06e28;
+    box-shadow: none !important;
+}
+
+.wmt-chat-form textarea {
+    resize: none;
+}
+
+.wmt-chat-btn-submit {
+    width: 100%;
+    background: #f06e28;
+    border: none;
+}
+
+.wmt-chat-btn-submit:hover {
+    background: #f06e28;
+}
+
+.wmt-chat-btn-submit:active {
+    background-color: #be4b0d !important;
+    border-color: #de5f1b !important;
+}
+
+.wmt-chat-btn-submit:focus {
+    box-shadow: none;
+}
+
+.wmt-chat-btn-submit:active {
+    background: #f06e28;
+}
+
+.wmt-chat-options {
+    margin-bottom: 30px;
+}
+
+.wmt-chat-btn-option {
+    width: 100%;
+    background: #FFFFFF;
+    border: none;
+    color: #0a0a0a;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.wmt-chat-btn-option:hover {
+    background: #FFFFFF;
+    color: #0a0a0a;
+}
+
+.wmt-chat-select-options {
+    border-bottom: 2px solid rgba(240, 110, 40, 0.68);
+    padding-bottom: 20px;
+}
+
+#wmt-chat-tech-support {
+    display: none;
+}
+
+.wmt-chat-notification {
+    text-align: center;
+    margin-top: 10px;
+    display: none;
+}
+
+.wmt-chat-notice-success{
+    color: green;
+}
+
+.wmt-chat-notice-error {
+    color: red;
+}
+
+.wmt-chat-welcome-box {
+    margin-bottom: 100px;
+}
+
+.wmt-btn-start {
+    min-width: 150px;
+    border-radius: 20px;
+}
+
+.wmt-chat-welcome-box select {
+    min-width: 300px;
+    border-radius: 20px;
+
+}
+
+
+
+@media (max-width: 400px) {
+    #wmt-chat-box {
+        max-width: 300px;
+    }
+
+    .wmt-chat-welcome-box select {
+        min-width: 200px;
+
+    }
+}
+
+
+
