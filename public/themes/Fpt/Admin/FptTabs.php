@@ -31,7 +31,8 @@ class FptTabs extends Tabs
             ->add($this->newsletter())
             ->add($this->features())
             ->add($this->productPage())
-            ->add($this->socialLinks());
+            ->add($this->socialLinks())
+            ->add($this->chatBox());
 
         $this->group('feature', trans('fpt::fpt.tabs.group.feature'))
             ->add($this->sectionFeatureCapQuangCaNhan())
@@ -360,7 +361,15 @@ class FptTabs extends Tabs
         });
     }
 
-     private function sectionFeatureInternetLux()
+    private function chatBox()
+    {
+        return tap(new Tab('chat_box', 'Chat Box'), function (Tab $tab) {
+            $tab->weight(27);
+            $tab->view('admin.fpt.tabs.chat_box');
+        });
+    }
+
+    private function sectionFeatureInternetLux()
     {
         $data = [];
 

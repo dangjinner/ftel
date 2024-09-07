@@ -2,7 +2,9 @@
 
 namespace Themes\Fpt\Http\Controllers;
 
+use FleetCart\Jobs\ChatRegisterServiceJob;
 use FleetCart\Jobs\SendMailRegister;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Cookie;
 use Modules\Affiliate\Entities\AffiliateCustomer;
 use Modules\Affiliate\Entities\AffiliateLink;
