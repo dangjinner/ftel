@@ -49,6 +49,7 @@
         <!--<link rel="stylesheet" href="{{ v(theme::url('assets/css/style.css')) }}">-->
         <link rel="stylesheet" href="{{ v(theme::url('assets/css/main.min.css')) }}">
         <link rel="stylesheet" href="{{ v(theme::url('assets/css/root-review.css')) }}">
+        <link rel="stylesheet" href="{{ v(theme::url('assets/css/chat-box.css')) }}">
         <link rel="stylesheet" href="{{ v(theme::url('assets/css/customize.css')) }}">
         <style>
             @font-face {font-family: "Board of Directors W00 Bold It";
@@ -257,6 +258,7 @@
         <script src="{{ v(theme::url('assets/js/plugins/sticky-sidebar.min.js')) }}"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
         <script src="{{ v(theme::url('assets/js/main.js')) }}"></script>
+        <script src="{{ v(theme::url('assets/js/chat-box.js')) }}"></script>
 
         <!--<script src="https://www.google.com/recaptcha/api.js?render={{ config('services.google_recaptcha.key') }}"></script>-->
 

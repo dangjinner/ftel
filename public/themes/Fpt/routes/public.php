@@ -11,6 +11,7 @@ Route::get('dang-ky-truc-tuyen', 'HomeController@registerOnline')->name('custome
 Route::get('dang-ky-online/cam-on', 'HomeController@customerRegisterThank')->name('home.kh.dangkydichvu.thank');
 Route::get('{slug}/thank-you', 'HomeController@customThanksRegister')->name('home.custom.dangkydichvu.thank');
 
+Route::post('/chat/register-service', 'HomeController@chatRegisterService')->name('chatRegisterService');
 
 Route::post('cam-on-dang-ky', 'HomeController@postContactForm')->name('shortcode.dangkydichvu');
 
