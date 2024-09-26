@@ -50,8 +50,6 @@ class CoreServiceProvider extends ServiceProvider
         $this->registerMiddleware();
         $this->registerInAdminPanelState();
         $this->blacklistAdminRoutesOnFrontend();
-
-        $this->logSQL();
     }
 
     /**
