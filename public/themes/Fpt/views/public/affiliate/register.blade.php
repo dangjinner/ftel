@@ -15,7 +15,7 @@
                 @csrf
                 <h3 class="font-weight-bold mb-2">Thông tin cá nhân:</h3>
                 <div class="form-row form-group">
-                    <div class="col">
+                    <div class="col-md-6 col-sm-12 ">
                         <label for="last_name">Họ, tên đệm<span class="text-danger">*</span></label>
                         <input type="text" id="last_name" name="last_name" value="{{ $user->last_name }}" class="form-control @error('last_name') is-invalid @enderror" placeholder="Enter last name">
                         @error('last_name')
@@ -24,7 +24,7 @@
                         </div>
                         @enderror
                     </div>
-                    <div class="col">
+                    <div class="col-md-6 col-sm-12">
                         <label for="first_name">Tên<span class="text-danger">*</span></label>
                         <input type="text" id="first_name" name="first_name" value="{{ $user->first_name }}" class="form-control @error('first_name') is-invalid @enderror" placeholder="Enter first name">
                         @error('first_name')
@@ -66,7 +66,7 @@
                 <h3 class="font-weight-bold mb-2">Thông tin thanh toán:</h3>
 
                 <div class="form-group form-row">
-                    <div class="col">
+                    <div class="col-md-6 col-sm-12">
                         <label for="bank_account_name">Tên người thụ hưởng<span class="text-danger">*</span></label>
                         <input type="text" id="bank_account_name" name="bank_account_name" value="{{ old('bank_account_name') }}" class="form-control @error('bank_account_name') is-invalid @enderror">
                         @error('bank_account_name')
@@ -76,7 +76,7 @@
                         @enderror
                     </div>
 
-                    <div class="col">
+                    <div class="col-md-6 col-sm-12">
                         <label for="bank_account_number">Số tài khoản<span class="text-danger">*</span></label>
                         <input type="text" id="bank_account_number" name="bank_account_number" value="{{ old('bank_account_number') }}" class="form-control @error('bank_account_number') is-invalid @enderror">
                         @error('bank_account_number')
@@ -89,7 +89,7 @@
                 </div>
 
                 <div class="form-group form-row">
-                    <div class="col">
+                    <div class="col-md-6 col-sm-12">
                         <label for="bank_name">Tên ngân hàng<span class="text-danger">*</span></label>
                         <input type="text" id="bank_name" name="bank_name" value="{{ old('bank_name') }}" class="form-control @error('bank_name') is-invalid @enderror">
                         @error('bank_name')
@@ -98,7 +98,7 @@
                         </div>
                         @enderror
                     </div>
-                    <div class="col">
+                    <div class="col-md-6 col-sm-12">
                         <label for="bank_branch">Chi nhánh<span class="text-danger">*</span></label>
                         <input type="text" id="bank_branch" name="bank_branch" value="{{ old('bank_branch') }}" class="form-control @error('bank_branch') is-invalid @enderror">
                         @error('bank_branch')

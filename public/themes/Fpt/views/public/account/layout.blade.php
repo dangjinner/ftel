@@ -5,6 +5,24 @@
         .commission-info {
             background-color: rgba(188, 228, 245, 0.37);
         }
+
+        #accountMobileMenu {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            #accountMenu {
+                display: none;
+            }
+
+            #accountMobileMenu {
+                display: block;
+            }
+        }
+
+        @media (min-width: 576px) {
+
+        }
     </style>
 @endpush
 @section('content')
@@ -23,16 +41,29 @@
         </div>
         <div class="card p-3">
             <div class="row">
-                <div class="col-3">
-                    <div class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
+                <div class="col-md-3 col-sm-12">
+                    <div id="accountMenu" class="nav flex-column nav-pills" role="tablist" aria-orientation="vertical">
                         <a class="nav-link @if(Request::is('tai-khoan/*')) active @endif"
                            href="{{ route('account.info') }}">Tài khoản</a>
                         <a class="nav-link @if(Request::is('affiliate/*')) active @endif"
                            href="{{ route('affiliate.products') }}">Affiliate</a>
                         <a class="nav-link " href="{{ route('auth.logout') }}">Đăng xuất</a>
                     </div>
+                    <div id="accountMobileMenu" class="dropdown show mb-2">
+                        <a class="btn btn-sm btn-success dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Menu
+                        </a>
+
+                        <div class="dropdown-menu nav-pills" aria-labelledby="dropdownMenuLink">
+                            <a class="nav-link @if(Request::is('tai-khoan/*')) active @endif"
+                               href="{{ route('account.info') }}">Tài khoản</a>
+                            <a class="nav-link @if(Request::is('affiliate/*')) active @endif"
+                               href="{{ route('affiliate.products') }}">Affiliate</a>
+                            <a class="nav-link " href="{{ route('auth.logout') }}">Đăng xuất</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-9">
+                <div class="col-md-9 col-sm-12">
                     <div class="pl-2 pr-2">
                         @yield('sub_content')
                     </div>

@@ -15,6 +15,9 @@ class AffiliateCustomer extends Model
     const REJECTED = 3;
 
     protected $fillable = [
+        'aff_account_id',
+        'aff_product_id',
+        'aff_link_id',
         'name',
         'phone_number',
         'address',
@@ -45,6 +48,16 @@ class AffiliateCustomer extends Model
 
     public function link()
     {
-        return $this->belongsTo(AffiliateLink::class, 'aff_code', 'code');
+        return $this->belongsTo(AffiliateLink::class, 'aff_link_id', 'id');
+    }
+
+    public function account()
+    {
+        return $this->belongsTo(AffiliateAccount::class, 'aff_account_id', 'id');
+    }
+
+    public function product()
+    {
+        return $this->belongsTo(AffiliateProduct::class, 'aff_product_id', 'id');
     }
 }

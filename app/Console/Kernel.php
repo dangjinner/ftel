@@ -4,6 +4,7 @@ namespace FleetCart\Console;
 
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use Modules\Affiliate\Console\UpdateAffiliateCustomerCommand;
 
 class Kernel extends ConsoleKernel
 {
@@ -15,6 +16,7 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         Commands\ScaffoldModuleCommand::class,
         Commands\ScaffoldEntityCommand::class,
+        UpdateAffiliateCustomerCommand::class,
     ];
 
     /**

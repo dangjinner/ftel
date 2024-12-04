@@ -67,7 +67,7 @@
             }
             p.wrapIframe{
                 position: relative;
-                padding-bottom: 56.25%;
+                padding-bottom: 0;
                 height: 0;
                 overflow: hidden;
             }
@@ -246,6 +246,7 @@
         <script src="//cdn.jsdelivr.net/npm/jquery.marquee@1.5.0/jquery.marquee.min.js" type="text/javascript"></script>
 
 
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
         <script src="{{ v(theme::url('assets/js/vendor/bootstrap.min.js')) }}"></script>
 
         <script src="{{ v(theme::url('assets/js/plugins/plugins.js')) }}"></script>
