@@ -38,7 +38,7 @@ class UpdateAffiliateCustomerCommand extends Command
      */
     public function handle()
     {
-        $affiliateCustomers = AffiliateCustomer::whereDate('created_at', '<=', '2024-12-4')->get();
+        $affiliateCustomers = AffiliateCustomer::whereDate('created_at', '<=', '2024-12-04')->get();
 
         foreach ($affiliateCustomers as $affiliateCustomer) {
             $link = $affiliateCustomer->link;
@@ -48,6 +48,8 @@ class UpdateAffiliateCustomerCommand extends Command
                     'aff_product_id' => $link->aff_product_id,
                     'aff_link_id' => $link->id
                 ]);
+
+                $this->info("Update successful for {$affiliateCustomer->name}");
             }
         }
     }
