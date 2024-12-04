@@ -40,6 +40,7 @@ return [
         'name' => 'Name',
         'phone_number' => 'Phone Number',
         'service_option' => 'Service Option',
-        'status' => 'Status'
+        'status' => 'Status',
+        'affiliate_account' => 'Affiliate Account',
     ]
 ];

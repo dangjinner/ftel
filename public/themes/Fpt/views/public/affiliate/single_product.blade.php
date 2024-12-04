@@ -72,7 +72,7 @@
                       </div>
                     <div id="utm-section" class="collapse multi-collapse">
                         <div class="form-row form-group">
-                            <div class="col">
+                            <div class="col-md-6 col-sm-12">
                                 <label for="utm_source">Utm Source</label>
                                 <input type="text" id="utm_source" name="utm_source" value=""
                                        class="form-control @error('utm_source') is-invalid @enderror"
@@ -83,7 +83,7 @@
                                 </div>
                                 @enderror
                             </div>
-                            <div class="col">
+                            <div class="col-md-6 col-sm-12">
                                 <label for="utm_medium">Utm Medium</label>
                                 <input type="text" id="utm_medium" name="utm_medium" value=""
                                        class="form-control @error('utm_medium') is-invalid @enderror"
@@ -97,7 +97,7 @@
 
                         </div>
                         <div class="form-row form-group">
-                            <div class="col">
+                            <div class="col-md-6 col-sm-12">
                                 <label for="utm_campaign">Utm campaign</label>
                                 <input type="text" id="utm_campaign" name="utm_campaign" value=""
                                        class="form-control @error('utm_campaign') is-invalid @enderror"
@@ -108,7 +108,7 @@
                                 </div>
                                 @enderror
                             </div>
-                            <div class="col">
+                            <div class="col-md-6 col-sm-12">
                                 <label for="utm_content">Utm content</label>
                                 <input type="text" id="utm_content" name="utm_content" value=""
                                        class="form-control @error('utm_content') is-invalid @enderror"
@@ -128,7 +128,7 @@
             @if(count($product->ownLinks) > 0)
                 <div class="mt-3">
                     <h3>Danh sách affiliate links</h3>
-                    <div class="mt-3">
+                    <div class="mt-3 table-responsive">
                         <table class="table">
                             <thead class="thead-light">
                             <tr>

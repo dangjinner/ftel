@@ -13,7 +13,7 @@ class AffiliateCustomerTable extends AdminTable
      *
      * @var array
      */
-    protected $rawColumns = [];
+    protected $rawColumns = ['affiliate_account'];
 
     /**
      * Make table response for the resource.
@@ -34,6 +34,15 @@ class AffiliateCustomerTable extends AdminTable
 
                 $elm = "<span class='{$class}'>{$text}</span>";
                 return $elm;
+            })
+            ->editColumn('affiliate_account', function($affiliateCustomer) {
+                $account = $affiliateCustomer->account;
+
+                if ($account) {
+                    $url = route('admin.affiliate_accounts.edit', ['id' => $account->id]);
+                    return "<a href='{$url}'>{$account->full_name}</a>";
+                }
+                return "";
             });
     }
 }

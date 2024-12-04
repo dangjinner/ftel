@@ -7,7 +7,7 @@
         <div class="mt-3">
             <div class="row">
                 @foreach($products as $product)
-                    <div class="col-md-4">
+                    <div class="col-md-4 mt-3">
                         <div class="card">
                             <div class="card-body">
                                 <div class="img-thumbnail">

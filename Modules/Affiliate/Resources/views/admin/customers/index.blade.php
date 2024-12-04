@@ -19,6 +19,7 @@
             <th>{{ trans('affiliate::customers.table.name') }}</th>
             <th>{{ trans('affiliate::customers.table.phone_number') }}</th>
             <th>{{ trans('affiliate::customers.table.service_option') }}</th>
+            <th>{{ trans('affiliate::customers.table.affiliate_account') }}</th>
             <th>{{ trans('affiliate::customers.table.status') }}</th>
             <th data-sort>{{ trans('admin::admin.table.created') }}</th>
         </tr>
@@ -41,6 +42,7 @@
                 { data: 'name', name: 'name', orderable: false, defaultContent: '' },
                 { data: 'phone_number', name: 'phone_number', orderable: false, defaultContent: '' },
                 { data: 'service_option', name: 'service_option', orderable: false, defaultContent: '' },
+                { data: 'affiliate_account', name: 'affiliate_account', orderable: false },
                 { data: 'status', name: 'status', orderable: true },
                 { data: 'created', name: 'created_at' },
             ],

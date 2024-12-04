@@ -10,7 +10,7 @@
         <div class="mt-3">
             <div>
                 <h3>Danh sách khách hàng đăng ký</h3>
-                <div class="mt-3">
+                <div class="mt-3 table-responsive">
                     <table class="table">
                         <thead class="thead-light">
                         <tr>
