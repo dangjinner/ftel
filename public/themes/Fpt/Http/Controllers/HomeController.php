@@ -151,12 +151,17 @@ class HomeController
     {
         $affCode = Cookie::get('aff_code');
         $affliateLink = AffiliateLink::where('code', $affCode)->first();
+        $affiliateProductId = 0;
+        $affiliateAccountId = 0;
+
         if($affliateLink && !$affliateLink->is_expired) {
             $attributes['utm_source'] = $affliateLink->utm_source;
             $attributes['utm_campaign'] = $affliateLink->utm_campaign;
             $attributes['utm_term'] = $affliateLink->utm_term;
             $attributes['utm_medium'] = $affliateLink->utm_medium;
             $attributes['utm_content'] = $affliateLink->utm_content;
+            $affiliateProductId = $affliateLink->aff_product_id;
+            $affiliateAccountId = $affliateLink->aff_account_id;
         } else {
             $affCode = null;
         }
@@ -174,7 +179,9 @@ class HomeController
             'utm_medium' => $attributes['utm_medium'],
             'ip' => $attributes['ip'],
             'from_page_url' => $attributes['current_url'],
-            'aff_code' => $affCode
+            'aff_code' => $affCode,
+            'aff_product_id' => $affiliateProductId,
+            'aff_account_id' => $affiliateAccountId,
         ]);
     }
 
