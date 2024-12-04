@@ -48,6 +48,8 @@ class UpdateAffiliateCustomerCommand extends Command
                     'aff_product_id' => $link->aff_product_id,
                     'aff_link_id' => $link->id
                 ]);
+
+                $this->info("Update successful for {$affiliateCustomer->name}");
             }
         }
     }
