@@ -38,7 +38,7 @@ class UpdateAffiliateCustomerCommand extends Command
      */
     public function handle()
     {
-        $affiliateCustomers = AffiliateCustomer::whereDate('created_at', '<=', '2024-12-4')->get();
+        $affiliateCustomers = AffiliateCustomer::whereDate('created_at', '<=', '2024-12-04')->get();
 
         foreach ($affiliateCustomers as $affiliateCustomer) {
             $link = $affiliateCustomer->link;
