@@ -48,16 +48,19 @@ class AffiliateCustomer extends Model
 
     public function link()
     {
-        return $this->belongsTo(AffiliateLink::class, 'aff_link_id', 'id');
+        if ($this->aff_link_id > 0) {
+            return $this->belongsTo(AffiliateLink::class, 'aff_link_id', 'id');
+        }
+
+        return $this->belongsTo(AffiliateLink::class, 'aff_code', 'code');
     }
 
     public function account()
     {
-        return $this->belongsTo(AffiliateAccount::class, 'aff_account_id', 'id');
+       return $this->belongsTo(AffiliateAccount::class, 'aff_account_id', 'id');
     }
 
-    public function product()
-    {
+    public function product() {
         return $this->belongsTo(AffiliateProduct::class, 'aff_product_id', 'id');
     }
 }
