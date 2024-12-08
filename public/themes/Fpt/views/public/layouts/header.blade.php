@@ -57,6 +57,12 @@
                                     </li>
 
                                 @endforeach
+
+                                    <li class="menu-item-has-children">
+                                        <a href="{{ route('affiliate.products') }}">
+                                            Đăng ký CTV
+                                        </a>
+                                    </li>
                             </ul>
                         </div>
                         <!-- Offcanvas Menu End -->
@@ -168,7 +174,8 @@
                                             @foreach($primaryMenu as $menu)
                                             <li>
                                                 <a title="{{ $menu->name }}" href="{{ $menu->url }}">{{ $menu->name }}
-                                                    <i class="fa fa-angle-down"></i></a>
+                                                    @if($menu->children()->count() > 0) <i class="fa fa-angle-down"></i>@endif
+                                                </a>
                                                 @if($menu->children()->count() > 0)
                                                 <div class="mega-menu dropdown">
                                                     <ul class="mega-menu-inner d-flex">

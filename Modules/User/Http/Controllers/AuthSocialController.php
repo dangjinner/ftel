@@ -69,7 +69,7 @@ class AuthSocialController extends Controller
      */
     public function handleGoogleCallback()
     {
-        $callbackUrl = Session::get('callbackUrl');
+        $callbackUrl = Session::get('url.intended') ?? Session::get('callbackUrl');
 
         if(auth()->check()) {
             Auth::logout();

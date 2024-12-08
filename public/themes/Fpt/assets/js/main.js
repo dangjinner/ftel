@@ -676,7 +676,17 @@
 	/*---Off Canvas Menu---*/
 	var $offcanvasNav = $('.offcanvas_main_menu, .sidebar-category-expand, .categories-expand'),
 		$offcanvasNavSubMenu = $offcanvasNav.find('.sub-menu');
-	$offcanvasNavSubMenu.parent().prepend('<span class="menu-expand"><i class="fa fa-angle-down"></i></span>');
+
+    $offcanvasNav.find('.sub-menu').each(function (index) {
+        if ($(this).children().length > 0) {
+            $(this).parent().prepend('<span class="menu-expand"><i class="fa fa-angle-down"></i></span>');
+        }
+    })
+
+    // if ($offcanvasNavSubMenu.children().length > 0) {
+    //     $offcanvasNavSubMenu.parent().prepend('<span class="menu-expand"><i class="fa fa-angle-down"></i></span>');
+    // }
+
 	$offcanvasNavSubMenu.slideUp();
 	$offcanvasNav.on('click', 'li a, li .menu-expand', function(e) {
 		var $this = $(this);
