@@ -2,7 +2,9 @@
 
 namespace Modules\Affiliate\Http\Requests;
 
+use Illuminate\Validation\Rule;
 use Modules\Core\Http\Requests\Request;
+use Modules\Affiliate\Entities\AffiliateAccount;
 
 class SaveAffiliateAccountRequest extends Request
 {
@@ -22,6 +24,13 @@ class SaveAffiliateAccountRequest extends Request
             'status' => 'required|int|in:0,1,2',
             'users' => 'required|array',
             'users.*' => 'required|int|exists:users,id',
+            'type' => [
+                'required',
+                Rule::in([
+                    AffiliateAccount::TYPE_NORMAL,
+                    AffiliateAccount::TYPE_AGENCY
+                ])
+            ],
         ];
     }
 

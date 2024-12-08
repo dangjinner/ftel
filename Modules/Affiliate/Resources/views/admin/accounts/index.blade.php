@@ -17,6 +17,7 @@
 
             <th>{{ trans('admin::admin.table.id') }}</th>
             <th>{{ trans('affiliate::accounts.table.full_name') }}</th>
+            <th>{{ trans('affiliate::accounts.table.type') }}</th>
             <th>{{ trans('affiliate::accounts.table.email') }}</th>
             <th>{{ trans('affiliate::accounts.table.phone_number') }}</th>
             <th>{{ trans('admin::admin.table.status') }}</th>
@@ -38,7 +39,8 @@
             columns: [
                 { data: 'checkbox', orderable: false, searchable: false, width: '3%' },
                 { data: 'id', width: '5%' },
-                { data: 'full_name', name: 'full_name', orderable: false, defaultContent: '' },
+                { data: 'full_name', name: 'full_name', orderable: true, defaultContent: '' },
+                { data: 'type', name: 'type', orderable: true },
                 { data: 'email', name: 'email', orderable: false, defaultContent: '' },
                 { data: 'phone_number', name: 'phone_number', orderable: false, defaultContent: '' },
                 { data: 'status', searchable: false },

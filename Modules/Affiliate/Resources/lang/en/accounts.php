@@ -1,5 +1,7 @@
 <?php
 
+use Modules\Affiliate\Entities\AffiliateAccount;
+
 return [
     'accounts' => 'Accounts',
     'account' => 'Account',
@@ -18,6 +20,7 @@ return [
         'email' => 'Email',
         'phone_number' => 'Phone Number',
         'address' => 'Address',
+        'type' => 'Type',
     ],
     'form' => [
         'enable_the_account' => 'Enable the account',
@@ -26,12 +29,17 @@ return [
             2 => 'Pending',
             1 => 'Active',
             0 => 'Deactivate',
+        ],
+        'types' => [
+            AffiliateAccount::TYPE_NORMAL => 'Normal',
+            AffiliateAccount::TYPE_AGENCY => 'Agency',
         ]
     ],
     'table' => [
         'name' => 'Name',
         'full_name' => 'Full Name',
         'email' => 'Email',
-        'phone_number' => 'Phone Number'
+        'phone_number' => 'Phone Number',
+        'type' => 'Type',
     ]
 ];

@@ -13,6 +13,7 @@ return [
         'admin.dashboard.css' => ['module' => 'admin:css/dashboard.css'],
         'admin.dashboard.js' => ['module' => 'admin:js/dashboard.js'],
         'admin.polyfill.js' => ['cdn' => 'https://cdn.polyfill.io/v2/polyfill.min.js'],
+        'customize.css' => ['module' => 'admin:css/customize.css'],
     ],
 
     /*
@@ -21,5 +22,5 @@ return [
     | through the asset pipeline
     |--------------------------------------------------------------------------
     */
-    'required_assets' => ['admin.css', 'admin.polyfill.js', 'admin.js'],
+    'required_assets' => ['admin.css', 'admin.polyfill.js', 'admin.js', 'customize.css'],
 ];

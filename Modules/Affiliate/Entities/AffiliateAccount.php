@@ -14,6 +14,9 @@ class AffiliateAccount extends Model
     const ACTIVE = 1;
     const DEACTIVATE = 0;
 
+    const TYPE_AGENCY = 'agency';
+    const TYPE_NORMAL = 'normal';
+
     protected $fillable = [
         'user_id',
         'first_name',
@@ -26,7 +29,8 @@ class AffiliateAccount extends Model
         'bank_account_number',
         'bank_name',
         'bank_branch',
-        'total_commission'
+        'total_commission',
+        'type'
     ];
 
     protected $appends = [
@@ -59,5 +63,10 @@ class AffiliateAccount extends Model
     public function getFullNameAttribute()
     {
         return $this->last_name . ' ' . $this->first_name;
+    }
+
+    public function customers()
+    {
+        return $this->hasMany(AffiliateCustomer::class, 'aff_account_id', 'id');
     }
 }

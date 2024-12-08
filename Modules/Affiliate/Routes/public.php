@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use Modules\Affiliate\Http\Controllers\AffiliateLinkController;
 use Modules\Affiliate\Http\Controllers\AffiliateProductController;
 use Modules\Affiliate\Http\Controllers\AffiliateAccountController;
+use Modules\Affiliate\Http\Controllers\AffiliateAgencyController;
 
 Route::get('ctv/{code}', [AffiliateLinkController::class, 'generateAffiliateLink'])
     ->name('affiliate.ctv.link');
@@ -18,6 +19,9 @@ Route::prefix('affiliate')
                 Route::get('products/{id}', [AffiliateProductController::class, 'getSingleProduct'])->name('single_product');
                 Route::post('products/{id}/create-link', [AffiliateProductController::class, 'createAffiliateLink'])->name('products.create_link');
                 Route::get('links/{code}', [AffiliateLinkController::class, 'getSingleLink'])->name('single_link');
+                Route::prefix('agency')->name('agency.')->group(function () {
+                    Route::get('customers', [AffiliateAgencyController::class, 'registeredCustomers'])->name('registered_customers');
+                });
             });
 
             Route::middleware('affiliate.not_pending')->group(function () {

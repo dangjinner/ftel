@@ -2,22 +2,20 @@
 @section('sub_content')
     <div>
         <div class="text-center ">
-            <h2>Thông tin affiliate link</h2>
-            <a class="text-primary" href="{{ $link->ctv_link }}" target="_blank">
-                {{ $link->ctv_link }}
-            </a>
+            <h2>Danh sách khách hàng đã đăng ký</h2>
         </div>
         <div class="mt-3">
             <div>
-                <h3>Danh sách khách hàng đăng ký</h3>
                 <div class="mt-3 table-responsive">
                     <table class="table">
                         <thead class="thead-light">
                         <tr>
                             <th scope="col">#</th>
                             <th scope="col">Tên</th>
+                            <th scope="col">SĐT</th>
+                            <th scope="col">Dịch vụ</th>
                             <th scope="col">Trạng thái</th>
-                            <th scope="col">Thời gian tạo</th>
+                            <th scope="col">Thời gian</th>
                         </tr>
                         </thead>
                         <tbody>
@@ -25,10 +23,16 @@
                             <tr>
                                 <th scope="row">{{ $loop->iteration }}</th>
                                 <td>
-                                   {{ $customer->name }}
+                                    {{ $customer->name }}
                                 </td>
                                 <td>
-                                   {{ trans('affiliate::customers.form.status')[$customer->status] }}
+                                    {{ $customer->phone_number }}
+                                </td>
+                                <td>
+                                    {{ $customer->service_option }}
+                                </td>
+                                <td>
+                                    {{ trans('affiliate::customers.form.status')[$customer->status] }}
                                 </td>
                                 <td>{{ $customer->created }}</td>
                             </tr>

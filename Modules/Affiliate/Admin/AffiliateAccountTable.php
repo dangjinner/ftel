@@ -3,6 +3,7 @@
 namespace Modules\Affiliate\Admin;
 
 use Modules\Admin\Ui\AdminTable;
+use Modules\Affiliate\Entities\AffiliateAccount;
 
 class AffiliateAccountTable extends AdminTable
 {
@@ -11,7 +12,7 @@ class AffiliateAccountTable extends AdminTable
      *
      * @var array
      */
-    protected $rawColumns = [];
+    protected $rawColumns = ['type'];
 
     /**
      * Make table response for the resource.
@@ -24,13 +25,19 @@ class AffiliateAccountTable extends AdminTable
             ->editColumn('status', function ($affiliateAccount) {
                 $elm = '<span class="dot red"></span>';
 
-                if($affiliateAccount->status == 1) {
+                if ($affiliateAccount->status == 1) {
                     $elm = '<span class="dot green"></span>';
-                } elseif($affiliateAccount->status == 2) {
+                } elseif ($affiliateAccount->status == 2) {
                     $elm = '<span class="dot" style="background-color: #deba06"></span>';
                 }
 
                 return $elm;
+            })
+            ->editColumn('type', function ($affiliateAccount) {
+                if ($affiliateAccount->type == AffiliateAccount::TYPE_AGENCY) {
+                    return "<span class='badge badge-primary'>Agency</span>";
+                }
+                return "<span class='badge badge-secondary'>Normal</span>";
             });
     }
 }
