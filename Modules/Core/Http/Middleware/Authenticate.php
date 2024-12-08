@@ -31,6 +31,6 @@ class Authenticate
             abort(403, 'Unauthenticated.');
         }
 
-        return redirect()->route('login');
+        return redirect()->route('auth.login.get', ['nextUrl' => $url]);
     }
 }

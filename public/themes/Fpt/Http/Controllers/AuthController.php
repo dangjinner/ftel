@@ -5,6 +5,7 @@ namespace Themes\Fpt\Http\Controllers;
 use Cartalyst\Sentinel\Checkpoints\NotActivatedException;
 use Cartalyst\Sentinel\Laravel\Facades\Activation;
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
+use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -18,7 +19,7 @@ use Themes\Fpt\Http\Requests\VerifyEmailRequest;
 
 class AuthController extends Controller
 {
-    public function getLogin()
+    public function getLogin(Request $request)
     {
         if(\auth()->check()) {
             return redirect()->route('account.info');
