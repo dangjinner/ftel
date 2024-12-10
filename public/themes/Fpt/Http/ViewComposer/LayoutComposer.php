@@ -3,11 +3,14 @@
 namespace Themes\Fpt\Http\ViewComposer;
 
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Cookie;
+use Modules\Affiliate\Entities\AffiliateLink;
 use Modules\Media\Entities\File;
 use Modules\Menu\Entities\Menu;
 use Themes\Fpt\Banner;
 
-class LayoutComposer {
+class LayoutComposer
+{
     /**
      * Bind data to the view.
      *
@@ -23,6 +26,7 @@ class LayoutComposer {
             'primaryMenu' => $this->getPrimaryMenu(),
             'registerServiceOptions' => $this->getRegisterServiceOption(),
             'footerBanner' => $this->getFooterBanner(),
+            'contactPhone' => $this->getContactPhone(),
         ]);
     }
 
@@ -55,7 +59,7 @@ class LayoutComposer {
 
     public function getFooterBanner()
     {
-       return $this->getMedia(setting('fpt_footer_banner'));
+        return $this->getMedia(setting('fpt_footer_banner'));
     }
 
     private function getMedia($fileId)
@@ -67,27 +71,28 @@ class LayoutComposer {
 
     public function getServicesThumbnail($fileIds)
     {
-        if($fileIds == null) {
+        if ($fileIds == null) {
             $fileIds = [];
         }
         $files = File::whereIn('id', $fileIds)->get();
         return $files;
     }
 
-     public function getRegisterServiceOption()
+    public function getRegisterServiceOption()
     {
         $services = [];
-        for($i = 1; $i <= 10; $i++) {
-             $service = setting('register_form_service_option_'.$i);
-             if($service) {
+        for ($i = 1; $i <= 10; $i++) {
+            $service = setting('register_form_service_option_' . $i);
+            if ($service) {
                 $services[] = $service;
-             }
+            }
         }
         return $services;
     }
 
-    private function getMediaFiles($fileIds) {
-        if($fileIds == null) {
+    private function getMediaFiles($fileIds)
+    {
+        if ($fileIds == null) {
             $fileIds = [];
         }
         $files = File::whereIn('id', $fileIds)->get();
@@ -97,5 +102,22 @@ class LayoutComposer {
     public function getFooterImages()
     {
         return $this->getMediaFiles(setting('footer_col_5_images'));
+    }
+
+    public function getContactPhone()
+    {
+        $affiliateCode = Cookie::get('aff_code');
+
+        if ($affiliateCode) {
+            $affiliateLink = AffiliateLink::where('code', $affiliateCode)->first();
+            if ($affiliateLink) {
+                $affiliateAccount = $affiliateLink->account;
+                if ($affiliateAccount) {
+                    return $affiliateAccount->isAgency() ? $affiliateAccount->phone_number : null;
+                }
+            }
+        }
+
+        return setting('fpt_hotline');
     }
 }

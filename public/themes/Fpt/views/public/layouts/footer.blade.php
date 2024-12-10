@@ -15,7 +15,7 @@
             </div>
         @endif
 
-        @if(!Cookie::get('aff_code'))
+        @if($contactPhone)
             <div class="group-call col-xs-12 fix-pad ">
                 <div id="group-call" class="bg-gray text-center pull-right">
                     <a href="tel:{{ setting('fpt_hotline') }}" title="{{ setting('fpt_hotline') }}"><img
@@ -23,18 +23,7 @@
                 </div>
                 <div id="group-call-text" class="text-number hide text-center pull-right">
                     <p>Hotline Đăng ký</p>
-                    @auth
-                        @php
-                           $agencyAccount = auth()->user()->getAgencyAccount();
-                        @endphp
-                        @if($agencyAccount)
-                            <a>{{ auth()->user()->phone_number }}</a>
-                        @else
-                            <a>{{ setting('fpt_hotline') }}</a>
-                        @endif
-                    @else
-                        <a>{{ setting('fpt_hotline') }}</a>
-                    @endauth
+                    <a>{{ $contactPhone }}</a>
                 </div>
             </div>
         @endif
