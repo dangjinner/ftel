@@ -30,6 +30,7 @@ Route::post('tai-khoan/xac-thuc', 'AuthController@postVerifyAccount')
 
 Route::prefix('tai-khoan')->name('account.')->middleware('auth')->group(function() {
     Route::get('thong-tin', 'UserController@getAccountInfo')->name('info');
+    Route::post('thong-tin', 'UserController@updateAccountInfo')->name('info.update');
 });
 
 Route::get('{slug}', '\Modules\Page\Http\Controllers\PageController@show')->name('pages.news.show');

@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Cookie;
 use Modules\Affiliate\Entities\AffiliateCustomer;
 use Modules\Affiliate\Entities\AffiliateLink;
+use Modules\Affiliate\Jobs\SendCustomerDataToAgencyJob;
 use Modules\Group\Entities\Group;
 use Modules\Slider\Entities\Slider;
 use Modules\Menu\Entities\Menu;
@@ -36,7 +37,8 @@ class HomeController
     protected $google_sheet_fpt;
     protected $google_sheet_adsen;
 
-    public function __construct(GoogleSheetCustomer $google_sheet, GoogleSheet $google_sheet_fpt, GoogleSheetAdsen $google_sheet_adsen) {
+    public function __construct(GoogleSheetCustomer $google_sheet, GoogleSheet $google_sheet_fpt, GoogleSheetAdsen $google_sheet_adsen)
+    {
         $this->google_sheet = $google_sheet;
         $this->google_sheet_fpt = $google_sheet_fpt;
         $this->google_sheet_adsen = $google_sheet_adsen;
@@ -49,7 +51,7 @@ class HomeController
      */
     public function index()
     {
-        if(request()->get('wordfence_lh')){
+        if (request()->get('wordfence_lh')) {
             return redirect()->route('home');
         }
         $data['menus'] = Menu::with('menuItems')->findOrFail(setting('fpt_menu_product_service'));
@@ -67,7 +69,7 @@ class HomeController
         $data['postsKM'] = Group::findOrFail(15)->posts()->desc()->limit(6)->get();
         // dd($data['postsKM']);
         $data['slider'] = Slider::findWithSlides(setting('fpt_slider'));
-        return view('public.home.' . setting('home_switcher'), $data );
+        return view('public.home.' . setting('home_switcher'), $data);
     }
 
     public function design()
@@ -80,7 +82,8 @@ class HomeController
         return 'ok';
     }
 
-    public function customerRegister(RegisterServiceRequest $request){
+    public function customerRegister(RegisterServiceRequest $request)
+    {
         $name = $request->get('name');
         $phone = $request->get('phone');
         $address = $request->get('address') ?? '---';
@@ -99,16 +102,16 @@ class HomeController
             'google_sheet_link' => request()->get('google_sheet_link'),
         ];
         $googleSheetCustom = new GoogleSheetCustom($spreadSheetId, $sheetName);
-        if($sheetName !== null && $spreadSheetId !== null) {
+        if ($sheetName !== null && $spreadSheetId !== null) {
             $googleSheetCustom->saveDataToSheet([
-                [$currentDate, $name, $phone, $address, $service ,$message]
+                [$currentDate, $name, $phone, $address, $service, $message]
             ]);
         }
-         $emailsReceive = explode(',', request()->get('email_received'));
-        foreach($emailsReceive as $key => $email) {
+        $emailsReceive = explode(',', request()->get('email_received'));
+        foreach ($emailsReceive as $key => $email) {
             $emailsReceive[$key] = trim($email);
         }
-        if(request()->get('email_received') !== null) {
+        if (request()->get('email_received') !== null) {
             Mail::to($emailsReceive)->send(new RegisterOnlineMail($data));
             // $sendMail = new SendMailRegister($emailsReceive, $data);
             // dispatch($sendMail);
@@ -123,25 +126,25 @@ class HomeController
             $currentURL = request()->input('current_url');
 
             $this->google_sheet_adsen->saveDataToSheet([
-                [$currentDate, $name, $phone, $address, $service ,$message, $utmSource, $utmMedium, $utmCapaign, $utmTerm,  $utmContent, $ipAddress,  $currentURL]
+                [$currentDate, $name, $phone, $address, $service, $message, $utmSource, $utmMedium, $utmCapaign, $utmTerm, $utmContent, $ipAddress, $currentURL]
             ]);
 
-           $this->saveAffiliateCustomer([
-               'name' => $name,
-               'phone' => $phone,
-               'address' => $address,
-               'note' => $message,
-               'service' => $service,
-               'utm_source' => $utmSource,
-               'utm_campaign' => $utmCapaign,
-               'utm_term' => $utmTerm,
-               'utm_content' => $utmContent,
-               'utm_medium' => $utmMedium,
-               'ip' => $ipAddress,
-               'current_url' => $currentURL,
-           ]);
+            $this->saveAffiliateCustomer([
+                'name' => $name,
+                'phone' => $phone,
+                'address' => $address,
+                'note' => $message,
+                'service' => $service,
+                'utm_source' => $utmSource,
+                'utm_campaign' => $utmCapaign,
+                'utm_term' => $utmTerm,
+                'utm_content' => $utmContent,
+                'utm_medium' => $utmMedium,
+                'ip' => $ipAddress,
+                'current_url' => $currentURL,
+            ]);
         }
-        if(request()->get('email_received') !== null) {
+        if (request()->get('email_received') !== null) {
             return redirect()->route('home.custom.dangkydichvu.thank', ['slug' => request()->get('slug_page')]);
         }
         return redirect()->route('pages.thankyou');
@@ -154,7 +157,7 @@ class HomeController
         $affiliateProductId = 0;
         $affiliateAccountId = 0;
 
-        if($affliateLink && !$affliateLink->is_expired) {
+        if ($affliateLink && !$affliateLink->is_expired) {
             $attributes['utm_source'] = $affliateLink->utm_source;
             $attributes['utm_campaign'] = $affliateLink->utm_campaign;
             $attributes['utm_term'] = $affliateLink->utm_term;
@@ -166,7 +169,7 @@ class HomeController
             $affCode = null;
         }
 
-        AffiliateCustomer::create([
+        $affiliateCustomer = AffiliateCustomer::create([
             'name' => $attributes['name'],
             'phone_number' => $attributes['phone'],
             'address' => $attributes['address'],
@@ -183,6 +186,8 @@ class HomeController
             'aff_product_id' => $affiliateProductId,
             'aff_account_id' => $affiliateAccountId,
         ]);
+
+        SendCustomerDataToAgencyJob::dispatch($affiliateCustomer);
     }
 
     public function customerRegisterThank()
@@ -190,7 +195,8 @@ class HomeController
         return view('public.folderkh.thank-you');
     }
 
-     public function customThanksRegister($slug) {
+    public function customThanksRegister($slug)
+    {
         $page = Page::withoutGlobalScope('active')->where('slug', $slug)->first();
         return view('public.layouts_custom.thankyou_custom', ['page' => $page]);
     }
@@ -210,101 +216,100 @@ class HomeController
 
         $data['area_id'] = null;
 
-        if($request->has('locationId')) {
+        if ($request->has('locationId')) {
             $getAreaId = AreaProvince::where('province_id', $request->locationId)
-            ->pluck('area_id')
-            ->toArray();
+                ->pluck('area_id')
+                ->toArray();
 
-                if($getAreaId != null){
-                    $data['area_id'] = $getAreaId;
-                    $final = [];
-                    foreach ($data['area_id'] as $key => $value) {
-                        $area[] = AreaService::where([['area_id', $value],['province_id',$request->locationId]])
-                                            ->get();
+            if ($getAreaId != null) {
+                $data['area_id'] = $getAreaId;
+                $final = [];
+                foreach ($data['area_id'] as $key => $value) {
+                    $area[] = AreaService::where([['area_id', $value], ['province_id', $request->locationId]])
+                        ->get();
+                }
+                foreach ($area as $k => $v) {
+                    foreach ($v as $v2) {
+                        $final[] = $v2;
                     }
-                    foreach ($area as $k => $v) {
-                        foreach ($v as $v2) {
-                            $final[] = $v2;
-                        }
-                    }
-
-                    if ($final != null) {
-                        $finalArea = collect($final)->sortBy('price_area_discount')->first();
-                        $areaId = $finalArea->area_id;
-                        $provinceId = $finalArea->province_id;
-
-                        $data['category_services_1'] = Service::join('area_services', 'services.id', '=', 'area_services.service_id')
-                                                                ->where([['area_id', $areaId],['province_id', $provinceId],['category_service_id', 5]])
-                                                                ->get();
-
-                        $data['category_services_2'] = Service::join('area_services', 'services.id', '=', 'area_services.service_id')
-                                                            ->where([['area_id', $areaId],['province_id', $provinceId],['category_service_id', 6]])
-                                                            ->get();
-
-                        $data['service_internetFpt'] = $data['category_services_1']->merge($data['category_services_2']);
-
-                        $data['service_comboInternet'] = Service::join('area_services', 'services.id', '=', 'area_services.service_id')
-                                                            ->where([['area_id', $areaId],['province_id', $provinceId],['category_service_id', 7]])
-                                                            ->get();;
-
-                        $data['services_camfpt'] = CategoryService::findOrFail(21)->services()->get();
-                        $data['services_cloud'] = CategoryService::findOrFail(22)->services()->get();
-
-                        $data['services_fptplaybox'] = CategoryService::findOrFail(12)->services()->get();
-
-                        $data['services_ihome'] = CategoryService::findOrFail(15)->services()->first();
-
-                        $data['provinces'] = Province::all()->pluck('name', 'id');
-
-                        return view('public.pages.online_register', $data );
-                    } else {
-                        $data['service_internetFpt'] = $data['category_services_1']->merge($data['category_services_2']);
-
-                        $data['service_comboInternet'] = CategoryService::findOrFail(7)->services()->get();
-                         if(request()->get('locationId')){
-                            $data['area_id'] = AreaProvince::where('province_id', request()->get('locationId'))
-                            ->pluck('area_id')
-                            ->toArray();
-                        }
-
-                        $data['services_camfpt'] = CategoryService::findOrFail(21)->services()->get();
-                        $data['services_cloud'] = CategoryService::findOrFail(22)->services()->get();
-
-                        $data['services_fptplaybox'] = CategoryService::findOrFail(12)->services()->get();
-
-                        $data['services_ihome'] = CategoryService::findOrFail(15)->services()->first();
-
-                        $data['provinces'] = Province::all()->pluck('name', 'id');
-
-                        return view('public.folderkh.page.register_online', $data );
-                    }
-
-
                 }
 
+                if ($final != null) {
+                    $finalArea = collect($final)->sortBy('price_area_discount')->first();
+                    $areaId = $finalArea->area_id;
+                    $provinceId = $finalArea->province_id;
+
+                    $data['category_services_1'] = Service::join('area_services', 'services.id', '=', 'area_services.service_id')
+                        ->where([['area_id', $areaId], ['province_id', $provinceId], ['category_service_id', 5]])
+                        ->get();
+
+                    $data['category_services_2'] = Service::join('area_services', 'services.id', '=', 'area_services.service_id')
+                        ->where([['area_id', $areaId], ['province_id', $provinceId], ['category_service_id', 6]])
+                        ->get();
+
+                    $data['service_internetFpt'] = $data['category_services_1']->merge($data['category_services_2']);
+
+                    $data['service_comboInternet'] = Service::join('area_services', 'services.id', '=', 'area_services.service_id')
+                        ->where([['area_id', $areaId], ['province_id', $provinceId], ['category_service_id', 7]])
+                        ->get();;
+
+                    $data['services_camfpt'] = CategoryService::findOrFail(21)->services()->get();
+                    $data['services_cloud'] = CategoryService::findOrFail(22)->services()->get();
+
+                    $data['services_fptplaybox'] = CategoryService::findOrFail(12)->services()->get();
+
+                    $data['services_ihome'] = CategoryService::findOrFail(15)->services()->first();
+
+                    $data['provinces'] = Province::all()->pluck('name', 'id');
+
+                    return view('public.pages.online_register', $data);
+                } else {
+                    $data['service_internetFpt'] = $data['category_services_1']->merge($data['category_services_2']);
+
+                    $data['service_comboInternet'] = CategoryService::findOrFail(7)->services()->get();
+                    if (request()->get('locationId')) {
+                        $data['area_id'] = AreaProvince::where('province_id', request()->get('locationId'))
+                            ->pluck('area_id')
+                            ->toArray();
+                    }
+
+                    $data['services_camfpt'] = CategoryService::findOrFail(21)->services()->get();
+                    $data['services_cloud'] = CategoryService::findOrFail(22)->services()->get();
+
+                    $data['services_fptplaybox'] = CategoryService::findOrFail(12)->services()->get();
+
+                    $data['services_ihome'] = CategoryService::findOrFail(15)->services()->first();
+
+                    $data['provinces'] = Province::all()->pluck('name', 'id');
+
+                    return view('public.folderkh.page.register_online', $data);
+                }
+
+
             }
-            $data['service_internetFpt'] = $data['category_services_1']->merge($data['category_services_2']);
+
+        }
+        $data['service_internetFpt'] = $data['category_services_1']->merge($data['category_services_2']);
 
 
-            $data['service_comboInternet'] = CategoryService::findOrFail(7)->services()->get();
+        $data['service_comboInternet'] = CategoryService::findOrFail(7)->services()->get();
 
-            $data['services_camfpt'] = CategoryService::findOrFail(21)->services()->get();
-            $data['services_cloud'] = CategoryService::findOrFail(22)->services()->get();
+        $data['services_camfpt'] = CategoryService::findOrFail(21)->services()->get();
+        $data['services_cloud'] = CategoryService::findOrFail(22)->services()->get();
 
-            $data['services_fptplaybox'] = CategoryService::findOrFail(12)->services()->get();
+        $data['services_fptplaybox'] = CategoryService::findOrFail(12)->services()->get();
 
-            $data['services_ihome'] = CategoryService::findOrFail(15)->services()->first();
+        $data['services_ihome'] = CategoryService::findOrFail(15)->services()->first();
 
-            $data['provinces'] = Province::all()->pluck('name', 'id');
+        $data['provinces'] = Province::all()->pluck('name', 'id');
 
-            $data['title'] = 'Đăng ký Online - Cập nhật các gói cước mới nhất FPT Telecom!';
-            return view('public.folderkh.page.register_online', $data );
+        $data['title'] = 'Đăng ký Online - Cập nhật các gói cước mới nhất FPT Telecom!';
+        return view('public.folderkh.page.register_online', $data);
     }
 
     public function postContactForm(RegisterServiceRequest $request)
     {
-        if($this->checkSpam($request))
-        {
+        if ($this->checkSpam($request)) {
             $name = $request->get('name');
             $phone = $request->get('phone');
             $address = $request->get('address');
@@ -326,7 +331,7 @@ class HomeController
             $utmContent = request()->input('utm_content') ?? '';
             $ipAddress = request()->ip();
             $this->google_sheet_adsen->saveDataToSheet([
-                [$currentDate, $name, $phone, $address, $service ,$message, $utmSource, $utmMedium, $utmCapaign, $utmTerm,  $utmContent, $ipAddress]
+                [$currentDate, $name, $phone, $address, $service, $message, $utmSource, $utmMedium, $utmCapaign, $utmTerm, $utmContent, $ipAddress]
                 // [$currentDate, $name, $phone, $address, $service ,$message]
             ]);
             return view('public.mail.thank_you');
@@ -341,7 +346,7 @@ class HomeController
         $client = new Client();
         $response = $client->request('POST', 'https://www.google.com/recaptcha/api/siteverify', [
             'form_params' => [
-                'secret'   => config('services.google_recaptcha.secret'),
+                'secret' => config('services.google_recaptcha.secret'),
                 'response' => $inputs['recaptcha_token'],
             ]
         ]);
@@ -375,7 +380,7 @@ class HomeController
             Log::info('data', $data);
             ChatRegisterServiceJob::dispatch($data);
             return response()->json(true, 200);
-        }catch (\Exception $e) {
+        } catch (\Exception $e) {
             return response()->json(false, 500);
         }
     }

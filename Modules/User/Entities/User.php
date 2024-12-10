@@ -254,6 +254,13 @@ class User extends EloquentUser implements AuthenticatableContract
         return $this->hasOne(AffiliateAccount::class, 'user_id', 'id');
     }
 
+    public function getAgencyAccount()
+    {
+        return $this->affiliateAccount()
+            ->where('type', AffiliateAccount::TYPE_AGENCY)
+            ->first();
+    }
+
     public function getTotalCommissionAttribute()
     {
         return Money::inDefaultCurrency($this->affiliateAccount()->sum('total_commission'));

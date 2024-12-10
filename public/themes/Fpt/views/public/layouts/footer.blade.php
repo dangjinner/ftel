@@ -23,7 +23,18 @@
                 </div>
                 <div id="group-call-text" class="text-number hide text-center pull-right">
                     <p>Hotline Đăng ký</p>
-                    <a>{{ setting('fpt_hotline') }}</a>
+                    @auth
+                        @php
+                           $agencyAccount = auth()->user()->getAgencyAccount();
+                        @endphp
+                        @if($agencyAccount)
+                            <a>{{ auth()->user()->phone_number }}</a>
+                        @else
+                            <a>{{ setting('fpt_hotline') }}</a>
+                        @endif
+                    @else
+                        <a>{{ setting('fpt_hotline') }}</a>
+                    @endauth
                 </div>
             </div>
         @endif

@@ -69,4 +69,9 @@ class AffiliateAccount extends Model
     {
         return $this->hasMany(AffiliateCustomer::class, 'aff_account_id', 'id');
     }
+
+    public function isAgency()
+    {
+        return $this->type === self::TYPE_AGENCY;
+    }
 }

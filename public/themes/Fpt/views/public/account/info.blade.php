@@ -5,7 +5,12 @@
             <h2 >Thông tin tài khoản</h2>
         </div>
         <div class="mt-3">
-            <form method="GET" action="#">
+            @if(Session::has('message'))
+                <div class="alert alert-success">
+                    {{ Session::get('message') }}
+                </div>
+            @endif
+            <form method="POST" action="{{ route('account.info.update') }}" novalidate>
                 @csrf
                 <div class="form-row form-group">
                     <div class="col">
@@ -29,9 +34,9 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="phone">Số điện thoại<span class="text-danger">*</span></label>
-                    <input type="tel" id="phone" name="phone" value="{{ $user->phone_number }}" class="form-control @error('phone') is-invalid @enderror" placeholder="Enter phone number">
-                    @error('phone')
+                    <label for="phone_number">Số điện thoại<span class="text-danger">*</span></label>
+                    <input type="tel" id="phone_number" name="phone_number" value="{{ $user->phone_number }}" class="form-control @error('phone_number') is-invalid @enderror" placeholder="Enter phone number">
+                    @error('phone_number')
                     <div class="invalid-feedback">
                         {{ $message }}
                     </div>
