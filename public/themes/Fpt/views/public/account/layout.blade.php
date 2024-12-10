@@ -62,9 +62,11 @@
                         <div class="collapse " id="accountCollapseMenu">
                             <div class="list-group">
                                 <a class="list-group-item" href="{{ route('affiliate.products') }}">Sản phẩm</a>
-                                @if(auth()->user()->affiliateAccount->type === \Modules\Affiliate\Entities\AffiliateAccount::TYPE_AGENCY)
+                                @if(auth()->user()->affiliateAccount->isAgency())
                                     <a class="list-group-item"
                                        href="{{ route('affiliate.agency.registered_customers') }}">Khách hàng</a>
+                                    <a class="list-group-item"
+                                       href="{{ route('affiliate.agency.account_info') }}">Tài khoản đại lý</a>
                                 @endif
                             </div>
                         </div>
@@ -83,9 +85,11 @@
                             >Affiliate</a>
                             <div class="list-group">
                                 <a class="list-group-item" href="{{ route('affiliate.products') }}">Sản phẩm</a>
-                                @if(auth()->user()->affiliateAccount->type === \Modules\Affiliate\Entities\AffiliateAccount::TYPE_AGENCY)
+                                @if(auth()->user()->affiliateAccount->isAgency())
                                     <a class="list-group-item"
                                        href="{{ route('affiliate.agency.registered_customers') }}">Khách hàng</a>
+                                    <a class="list-group-item"
+                                       href="{{ route('affiliate.agency.account_info') }}">Tài khoản đại lý</a>
                                 @endif
                             </div>
                             <a class="nav-link " href="{{ route('auth.logout') }}">Đăng xuất</a>

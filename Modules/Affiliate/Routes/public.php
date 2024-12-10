@@ -21,6 +21,8 @@ Route::prefix('affiliate')
                 Route::get('links/{code}', [AffiliateLinkController::class, 'getSingleLink'])->name('single_link');
                 Route::prefix('agency')->name('agency.')->group(function () {
                     Route::get('customers', [AffiliateAgencyController::class, 'registeredCustomers'])->name('registered_customers');
+                    Route::get('account-info', [AffiliateAgencyController::class, 'accountInfo'])->name('account_info');
+                    Route::post('account-info', [AffiliateAgencyController::class, 'updateAccountInfo'])->name('account_info.update');
                 });
             });
 
