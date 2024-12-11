@@ -18,7 +18,7 @@
         @if($contactPhone)
             <div class="group-call col-xs-12 fix-pad ">
                 <div id="group-call" class="bg-gray text-center pull-right">
-                    <a href="tel:{{ setting('fpt_hotline') }}" title="{{ setting('fpt_hotline') }}"><img
+                    <a href="tel:{{ $contactPhone }}" title="{{ $contactPhone }}"><img
                             src="{{ v(theme::url('assets/images/call.png')) }}" alt="Call FPT"></a>
                 </div>
                 <div id="group-call-text" class="text-number hide text-center pull-right">
