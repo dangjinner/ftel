@@ -56,6 +56,8 @@
                                     </div>
 
                                     {{ Form::text('name', trans('categoryservice::attributes.name'), $errors, null, ['required' => true]) }}
+                                    {{ Form::checkbox('is_active', trans('post::attributes.is_active'), 'Enable', $errors, null) }}
+
                                 </div>
                             </div>
                         </div>

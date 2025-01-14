@@ -120,6 +120,10 @@ export default class {
         $('.logo .image-holder-wrapper').html(this.categoryImage('logo', categoryservices.logo));
         $('.banner .image-holder-wrapper').html(this.categoryImage('banner', categoryservices.banner));
 
+        $('#is_default_rating').prop('checked', categoryservices.is_default_rating);
+        $('#custom_avg_rating').val(categoryservices.custom_avg_rating);
+        $('#custom_rating_count').val(categoryservices.custom_rating_count);
+
         $('#categoryservice-form input[name="parent_id"]').remove();
     }
 
