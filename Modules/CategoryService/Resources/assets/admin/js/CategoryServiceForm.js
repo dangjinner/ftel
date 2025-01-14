@@ -122,7 +122,7 @@ export default class {
 
         $('#is_default_rating').prop('checked', categoryservices.is_default_rating);
         $('#custom_avg_rating').val(categoryservices.custom_avg_rating);
-        $('#custom_rating_count').val(categoryservices.custom_rating_count);
+        $('#custom_rating_count').val(categoryservices.custom_rating_count > 0 ? categoryservices.custom_rating_count : 1);
 
         $('#categoryservice-form input[name="parent_id"]').remove();
     }
