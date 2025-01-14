@@ -128,7 +128,7 @@ export default class {
     }
 
     categoryImage(fieldName, file) {
-        if (! file.exists) {
+        if (! file.id) {
             return this.imagePlaceholder();
         }
 
