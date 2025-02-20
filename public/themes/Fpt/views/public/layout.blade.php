@@ -15,6 +15,9 @@
         <!--<meta property="og:description" content="Website chính thức cung cấp đầy đủ, chính xác thông tin về khuyến mại lắp mạng FPT, Truyền hình FPT, FPT Play Box, FPT Camera, FPT Internet, FPT iHome - FPT Telecom!" />-->
         <!--<meta property="og:image" content="/themes/fpt/assets/images/logo.png" />-->
         <!--<meta property="og:locale" content="vi_VN" />-->
+        <meta name="og:site_name" content="FPT Telecom">
+        <meta name="twitter:site" content="@FPTTelecom">
+        <meta name="smartbanner:author" content="FPT Telecom">
         <meta property="fb:app_id" content="151028583643197" />
         <meta property="fb:admins" content="100005895009679"/>
         <meta property="fb:admins" content="100002259878240"/>
@@ -186,6 +189,15 @@
         @routes
         @yield('css')
         @stack('styles')
+        <script type="application/ld+json">
+            {
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "FPT Telecom",
+              "url": "{{ url('/') }}",
+              "logo": "{{ v(Theme::url('assets/images/logo.png')) }}"
+            }
+        </script>
         @stack('schemaJson')
         {!! setting('custom_header_assets') !!}
 
