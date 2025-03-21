@@ -141,7 +141,7 @@
                 @endif
                 <form action="{{ route('home.kh.dangkydichvu') }}" method="post" id="formRegisterServiceFPT">
                     @csrf
-                    <p class="title-header">VUI LÒNG NHẬP THÔNG TIN CỦA BẠN :</p>
+                    <p class="title-header">ĐĂNG KÝ ONLINE GIẢM NGAY 200k:</p>
                     <span class="note">Chúng tôi sẽ liên hệ với Bạn sau 5 phút đăng ký</span>
                     <div class="sex">
                         <input type="radio" name="sex" id="male" checked value="male"
