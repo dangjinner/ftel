@@ -671,7 +671,7 @@
                                                             <center
                                                                 style="color:#ffffff; font-family:Tahoma, sans-serif; font-size:16px">
                                                     <![endif]-->
-                                                    <a href="{{ route('pages.news.show', ['slug' => $comment->post->slug]) . '#root-comment' }}">
+                                                    <a href="{{ $comment->link() . '#root-comment' }}">
                                                         <div
                                                             style="
                                         text-decoration: none;
