@@ -1,0 +1,760 @@
+.banner-teacher {
+  .header-top {
+    background-image: url(../images/teacher-details/hello-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .hello {
+    background-image: url(../images/teacher-details/hello.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 10px 10px 23px 25px;
+    margin-top: 90px;
+
+    h2 {
+      color: #fff;
+      text-transform: uppercase;
+      ;
+    }
+  }
+
+  .name {
+    h1 span {
+      &:first-child {
+        
+        color: #868686;
+      }
+
+      &:last-child {
+        
+        color: #f41067;
+      }
+    }
+
+    h5 {
+      
+      color: #868686;
+    }
+  }
+
+  .resume a {
+    color: #fff;
+    ;
+    padding: 8px 16px;
+    background-color: #f41067;
+    border: 1px solid #f41067;
+
+    &:hover {
+      color: #f41067;
+      border: 1px solid #f41067;
+      background-color: #fff;
+    }
+  }
+
+  .social {
+    margin-top: 90px;
+    background-color: #fff;
+    display: inline-block;
+    padding-top: 8px;
+    padding-bottom: 8px;
+
+    a {
+      color: #a8b3b9;
+      font-size: 24px;
+      padding: 5px 10px;
+
+      &:first-child {
+        padding-left: 18px !important;
+      }
+
+      &:last-child {
+        padding-right: 18px;
+      }
+
+      &:hover {
+        color: #f41067;
+      }
+    }
+  }
+}
+
+.about-me-heading h1 {
+  padding-right: 30px !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 0px 40px 40px 0px;
+  background-color: #fff;
+  display: inline-block;
+  padding-left: 9%;
+
+  span {
+    &:first-child {
+      color: #868686;
+    }
+
+    &:last-child {
+      color: #f41067;
+    }
+  }
+}
+
+.about-content p {
+  color: #868686;
+  text-align: justify;
+}
+
+.skill {
+  color: #5f5f5f;
+
+  span {
+    margin-right: 10px;
+  }
+}
+
+.my-skill-heading h1 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 40px 0px 0px 40px;
+  background-color: #fff;
+  display: inline-block;
+  float: right;
+  padding-right: 9%;
+  padding-left: 30px;
+}
+
+#skill-progress {
+  color: #5f5f5f;
+}
+
+.my-skill-heading h1 span {
+  &:first-child {
+    color: #868686;
+  }
+
+  &:last-child {
+    color: #f41067;
+  }
+}
+
+.skillbar {
+  position: relative;
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+  background: #eee;
+  height: 10px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -webkit-transition: 0.4s linear;
+  -moz-transition: 0.4s linear;
+  -ms-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
+  transition: 0.4s linear;
+  -webkit-transition-property: width, background-color;
+  -moz-transition-property: width, background-color;
+  -ms-transition-property: width, background-color;
+  -o-transition-property: width, background-color;
+  transition-property: width, background-color;
+}
+
+.skillbar-bar {
+  height: 10px;
+  width: 0px;
+  background: #ffc107;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+.work-exp-heading h1 {
+  padding-right: 30px !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 0px 40px 40px 0px;
+  background-color: #fff;
+  display: inline-block;
+  padding-left: 9%;
+
+  span {
+    &:first-child {
+      color: #868686;
+    }
+
+    &:last-child {
+      color: #f41067;
+    }
+  }
+}
+
+.list-group.vertical-steps {
+  padding-left: 10px;
+
+  .list-group-item {
+    border: none;
+    border-left: 2px solid #fbc10a;
+    box-sizing: border-box;
+    border-radius: 0;
+    padding-left: 20px;
+    padding-right: 0px;
+    padding-bottom: 20px;
+    padding-top: 0px;
+    background-color: transparent;
+
+    &.active {
+      background-color: transparent;
+      color: inherit;
+    }
+
+    &:last-child {
+      border-left: 3px solid transparent;
+      padding-bottom: 0;
+    }
+
+    &::before {
+      border-radius: 50%;
+      background-color: #fff;
+      color: #fff;
+      content: '';
+      display: inline-block;
+      float: left;
+      height: 17px;
+      line-height: 25px;
+      margin-left: -29px;
+      text-align: center;
+      width: 17px;
+    }
+
+    span, a {
+      overflow: hidden;
+      padding-top: 2px;
+    }
+
+    &.completed {
+      border-left: 1px solid #e8e8e8;
+
+      &::before {
+        color: #fff;
+        border: 5px solid #fbc10a;
+      }
+    }
+  }
+}
+
+.list-group-item {
+  h4 {
+    color: #f41067;
+    margin-right: 20px;
+    font-size: 24px;
+    float: left;
+  }
+
+  span {
+    background-color: #ffc107;
+    padding: 3px 10px;
+    color: #fff;
+    border-radius: 15px;
+    font-size: 13px;
+  }
+
+  h5 {
+    color: #5f5f5f;
+    text-transform: uppercase;
+    clear: both;
+    font-size: 18px;
+  }
+
+  p {
+    color: #868686;
+    font-size: 16px;
+  }
+}
+
+#my-work {
+  background-color: #fff;
+}
+
+.work-title h1 span {
+  &:first-child {
+    color: #868686;
+  }
+
+  &:last-child {
+    color: #f41067;
+  }
+}
+
+.tabs-wrapper .nav .nav-item {
+  margin-bottom: 8px;
+
+  a {
+    padding: 5px 18px;
+    color: #868686;
+    border-radius: 30px;
+    display: inline-block;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 13px;
+  }
+
+  .active {
+    background-color: #ffc107;
+    color: #fff;
+    border-radius: 15px;
+  }
+}
+
+.portfolio-item {
+  .portfolio-link {
+    position: relative;
+    display: block;
+    max-width: 400px;
+    margin: 0 auto;
+    cursor: pointer;
+    height: 200px;
+
+    img {
+      width: 100%;
+      height: 100% !important;
+    }
+
+    .portfolio-hover {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-transition: all ease 0.5s;
+      -moz-transition: all ease 0.5s;
+      transition: all ease 0.5s;
+      opacity: 0;
+      background: rgba(254, 209, 54, 0.9);
+
+      .portfolio-hover-content {
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: 20px;
+        margin-top: -12px;
+        text-align: center;
+        color: #fff;
+
+        i {
+          margin-top: -12px;
+        }
+      }
+    }
+  }
+
+  .portfolio-caption {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 25px;
+    text-transform: uppercase;
+    background-color: #fff;
+    text-align: center;
+
+    p:hover {
+      color: #f41067;
+    }
+  }
+
+  .portfolio-link .portfolio-hover:hover {
+    opacity: 1;
+  }
+}
+
+/* How i Work Section */
+
+.how-i-work-title h1 span {
+  &:first-child {
+    color: #868686;
+  }
+
+  &:last-child {
+    color: #f41067;
+  }
+}
+
+#how-work {
+  h1 {
+    color: #5f5f5f;
+  }
+
+  h6 {
+    text-transform: uppercase;
+    color: #868686;
+  }
+}
+
+.how-i-work-title h1 span {
+  &:first-child {
+    color: #868686;
+  }
+
+  &:last-child {
+    color: #f41067;
+  }
+}
+
+#how-work {
+  h1 {
+    color: #5f5f5f;
+  }
+
+  h6 {
+    text-transform: uppercase;
+    color: #868686;
+  }
+}
+
+.step-line ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  li {
+    float: left;
+    width: 25%;
+    display: block;
+    max-width: 25%;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    .step {
+      position: relative;
+    }
+
+    .last-step-img {
+      margin-bottom: 5px;
+    }
+
+    .step:after {
+      content: '';
+      position: absolute;
+      height: 1px;
+      color: #666;
+      width: 105%;
+      background-color: #ffc107;
+      top: 25px;
+    }
+
+    &:last-child .step:after {
+      content: none !important;
+    }
+  }
+}
+
+/* Freelance Section*/
+
+#freelance {
+  background-image: url(../images/teacher-details/freelancer-back.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin-top: 130px;
+}
+
+.freelance-text h2 span {
+  font-size: 32px;
+  color: #fff;
+}
+
+.hire-me a {
+  color: #fff;
+  padding: 8px 16px;
+  background-color: #f41067;
+  border: 1px solid #f41067;
+
+  &:hover {
+    color: #f41067;
+    border: 1px solid #f41067;
+    background-color: #fff;
+  }
+}
+
+.freelancer-img {
+  position: absolute;
+  top: -172px;
+}
+
+/* Contact Me Section */
+
+.contact-heading h1 {
+  padding-right: 30px !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 0px 40px 40px 0px;
+  background-color: #fff;
+  display: inline-block;
+  padding-left: 9%;
+
+  span {
+    &:first-child {
+      color: #868686;
+    }
+
+    &:last-child {
+      color: #f41067;
+    }
+  }
+}
+
+#contact-me {
+  background: #f4f8fa;
+  padding-top: 10px;
+
+  h4 {
+    color: #f41067;
+  }
+
+  h5 a {
+    color: #868686;
+  }
+
+  h6 {
+    background-color: #ffc107;
+    padding: 5px 18px;
+    color: #fff;
+    border-radius: 15px;
+    display: inline-block;
+  }
+
+  p {
+    letter-spacing: 1.3px;
+    color: #7a7a7a;
+  }
+}
+
+.contact-social {
+  background-color: #fff;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  display: inline-block;
+
+  a {
+    color: #a8b3b9;
+    font-size: 24px;
+    padding: 5px 10px;
+
+    &:first-child {
+      padding-left: 18px !important;
+    }
+
+    &:last-child {
+      padding-right: 18px;
+    }
+
+    &:hover {
+      color: #f41067;
+    }
+  }
+}
+
+textarea {
+  resize: none !important;
+}
+
+.home-contact {
+  .form-control {
+    border: 1px solid #fff !important;
+    border-radius: 0px !important;
+    -webkit-transition: width 10s;
+    color: #868686;
+  }
+
+  .form-btn {
+    color: #fff;
+    padding: 8px 16px 6px 16px;
+    background-color: #f41067;
+    border: 1px solid #f41067;
+    cursor: pointer;
+
+    &:hover {
+      color: #f41067;
+      background-color: #fff;
+      transition: all 320ms ease-in-out;
+    }
+  }
+
+  .form-control:focus {
+    color: #868686;
+    box-shadow: none !important;
+    border: 1px solid #f41067 !important;
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .about-me-heading h1, .work-exp-heading h1, .contact-heading h1 {
+    padding-left: 7%;
+  }
+
+  .my-skill-heading h1 {
+    padding-right: 7%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .list-group-item {
+    h4 {
+      float: none;
+    }
+
+    h5 {
+      margin-top: 14px;
+    }
+  }
+
+  .skill {
+    span img {
+      width: 40%;
+    }
+
+    font-size: 12px;
+  }
+
+  .about-me-heading h1, .work-exp-heading h1, .contact-heading h1 {
+    padding-left: 4%;
+  }
+
+  .my-skill-heading h1 {
+    padding-right: 4%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .about-me-heading h1, .work-exp-heading h1, .contact-heading h1 {
+    padding-left: 5%;
+  }
+
+  .list-group-item {
+    h4 {
+      float: none !important;
+    }
+
+    h5 {
+      margin-top: 10px;
+    }
+  }
+
+  .my-skill-heading h1 {
+    padding-right: 5%;
+  }
+
+  .name h1 {
+    font-size: 30px;
+  }
+
+  .social {
+    margin-top: 20px;
+  }
+
+  #freelance {
+    padding-top: 30px;
+    padding-bottom: 32px;
+  }
+
+  .freelancer-img {
+    top: -94px;
+  }
+}
+
+@media only screen and (max-width: 690px) {
+  .social a, .contact-social a {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .skill {
+    span img {
+      width: auto !important;
+    }
+
+    font-size: 14px !important;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .about-me-heading h1, .work-exp-heading h1, .contact-heading h1 {
+    padding-left: 4%;
+  }
+
+  .list-group-item {
+    h4 {
+      float: none !important;
+    }
+
+    h5 {
+      margin-top: 10px;
+    }
+  }
+
+  .my-skill-heading h1 {
+    padding-right: 3%;
+  }
+
+  .step-line ul li {
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+
+    .step {
+      display: none;
+    }
+  }
+
+  .freelancer-img {
+    position: initial;
+  }
+
+  #freelance {
+    padding-top: 40px;
+    padding-bottom: 0px;
+  }
+
+  .hire-me {
+    margin-bottom: 30px;
+  }
+}
+
+
+.modal-title {
+
+    color: #f41067;
+    margin-right: 20px;
+    font-size: 24px;
+}
+.modal-body {
+
+  color:#868686;
+  text-align:left;
+}
+.pro-date, .pro-client, .pro-category {
+ 
+    color: #f41067 !important;
+    margin-bottom: 0px;
+  text-align:center;
+}
+.model-img {
+  margin:0px auto;
+  width:100%; 
+}
+.modal-footer {
+    justify-content: center !important;
+    border-top: none !important;
+  padding-top:0px !important;
+}
+.btn-close{
+  color: #ffffff;
+  
+    padding: 7px 16px 5px 16px;
+    background-color: #f41067;
+    cursor: pointer;
+}

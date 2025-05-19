@@ -1,0 +1,490 @@
+.package-title {
+    width: 270px;
+    text-align: center;
+    background: #0a0a0a;
+}
+
+.package-title span {
+    color: #fff;
+    display: block;
+    font-family: "SFProDisplay-Bold";
+    text-transform: uppercase;
+    font-size: 35px;
+    line-height: 1.3em;
+}
+
+.package-title .text-1 {
+    font-size: 30px;
+}
+
+.package-title .text-2 {
+    font-size: 60px;
+}
+
+.package-content {
+    width: calc(100% - 270px);
+    padding: 30px;
+}
+
+.package-content > p {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6em;
+}
+
+.list-chanel {
+    margin-bottom: 20px;
+}
+
+.list-chanel ul li:first-child {
+    margin-bottom: 5px;
+}
+
+.list-chanel ul li a {
+    color: #ff9600;
+    font-size: 16px;
+    font-family: "SFProDisplay-SemiBold";
+}
+
+.list-chanel img {
+    height: 45px;
+    margin: 4px;
+    float: left;
+}
+
+.sp-area ul {
+    margin-top: 5px;
+}
+
+.sp-area ul li {
+    float: left;
+}
+
+.sp-area ul li:not(:last-child) {
+    margin-right: 15px;
+}
+
+.sp-area ul li p {
+    color: rgb(181, 181, 181);
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.sp-area a {
+    background: #ce282a;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: "SFProDisplay-Bold";
+    color: #fff;
+    padding: 10px 20px;
+    transition: 300ms;
+}
+
+.sp-area a:hover {
+    color: #fff !important;
+    background: #aa2123;
+}
+
+#block-6 {
+    padding-bottom: 150px;
+}
+
+
+
+footer .group-zalo-chat .bg-gray{
+    background: #0068ff;
+}
+
+footer .group-zalo-chat:hover #zalo-chat-text{
+    display: block!important;
+    position: absolute;
+    right: 0;
+    padding: 5px 0;
+    padding-right: 45px;
+}
+
+footer .group-zalo-chat #zalo-chat-text{
+    color: #fff;
+    text-align: center;
+    border-radius: 50px;
+    box-shadow: 0 0 40px -4px rgba(17,17,17,.7);
+    font-size: 26px;
+    height: 60px;
+    width: 254px;
+    background: #0068ff;
+}
+
+footer #zalo-chat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+footer #zalo-chat a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer #zalo-chat img {
+    width: 60px;
+    height: 60px;
+}
+
+@media screen and (max-width: 1250px) {
+    .landing .menu-area li {
+        margin: 0 25px;
+    }
+
+    .sp-area .left,
+    .sp-area .right {
+        float: none !important;
+    }
+
+    .sp-area ul {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .landing .menu-area li {
+        margin: 0 20px;
+    }
+
+    .package-content > p {
+        font-size: 16px;
+    }
+
+    .package-chanel,
+    .package-title {
+        display: block;
+    }
+
+    .package-title {
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .package-content {
+        padding: 20px;
+    }
+
+    .package-title .text-1 {
+        font-size: 20px;
+    }
+
+    .package-title .text-2 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .landing .menu-area {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 600px) {
+    .sp-area ul li:first-child {
+        float: none;
+        margin-bottom: 10px;
+    }
+
+    .sp-area {
+        text-align: center;
+    }
+
+    .sp-area ul {
+        display: inline-block;
+    }
+}
+
+.landing {
+    padding-top: 55px;
+}
+
+.sticky {
+    position: fixed !important;
+    top: 0px;
+    width: 100%;
+    z-index: 11;
+    background: rgba(0, 0, 0, 1) !important;
+}
+
+.landing .menu-area ul li {
+    display: inline-block;
+}
+
+.top-banner {
+    position: relative;
+}
+
+.top-banner .box-img {
+    line-height: 0;
+}
+
+.top-banner .box-img img {
+    max-width: 100%;
+}
+
+.landing .menu-area {
+    height: 55px;
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+}
+
+.landing .menu-area li {
+    margin: 0 30px;
+    padding: 20px 0 0 0;
+}
+
+.landing .menu-area li a {
+    font-size: 16px;
+    color: #fff;
+}
+
+.top-banner .menu.active {
+    color: #ff6500;
+}
+
+.table-area {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.table-cell-area {
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+    margin: 0 -0.125em;
+}
+
+.package-chanel {
+    margin: 50px 0;
+    background: #2a2a2a;
+}
+
+.package-title {
+    width: 270px;
+    text-align: center;
+    background: #0a0a0a;
+}
+
+.package-title span {
+    color: #fff;
+    display: block;
+    font-family: "SFProDisplay-Bold";
+    text-transform: uppercase;
+    font-size: 35px;
+    line-height: 1.3em;
+}
+
+.package-title .text-1 {
+    font-size: 30px;
+}
+
+.package-title .text-2 {
+    font-size: 60px;
+}
+
+.package-content {
+    width: calc(100% - 270px);
+    padding: 30px;
+}
+
+.package-content > p {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6em;
+}
+
+.list-chanel {
+    margin-bottom: 20px;
+}
+
+.list-chanel ul li:first-child {
+    margin-bottom: 5px;
+}
+
+.list-chanel ul li a {
+    color: #ff9600;
+    font-size: 16px;
+    font-family: "SFProDisplay-SemiBold";
+}
+
+.list-chanel img {
+    height: 45px;
+    margin: 4px;
+    float: left;
+}
+
+.sp-area ul {
+    margin-top: 5px;
+}
+
+.sp-area ul li {
+    float: left;
+}
+
+.sp-area ul li:not(:last-child) {
+    margin-right: 15px;
+}
+
+.sp-area ul li p {
+    color: rgb(181, 181, 181);
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.sp-area a {
+    background: #ce282a;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: "SFProDisplay-Bold";
+    color: #fff;
+    padding: 10px 20px;
+    transition: 300ms;
+}
+
+.sp-area a:hover {
+    color: #fff !important;
+    background: #aa2123;
+}
+
+#block-6 {
+    padding-bottom: 150px;
+}
+
+@media screen and (max-width: 1250px) {
+    .landing .menu-area li {
+        margin: 0 25px;
+    }
+
+    .sp-area .left,
+    .sp-area .right {
+        float: none !important;
+    }
+
+    .sp-area ul {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .landing .menu-area li {
+        margin: 0 20px;
+    }
+
+    .package-content > p {
+        font-size: 16px;
+    }
+
+    .package-chanel,
+    .package-title {
+        display: block;
+    }
+
+    .package-title {
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .package-content {
+        padding: 20px;
+    }
+
+    .package-title .text-1 {
+        font-size: 20px;
+    }
+
+    .package-title .text-2 {
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .landing .menu-area {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 600px) {
+    .sp-area ul li:first-child {
+        float: none;
+        margin-bottom: 10px;
+    }
+
+    .sp-area {
+        text-align: center;
+    }
+
+    .sp-area ul {
+        display: inline-block;
+    }
+}
+
+
+@media (max-width: 650px) {
+    #group-call-text {
+        display: none;
+        width: 0;
+        height: 0;
+        background: none;
+    }
+
+    #zalo-contact-icon {
+        width: 55px !important;
+    }
+
+    footer .always-on .zalo-contact {
+        position: fixed;
+        bottom: 12px;
+        right: 4.5rem;
+        z-index: 100;
+    }
+
+    footer .always-on > div.group-call {
+        position: fixed;
+        bottom: 100px;
+        right: 15px;
+        z-index: 200;
+    }
+
+    footer .always-on > div.group-chat {
+        position: fixed;
+        bottom: 175px;
+        right: 15px;
+        z-index: 100;
+    }
+
+        footer .group-zalo-chat{
+        position: fixed;
+        bottom: 170px;
+        right: 15px;
+        z-index: 100;
+    }
+
+    footer #zalo-chat img {
+        width: 50px;
+        height: 50px;
+    }
+}

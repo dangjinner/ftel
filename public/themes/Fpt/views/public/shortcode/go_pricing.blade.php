@@ -16,7 +16,7 @@
                 case 6:
                     return 'red_p';
                 default:
-                    return '';
+                    return 'oranges';
             }
         }
     }

@@ -102,7 +102,7 @@
                     case 4:
                         return 'purple';
                     default:
-                        return '';
+                        return 'oranges';
                 }
             }
         ?>
