@@ -38,9 +38,6 @@ class Post extends Model
         'sidebar_layout',
         'created_at',
         'video',
-        'is_default_rating',
-        'custom_avg_rating',
-        'custom_rating_count',
     ];
 
     /**
@@ -52,7 +49,6 @@ class Post extends Model
         'is_active'             => 'boolean',
         'is_thumbnail_display'  => 'boolean',
         'is_toc'                => 'boolean',
-        'is_default_rating' => 'boolean',
     ];
 
     /**
