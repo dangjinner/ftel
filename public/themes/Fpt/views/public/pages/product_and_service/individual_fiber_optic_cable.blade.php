@@ -103,8 +103,12 @@
                         return 'green';
                     case 4:
                         return 'purple';
+                    case 5:
+                        return 'blue';
+                    case 6:
+                        return 'green';
                     default:
-                        return '';
+                        return 'oranges';
                 }
             }
         ?>
