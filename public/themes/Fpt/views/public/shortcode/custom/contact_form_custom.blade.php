@@ -69,7 +69,7 @@
             <input type="hidden" name="google_sheet_key"  value="{{ $configData->google_sheet_key ?? "" }} ">
             <input type="hidden" name="google_sheet_link"  value=" {{ $configData->google_sheet_link ?? "" }} ">
             <input type="hidden" name="slug_page" value="{{ request()->path() }}" />
-            <button type="submit" id="submitDk">Đăng ký</button>
+            <button type="submit" id="submitDk" class="btnSubmitDk">Đăng ký</button>
         </div>
     </div>
 </form>
@@ -124,14 +124,14 @@
         border: 1px solid #ccc;
         border-radius: 5px;
     }
-    
+
      form.form-dk-post .form__content .form_submit .fa-spin-loading-form {
                 background: none;
                 color:#FFF;
                 font-size:30px;
                 margin-right: 1rem;
             }
-    
+
     form.form-dk-post .form__content .form_submit button[type=submit]{
                 width: auto;
                 padding: 0.5rem 4rem;
@@ -196,14 +196,15 @@
         })
     }
     document.addEventListener("DOMContentLoaded", function(event) {
-        submitContactForm();
+        // submitContactForm();
         $.validator.addMethod("regexPhone",
             function(value, element) {
                 return /(0[3|5|7|8|9])+([0-9]{8})\b/.test(value);
             },
             "Vui lòng nhập đúng SĐT"
         );
-        $("#registerFormCustom").validate({
+
+        $(".form-dk-post").validate({
             rules: {
                 sex: "required",
                 name: {
@@ -242,11 +243,11 @@
                 }
             }
         });
-        
+
          $('.form-dk-post').submit(function(e) {
                      e.preventDefault();
-                    $('#submitDk').html('<i class="fa fa-refresh fa-spin fa-spin-loading-form"></i> Đang đăng ký');
-                    $(this).unbind('submit').submit(); 
+                    $('.btnSubmitDk').html('<i class="fa fa-refresh fa-spin fa-spin-loading-form"></i> Đang đăng ký');
+                    $(this).unbind('submit').submit();
                 });
     });
 </script>
