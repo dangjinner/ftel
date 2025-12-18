@@ -44,6 +44,7 @@ class FptTabs extends Tabs
             ->add($this->sectionFeatureFptPlay());
 
          $this->group('register_form', trans('fpt::fpt.tabs.group.register_form'))
+            ->add($this->registerFormSettings())
             ->add($this->registerFormService());
 
         $this->group('home_section', trans('fpt::fpt.tabs.group.home_section'))
@@ -487,8 +488,16 @@ class FptTabs extends Tabs
      private function registerFormService()
     {
         return tap(new Tab('register_form_service', trans('fpt::fpt.tabs.register_form_service')), function (Tab $tab) {
-            $tab->weight(1);
+            $tab->weight(2);
             $tab->view('admin.fpt.tabs.register_form.service');
+        });
+    }
+
+    private function registerFormSettings()
+    {
+        return tap(new Tab('register_form_settings', trans('fpt::fpt.tabs.register_form_settings')), function (Tab $tab) {
+            $tab->weight(1);
+            $tab->view('admin.fpt.tabs.register_form.settings');
         });
     }
 

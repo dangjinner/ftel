@@ -1,0 +1,125 @@
+/* ===== Contact Modal Style ===== */
+
+.contact-modal-content {
+    background: linear-gradient(135deg, #ff9c1a, #ff6b00);
+    border-radius: 16px;
+    border: none;
+    padding: 1.5rem;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    opacity: 1;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: none;
+    border: none;
+    z-index: 9999;
+}
+
+.contact-modal-close::before,
+.contact-modal-close::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.2rem;
+    height: 2px;
+    background: #000;
+    transform-origin: center;
+}
+
+.contact-modal-close::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.contact-modal-close::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.contact-modal-img {
+    border-radius: 12px;
+    max-height: 350px;
+    object-fit: cover;
+}
+
+.contact-modal-title {
+    color: #fff;
+    font-size: 1.6rem;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.contact-modal-offer-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: 18px;
+    color: black;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.contact-modal-form .contact-modal-input,
+.contact-modal-form .contact-modal-select {
+    border-radius: 12px;
+    border: none;
+    padding: 10px 14px;
+    font-size: 0.95rem;
+}
+
+.contact-modal-btn-submit {
+    background: #fce641;
+    color: #d85b00;
+    border-radius: 40px;
+    padding: 10px 36px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.contact-modal-btn-submit:hover {
+    background: #fce641;
+    color: #d85b00;
+}
+
+.contact-modal-note {
+    color: #fff;
+    opacity: 0.9;
+    margin-top: 10px;
+}
+
+.contact-modal-body {
+    z-index: 999;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-modal-content {
+        padding: 1rem;
+    }
+
+    .contact-modal-left {
+        display: none;
+    }
+
+    .contact-modal-right {
+        text-align: center;
+        padding: 0 !important;
+    }
+
+    .contact-modal-mb-offer-text {
+        display: flex !important;
+        margin-bottom: 15px;
+    }
+
+    .contact-modal .modal-dialog.modal-dialog-centered {
+        min-width: auto !important;
+        max-width: 100% !important;
+    }
+}

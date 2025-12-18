@@ -76,6 +76,7 @@ return [
         'newsletter' => 'Newsletter',
         'features' => 'Features',
         'register_form_service' => 'Service',
+        'register_form_settings' => 'Popup Settings',
         'product_page' => 'Product Page',
         'social_links' => 'Social Links',
         'slider_banners' => 'Slider Banners',

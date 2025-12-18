@@ -15,6 +15,8 @@ Route::post('/chat/register-service', 'HomeController@chatRegisterService')->nam
 
 Route::post('cam-on-dang-ky', 'HomeController@postContactForm')->name('shortcode.dangkydichvu');
 
+Route::post('/contact-form', 'FptServiceController@postContactForm')->name('fpt.contactForm.post');
+
 Route::get('dang-nhap', 'AuthController@getLogin')->name('auth.login.get');
 Route::post('dang-nhap', 'AuthController@postLogin')->name('auth.login.post');
 Route::get('dang-ky', 'AuthController@getRegister')->name('auth.register.get');

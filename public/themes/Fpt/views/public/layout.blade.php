@@ -53,6 +53,7 @@
         <link rel="stylesheet" href="{{ v(theme::url('assets/css/main.min.css')) }}">
         <link rel="stylesheet" href="{{ v(theme::url('assets/css/root-review.css')) }}">
         <link rel="stylesheet" href="{{ v(theme::url('assets/css/chat-box.css')) }}">
+        <link rel="stylesheet" href="{{ v(theme::url('assets/css/contact-modal.css')) }}">
         <link rel="stylesheet" href="{{ v(theme::url('assets/css/customize.css')) }}">
         <style>
             @font-face {font-family: "Board of Directors W00 Bold It";
@@ -375,6 +376,8 @@
                 $('#google_esf').parent().css('display', 'none');
             });
         </script>
+        @include('public.sections.modals.contact_modal')
+
        @yield('script')
        {!! setting('custom_footer_assets') !!}
     </body>
