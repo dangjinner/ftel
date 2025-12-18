@@ -45,6 +45,7 @@
     <!-- Style CSS -->
     <!--<link rel="stylesheet" href="{{ v(theme::url('assets/css/style.css')) }}">-->
     <link rel="stylesheet" href="{{ v(theme::url('assets/css/main.min.css')) }}">
+    <link rel="stylesheet" href="{{ v(theme::url('assets/css/contact-modal.css')) }}">
     <link rel="stylesheet" href="{{ v(theme::url('assets/css/customize.css')) }}">
     <style>
         @font-face {font-family: "Board of Directors W00 Bold It";
@@ -439,6 +440,7 @@
             });
         });
     </script>
+    @include('public.sections.modals.contact_modal')
 
 </body>
 
