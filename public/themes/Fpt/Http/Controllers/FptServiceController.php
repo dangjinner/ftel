@@ -3,13 +3,18 @@
 namespace Themes\Fpt\Http\Controllers;
 
 use FleetCart\Jobs\RegisterFptInternet;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
 use Modules\Affiliate\Entities\AffiliateCustomer;
 use Modules\Affiliate\Entities\AffiliateLink;
 use Modules\Affiliate\Jobs\SendCustomerDataToAgencyJob;
+use Modules\Page\Entities\Page;
+use Themes\Fpt\Emails\RegisterOnlineMail;
 use Themes\Fpt\Http\Requests\ContactFormRequest;
 use Themes\Fpt\Http\Services\GoogleSheetAdsen;
+use Themes\Fpt\Http\Services\GoogleSheetCustom;
 
 class FptServiceController
 {
@@ -38,29 +43,80 @@ class FptServiceController
 
         $currentDate = date('d/m/Y H:i:s');
 
-        $affCode = Cookie::get('aff_code');
+        $slugLevel1 = collect(
+            explode('/', trim(parse_url($currentURL, PHP_URL_PATH), '/'))
+        )->first();
 
-        $this->google_sheet_adsen->saveDataToSheet([
-            [$currentDate, $name, $phone, $address, $service, $message, $utmSource, $utmMedium, $utmCampaign, $utmTerm, $utmContent, $ipAddress, $currentURL]
-        ]);
+        $page = Page::where('slug', $slugLevel1)->first();
 
-        $this->saveAffiliateCustomer([
+        if ($page) {
+            $this->handleDataForCustomizePage($request, $page);
+        } else {
+            $affCode = Cookie::get('aff_code');
+
+            $this->google_sheet_adsen->saveDataToSheet([
+                [$currentDate, $name, $phone, $address, $service, $message, $utmSource, $utmMedium, $utmCampaign, $utmTerm, $utmContent, $ipAddress, $currentURL]
+            ]);
+
+            $this->saveAffiliateCustomer([
+                'name' => $name,
+                'phone' => $phone,
+                'address' => $address,
+                'note' => $message,
+                'service' => $service,
+                'utm_source' => $utmSource,
+                'utm_campaign' => $utmCampaign,
+                'utm_term' => $utmTerm,
+                'utm_content' => $utmContent,
+                'utm_medium' => $utmMedium,
+                'ip' => $ipAddress,
+                'current_url' => $currentURL,
+                'aff_code' => $affCode,
+            ]);
+        }
+
+        return redirect()->route('pages.thankyou');
+    }
+
+    public function handleDataForCustomizePage(Request $request, Page $page)
+    {
+        $name = $request->get('cf_name');
+        $phone = $request->get('cf_phone');
+        $message = $request->get('cf_note') ?? '';
+        $address = $request->get('cf_address');
+        $service = $request->get('cf_service');
+        $currentDate = date('d/m/Y H:i:s');
+
+        $pageSettings = (array) json_decode($page->custom);
+
+        $sheetName = $pageSettings['google_sheet_name'];
+        $spreadSheetId = $pageSettings['google_sheet_key'];
+
+        $data = [
             'name' => $name,
             'phone' => $phone,
             'address' => $address,
-            'note' => $message,
-            'service' => $service,
-            'utm_source' => $utmSource,
-            'utm_campaign' => $utmCampaign,
-            'utm_term' => $utmTerm,
-            'utm_content' => $utmContent,
-            'utm_medium' => $utmMedium,
-            'ip' => $ipAddress,
-            'current_url' => $currentURL,
-            'aff_code' => $affCode,
-        ]);
+            'message' => $message,
+            'option_service' => $service,
+            'google_sheet_link' => $pageSettings['google_sheet_link']
+        ];
 
-        return redirect()->route('pages.thankyou');
+        $googleSheetCustom = new GoogleSheetCustom($spreadSheetId, $sheetName);
+        if ($sheetName !== null && $spreadSheetId !== null) {
+            $googleSheetCustom->saveDataToSheet([
+                [$currentDate, $name, $phone, $address, $service, $message]
+            ]);
+        }
+
+        $emailsReceive = explode(',', $pageSettings['email_receive']);
+
+        foreach ($emailsReceive as $key => $email) {
+            $emailsReceive[$key] = trim($email);
+        }
+
+        if (count($emailsReceive) > 0) {
+            Mail::to($emailsReceive)->send(new RegisterOnlineMail($data));
+        }
     }
 
     public function saveAffiliateCustomer($attributes)
