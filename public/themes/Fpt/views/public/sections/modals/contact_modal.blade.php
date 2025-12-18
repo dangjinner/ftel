@@ -129,12 +129,12 @@
 @if ($shouldShowModal)
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // setTimeout(function () {
+            setTimeout(function () {
                 const modalElement = $('#contactModal');
                 if (!modalElement) return;
 
                 modalElement.modal('show');
-            {{--}, {{ $modalDelay }});--}}
+            }, {{ $modalDelay }});
 
             $('.contact-modal-close').click(function (e) {
                 e.preventDefault();
