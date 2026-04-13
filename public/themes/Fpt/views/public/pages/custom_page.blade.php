@@ -614,6 +614,10 @@
     <script>
         $("li > a").click(function(e) {
             e.preventDefault();
+        });
+
+        $('.offcanvas_menu_logo a, .logo a').click(function (e) {
+            e.preventDefault();
         })
     </script>
 @endif
