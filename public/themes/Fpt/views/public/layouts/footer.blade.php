@@ -87,6 +87,18 @@
                                         {!! setting('footer_col_5_images') !!}
                                     </div>
                                 </div>
+                                <div class="col-lg-12">
+                                    <!-- Box thông tin thanh toán FPT Telecom -->
+                                    <div style="padding:20px 24px;background:transparent;border:1px solid #ffff;border-radius:14px;color:#dfe6f0;font-size:14px;line-height:1.6;">
+                                        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+                                            <span style="flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:#2b7de9;color:#fff;font-size:15px;font-weight:700;font-style:italic;font-family:Georgia,serif;">i</span>
+                                            <strong style="font-size:15px;letter-spacing:.3px;color:#fff;text-transform:uppercase;">Thông tin thanh toán FPT Telecom</strong>
+                                        </div>
+                                        <p style="margin:0 0 14px;">Khi thanh toán sản phẩm/dịch vụ, Quý khách có thể thực hiện thanh toán qua ứng dụng Hi FPT hoặc QR Code (đơn vị nhận: FPT Telecom hoặc Công ty Cổ phần Viễn thông FPT).</p>
+                                        <p style="margin:0;">Quý khách vui lòng không thanh toán sản phẩm/dịch vụ qua số tài khoản cá nhân.</p>
+                                    </div>
+                                    <!-- End box -->
+                                </div>
                                 {!! setting('footer_col_6') !!}
                             </div>
                         </div>
