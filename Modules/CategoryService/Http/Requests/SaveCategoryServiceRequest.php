@@ -25,9 +25,6 @@ class SaveCategoryServiceRequest extends Request
         return [
             'name' => 'required',
             'slug' => $this->getSlugRules(),
-            'is_default_rating' => 'required|boolean',
-            'custom_avg_rating' => 'required_if:is_default_rating,0|numeric|min:1|max:5',
-            'custom_rating_count' => 'required_if:is_default_rating,0|int|min:1',
         ];
     }
 

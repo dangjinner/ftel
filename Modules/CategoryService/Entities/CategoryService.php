@@ -34,9 +34,6 @@ class CategoryService extends Model
         'parent_id',
         'slug',
         'position',
-        'is_default_rating',
-        'custom_avg_rating',
-        'custom_rating_count',
     ];
 
     /**
@@ -47,7 +44,6 @@ class CategoryService extends Model
     protected $casts = [
         'is_searchable' => 'boolean',
         'is_active' => 'boolean',
-        'is_default_rating' => 'boolean',
     ];
 
     /**

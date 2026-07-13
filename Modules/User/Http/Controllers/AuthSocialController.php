@@ -97,7 +97,7 @@ class AuthSocialController extends Controller
             return redirect()->to($callbackUrl ?? '/');
         } catch (\Exception $e) {
             DB::rollBack();
-            Log::error($e->getMessage());
+            throw $e;
             return redirect()->to($callbackUrl ?? '/');
         }
     }

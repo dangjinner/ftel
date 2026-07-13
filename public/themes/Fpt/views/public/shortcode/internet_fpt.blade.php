@@ -16,7 +16,7 @@
                 case 8:
                     return 'purple';
                 default:
-                    return '';
+                    return 'oranges';
             }
         }
     }

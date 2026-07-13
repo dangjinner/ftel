@@ -1,24 +1,5 @@
 @extends('public.layout')
 
-@push('schemaJson')
-    @if($page->avg_rating > 0 && $page->rating_count > 0)
-        <script type="application/ld+json">
-          {
-            "@context": "https://schema.org/",
-            "@type": "CreativeWorkSeries",
-            "name": "{{ $page->name }}",
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "{{ $page->avg_rating }}",
-              "bestRating": "5",
-              "ratingCount": "{{ $page->rating_count }}"
-            }
-          }
-        </script>
-    @endif
-
-@endpush
-
 @section('css')
     <link rel="stylesheet" href="{{ v(theme::url('assets/css/toctoc.css')) }}" >
 
